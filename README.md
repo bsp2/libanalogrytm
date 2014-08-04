@@ -18,7 +18,7 @@ This is not an official Elektron development.
 
 All file format information has been found out by analyzing/comparing hundreds of sysex messages sent by the AR.
 
-This library may be used in both open and closed source software (see LICENSE).
+This library may be used in both open and closed source software (see [LICENSE](../master/LICENSE)).
 
 
 ## Status
