@@ -95,8 +95,12 @@ static void tc_syx_to_raw(sU8 *raw, sU8 *syx, const char *fname) {
       ar_error_t err;
       ar_sysex_meta_t meta;
       sU32 datSz;
+      const sU8 *sb = syx;  /* (note) simply passing &syx to ar_sysex_raw() is not allowed in C99/GCC/clang.
+                             *        assigning to a tmpvar ("sb") first, then passing &sb is. madness!
+                             *  Also see here: <http://c-faq.com/ansi/constmismatch.html>
+                             */
 
-      err = ar_sysex_to_raw(raw, &syx, &syxSz, &datSz, &meta);
+      err = ar_sysex_to_raw(raw, &sb, &syxSz, &datSz, &meta);
 
       if(AR_ERR_OK == err)
       {
