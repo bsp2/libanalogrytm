@@ -25,9 +25,9 @@ This library may be used in both open and closed source software (see LICENSE).
 
 - The basic AR sysex object types (kit, sound, pattern, song, settings, global) have been identified.
 
-- The basic sysex container structure and encoding has been identified. See "sysex.h", "sysex.c".
+- The basic sysex container structure and encoding has been identified. See [sysex.h](../blob/master/sysex.h), [sysex.c](../blob/master/sysex.c).
 
-- Most of the pattern format has been analyzed. See "pattern.h".
+- Most of the pattern format has been analyzed. See [pattern.h](../blob/master/pattern.h).
 
 - The library can convert a "whole project" .syx file (sent by the AR) to raw data, and back to .syx again.
-  See "testcases/main.c".
+  See [testcases/main.c](../blob/master/testcases/main.c).
