@@ -406,7 +406,7 @@ void ar_sysex_encode(sU8 *_dst, const sU8 *_src, sU32 _srcSize, s_u16_t *_retChk
 #endif
 
 #ifdef AR_DEBUG
-   Dprintf("[dbg] ar_sysex_encode: encoded %u raw bytes to %u syx bytes\n", srcSizeOrig, (_dst - dstOrig));
+   Dprintf("[dbg] ar_sysex_encode: encoded %u raw bytes to %u syx bytes\n", srcSizeOrig, (sUI)(_dst - dstOrig));
 #endif
 
    S_U14_SET(*_retChksum, chksum);

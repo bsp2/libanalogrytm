@@ -217,7 +217,7 @@ static void tc_syx_to_raw_to_syx(sU8 *raw, sU8 *syx, sU8 *resyx, const char *fna
             }
             else
             {
-               printf("NOK (query resyx size, have %d (0x%04x), expected %d (0x%04x)", sbsz, syxSz);
+               printf("NOK (query resyx size, have %u (0x%04x), expected %u (0x%04x)", sbsz, sbsz, syxSz, syxSz);
             }
          }
          else
@@ -302,7 +302,7 @@ static void tc_multi_syx_to_raw_to_syx(sU8 *raw, sU8 *syx, sU8 *resyx, const cha
                   }
                   else
                   {
-                     printf("[%4u] NOK (query resyx size, have %d (0x%04x), expected %d (0x%04x)", numMsg, rbsz, curSyxSz);
+                     printf("[%4u] NOK (query resyx size, have %d (0x%04x), expected %d (0x%04x)", numMsg, rbsz, rbsz, curSyxSz, curSyxSz);
                      break;
                   }
                }
