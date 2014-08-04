@@ -1,0 +1,372 @@
+/* ----
+ * ---- file   : pattern.h
+ * ---- author : bsp, void (joint rev.eng efforts)
+ * ---- legal  : Distributed under terms of the MIT LICENSE (MIT).
+ * ----
+ * ---- Permission is hereby granted, free of charge, to any person obtaining a copy
+ * ---- of this software and associated documentation files (the "Software"), to deal
+ * ---- in the Software without restriction, including without limitation the rights
+ * ---- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * ---- copies of the Software, and to permit persons to whom the Software is
+ * ---- furnished to do so, subject to the following conditions:
+ * ----
+ * ---- The above copyright notice and this permission notice shall be included in
+ * ---- all copies or substantial portions of the Software.
+ * ----
+ * ---- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * ---- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * ---- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * ---- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * ---- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * ---- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * ---- THE SOFTWARE.
+ * ----
+ * ---- info   : This is part of the "libanalogrytm" package.
+ * ----
+ * ---- changed: 30Jul2014, 01Aug2014, 04Aug2014
+ * ----
+ * ----
+ */
+
+#ifndef __AR_PATTERN_H__
+#define __AR_PATTERN_H__
+
+#include "cplusplus_begin.h"
+
+#pragma pack(push)
+#pragma pack(1)
+
+
+/*
+ *
+ ** Some natural constants
+ *
+ */
+#define AR_PATTERN_SYX_PATNR        (0x0009u)  /* offset of pattern number (byte) in sysex data     */
+#define AR_PATTERN_SYX_DATA         (0x000Au)  /* start of (encoded) 'raw' bytes in sysex data      */
+#define AR_PATTERN_SYX_CHECKSUM     (0x3AEDu)  /* offset to 2 byte (14bit) checksum (sum of 'raw' data bytes) */
+#define AR_PATTERN_SYX_DATASIZE     (0x3AEFu)  /* offset to 2 byte (14bit) data size (size includes data+chksum+data size) */
+
+#define AR_PATTERN_SYX_SZ           (0x3AF2u)  /* total size of pattern sysex dump (starting with 0xF0, ending with 0xF7) */
+
+#define AR_PATTERN_SZ    (0x3386u)  /* total size of pattern 'raw' 8bit data                */
+#define AR_TRACK_SZ      (0x0288u)  /* total size of track 'raw' 8bit data                  */
+#define AR_PLOCK_SEQ_SZ  (0x0042u)  /* total size of pattern plock sequence 'raw' 8bit data */
+
+#define AR_NUM_TRACKS                  (13u)   /* trk1..trk12, fx */
+#define AR_NUM_PLOCK_SEQS_PER_PATTERN  (72u)
+
+
+/*
+ *
+ ** Pattern (+ in future OS versions maybe track) speeds
+ *
+ */
+#define AR_SPD_2X     (0u)  /* 2x   */
+#define AR_SPD_3B2X   (1u)  /* 3/2x */
+#define AR_SPD_1X     (2u)  /* 1x   */
+#define AR_SPD_3B4X   (3u)  /* 3/4x */
+#define AR_SPD_1B2X   (4u)  /* 1/2x */
+#define AR_SPD_1B4X   (5u)  /* 1/4x */
+#define AR_SPD_1B8X   (6u)  /* 1/8x */
+
+
+/*
+ *
+ ** Filter types  
+ *
+ */
+#define AR_FLT_TYPE_LP2  (0u)  /* 24db lowpass  */
+#define AR_FLT_TYPE_LP1  (1u)  /* 12db lowpass  */
+#define AR_FLT_TYPE_BP   (2u)  /* 12db lowpass  */
+#define AR_FLT_TYPE_HP1  (3u)  /* 12db highpass */
+#define AR_FLT_TYPE_HP2  (4u)  /* 24db highpass */
+#define AR_FLT_TYPE_BS   (5u)  /* bandstop      */
+#define AR_FLT_TYPE_PK   (6u)  /* peak          */
+
+
+/*
+ *
+ ** LFO waveform types
+ *
+ */
+#define AR_LFO_WAVEFORM_TRI   (0u)  /* triangle    */
+#define AR_LFO_WAVEFORM_SIN   (1u)  /* sine        */
+#define AR_LFO_WAVEFORM_SQR   (2u)  /* square      */
+#define AR_LFO_WAVEFORM_SAW   (3u)  /* sawtooth    */
+#define AR_LFO_WAVEFORM_EXP   (4u)  /* exponential */
+#define AR_LFO_WAVEFORM_RMP   (5u)  /* ramp up     */
+#define AR_LFO_WAVEFORM_RND   (6u)  /* random      */
+
+#define NUM_AR_LFO_WAVEFORMS  (7u)
+
+
+/*
+ *
+ ** LFO trigger modes
+ *
+ */
+#define AR_LFO_TRIGMODE_FRE  (0u)  /* free running                                           */
+#define AR_LFO_TRIGMODE_TRG  (1u)  /* restart when note is triggered                         */
+#define AR_LFO_TRIGMODE_HLD  (2u)  /* free running but latch and hold when note is triggered */
+#define AR_LFO_TRIGMODE_ONE  (3u)  /* oneshot                                                */
+#define AR_LFO_TRIGMODE_HLF  (4u)  /* halfwave oneshot                                       */
+
+#define NUM_AR_LFO_TRIGMODES (5u)
+
+
+/*
+ *
+ ** P-Lock sequence types
+ *
+ */
+#define AR_PLOCK_TYPE_UNUSED        (0xFFu)
+
+#define AR_PLOCK_TYPE_MP0           (0x00u)  /* <syn> first machine parameter.  Also see e.g. AR_M_BDCLASSIC_P* */
+#define AR_PLOCK_TYPE_MP1           (0x01u)  /* <syn> second machine parameter                                  */
+#define AR_PLOCK_TYPE_MP2           (0x02u)  /* ..                                                              */
+#define AR_PLOCK_TYPE_MP3           (0x03u)  /* ..                                                              */
+#define AR_PLOCK_TYPE_MP4           (0x04u)  /* ..                                                              */
+#define AR_PLOCK_TYPE_MP5           (0x05u)  /* ..                                                              */
+#define AR_PLOCK_TYPE_MP6           (0x06u)  /* ..                                                              */
+#define AR_PLOCK_TYPE_MP7           (0x07u)  /* <syn> 8th machine parameter                                     */
+
+#define AR_PLOCK_TYPE_SMP_TUNE      (0x08u)  /* <sample> tune (0x28=-24, 0x40=+0, 0x58=+24) */
+#define AR_PLOCK_TYPE_SMP_FINE      (0x09u)  /* <sample> fine (0x00=-64, 0x40=+0, 0x7F=+63) */
+#define AR_PLOCK_TYPE_SMP_NR        (0x0Au)  /* <sample> nr (0(off), 1..127)                */
+#define AR_PLOCK_TYPE_SMP_BITRDC    (0x0Bu)  /* <sample> bitreduction (0..127)              */
+#define AR_PLOCK_TYPE_SMP_START     (0x0Cu)  /* <sample> start (0..120)                     */
+#define AR_PLOCK_TYPE_SMP_END       (0x0Du)  /* <sample> end (0..120)                       */
+#define AR_PLOCK_TYPE_SMP_LOOPSW    (0x0Eu)  /* <sample> loopsw (0..1)                      */
+#define AR_PLOCK_TYPE_SMP_LEVEL     (0x0Fu)  /* <sample> level (0..127)                     */
+
+#define AR_PLOCK_TYPE_FLT_ATTACK    (0x10u)  /* <filter> attacktime (0..127)                                    */
+#define AR_PLOCK_TYPE_FLT_SUSTAIN   (0x11u)  /* <filter> sustainlevel (0..127)                                  */
+#define AR_PLOCK_TYPE_FLT_DECAY     (0x12u)  /* <filter> decaytime (0..127)                                     */
+#define AR_PLOCK_TYPE_FLT_RELEASE   (0x13u)  /* <filter> releasetime (0..127)                                   */
+#define AR_PLOCK_TYPE_FLT_FREQ      (0x14u)  /* <filter> frequency (0..127)                                     */
+#define AR_PLOCK_TYPE_FLT_RESO      (0x15u)  /* <filter> resonance (0..127)                                     */
+#define AR_PLOCK_TYPE_FLT_TYPE      (0x16u)  /* <filter> type (0=lp2, 1=lp1, 2=bp, 3=hp1, 4=hp2, 5=bs, 6=pk).
+                                             *                Also see AR_FLT_TYPE_xxx
+                                             */
+#define AR_PLOCK_TYPE_FLT_ENV       (0x17u)  /* <filter> envdepth (0(-64)..64(0)..127(+63))                     */
+
+#define AR_PLOCK_TYPE_AMP_ATTACK    (0x18u)  /* <amp> attacktime (0..127)                 */
+#define AR_PLOCK_TYPE_AMP_HOLD      (0x19u)  /* <amp> holdtime (0..127)                   */
+#define AR_PLOCK_TYPE_AMP_DECAY     (0x1Au)  /* <amp> decaytime (0..126,127=inf)          */
+#define AR_PLOCK_TYPE_AMP_DRIVE     (0x1Bu)  /* <amp> overdrive (0..127)                  */
+#define AR_PLOCK_TYPE_AMP_DELAY     (0x1Cu)  /* <amp> delaysend (0..127)                  */
+#define AR_PLOCK_TYPE_AMP_REVERB    (0x1Du)  /* <amp> reverbsend (0..127)                 */
+#define AR_PLOCK_TYPE_AMP_PAN       (0x1Eu)  /* <amp> pan (0(left)..64(ctr)..127(right))  */
+#define AR_PLOCK_TYPE_AMP_VOLUME    (0x1Fu)  /* <amp> volume (0..127)                     */
+
+#define AR_PLOCK_TYPE_UNKNOWN_20    (0x20u)
+
+#define AR_PLOCK_TYPE_LFO_SPEED     (0x21u)  /* <lfo> speed (0(-63),64(0),127(+63))                              */
+#define AR_PLOCK_TYPE_LFO_MULTIPLY  (0x22u)  /* <lfo> multiplier (0=1, .., 0xb=2k)                               */
+#define AR_PLOCK_TYPE_LFO_FADE      (0x23u)  /* <lfo> fade (0(-63),64(0),127(+63))                               */
+#define AR_PLOCK_TYPE_LFO_DEST      (0x24u)  /* <lfo> dest (0=off, .., 0x29=reverbsend).
+                                             *             Also seee AR_LFO_DEST_xxx
+                                             */
+#define AR_PLOCK_TYPE_LFO_WAVEFORM  (0x25u)  /* <lfo> waveform (0=tri, 1=sin, 2=sqr, 3=saw, 4=exp, 5=rmp, 6=rnd).
+                                             *                 Also see AR_LFO_WAVEFORM_xxx
+                                             */
+#define AR_PLOCK_TYPE_LFO_PHASE     (0x26u)  /* <lfo> startphase (0..127)                                         */
+#define AR_PLOCK_TYPE_LFO_TRIGMODE  (0x27u)  /* <lfo> trigmode (0=fre, 1=trg, 2=hld, 3=one, 4=hlf)
+                                             *                 Also see AR_LFO_TRIGMODE_xxx
+                                             */
+#define AR_PLOCK_TYPE_LFO_DEPTH     (0x28u)  /* <lfo> depth (0..127)                                              */
+
+
+/*
+ *
+ ** Track trigger types  (see ar_track_t.trigs)
+ *
+ */
+
+/* trigger flags. 
+ *
+ * examples:
+ *                                                   data byte examples
+ *  note trig:           on: 2nd step byte | 0x01     0x03 0x81
+ *                      off: 2nd step byte & ~0x01    0x03 0x80
+ *
+ *  synswitch: plock enable: 1st step byte | 0x08
+ *                   sw.off: 2nd step byte & ~0x80    0x0B 0x01
+ *                    sw.on: 2nd step byte | 0x80     0x0B 0x81
+ *
+ *  smpswitch: plock enable: 1st step byte | 0x10
+ *                   sw.off: 1st step byte & ~0x01    0x12 0x81
+ *                    sw.on: 1st step byte | 0x01     0x13 0x81
+ *
+ *  env.f trig: plock enable: 1st step byte | 0x20
+ *                    sw.off: 1st step byte & ~0x02   0x21 0x81
+ *                     sw.on: 1st step byte | 0x02    0x23 0x81
+ *
+ *  lfo trig plock enable: 1st step byte | 0x40
+ *                 sw.off: 1st step byte & ~0x04      0x43 0x81
+ *                  sw.on: 1st step byte | 0x04       0x47 0x81
+ */
+
+/* (note) big endian */
+#define AR_TRIG_UNKNOWN4  (0x0010u)  /* <void> swing                       */
+#define AR_TRIG_NOTE_ON   (0x0001u)  /* note trig ("enable")               */
+#define AR_TRIG_UNKNOWN5  (0x0020u)  /* <void> slide                       */
+#define AR_TRIG_UNKNOWN1  (0x0002u)  /* <void> trigless                    */
+#define AR_TRIG_UNKNOWN6  (0x0040u)  /* ?                                  */
+#define AR_TRIG_UNKNOWN2  (0x0004u)  /* <void> mute                        */
+#define AR_TRIG_UNKNOWN3  (0x0008u)  /* <void> accent                      */
+#define AR_TRIG_SYN_EN    (0x0800u)  /* enable synswitch p-lock            */
+#define AR_TRIG_SYN_SW    (0x0080u)  /* synswitch bit (set=on, unset=off)  */
+#define AR_TRIG_SMP_EN    (0x1000u)  /* enable smpswitch p-lock            */
+#define AR_TRIG_SMP_SW    (0x0100u)  /* smpswitch bit (set=on, unset=off)  */
+#define AR_TRIG_ENVF_EN   (0x2000u)  /* enable filter env p-lock           */
+#define AR_TRIG_ENVF_SW   (0x0200u)  /* filter env bit (set=on, unset=off) */
+#define AR_TRIG_LFO_EN    (0x4000u)  /* enable LFO p-lock                  */
+#define AR_TRIG_LFO_SW    (0x0400u)  /* LFO bit (set=on, unset=off)        */
+#define AR_TRIG_UNKNOWN15 (0x8000u)  /* <void> retrig                      */
+
+
+
+/*
+ *
+ ** Track structure
+ *
+ */
+typedef struct { /* 0x288 bytes */
+   s_u16_t trigs[64];                   /* @0x0000..0x007F.  See AR_TRIG_xxx flags.                   */
+   sU8     notes[64];                   /* @0x0080..0x00BF.  0xFF=unset, MIDI note otherwise
+                                         *                    (default is C-4 == 0x3C, 0x3B="-1", 0x3D="+1") */
+   sU8     velocities[64];              /* @0x00C0..0x00FF.  0xFF=unset, 0x00=0, 0x7F=127             */
+   sU8     note_lengths[64];            /* @0x0100..0x013F.  0=0.125, 1=0.188, 2=1/64, 3=0.313, 6=1/32, .., 126=128, 127=inf */
+   sS8     micro_timings[64];           /* @0x0140..0x017F.  Micro timing (-23..+23) */
+   sU8     retrig_lengths[64];          /* @0x0180..0x01bF.  Retrig lengths (0..126(=128), 127=inf)   */
+   sU8     retrig_rates[64];            /* @0x01C0..0x01FF.  Retrig rates (0(=1/1)..16(=1/80))        */
+   sS8     retrig_velocity_offsets[64]; /* @0x0200..0x023F.  Retrig velocity offsets (-128..+127)     */
+   sU8     trig_note;                   /* @0x0240           <void> trigNote                          */
+   sU8     trig_velocity;               /* @0x0241           <void> trigVelocity                      */
+   sU8     trig_note_length;            /* @0x0242           <void> trigLength                        */
+   s_u16_t trig_flags;                  /* @0x0243           <void> trigFlags                         */
+   sU8     __unknown2;                  /* @0x0245           <void> unknown                           */
+   sU8     num_steps;                   /* @0x0246           Number of steps (1..64)                  */
+   sU8     quantize_amount;             /* @0x0247           <void> quantizeAmount                    */
+   sU8     sound_locks[64];             /* @0x0248..0x0287   <void> soundLocks                        */
+} ar_track_t;
+
+
+/*
+ *
+ ** P-Lock sequence structure
+ *
+ */
+typedef struct { /* 0x42 bytes */
+   sU8 plock_type;  /* @0x0000           0xFF=unused seq. See AR_PLOCK_TYPE_xxx               */
+   sU8 track_nr;    /* @0x0001           0xFF=unused seq. Tracknr (0..12)                     */
+   sU8 data[64];    /* @0x0002..0x0041.  Plock data (64 steps, value range is type dependent) */
+} ar_plock_seq_t;
+                    
+
+/*
+ *
+ ** Pattern structure
+ *
+ */
+typedef struct { /* 0x3386 bytes */
+   sU8            magic_header[4];  /* ??? a version number ??? reads '00 00 00 01' */
+   ar_track_t     tracks[13];       /* @0x0004..0x20EB */
+   ar_plock_seq_t plock_seqs[72];   /* @0x20EC..0x337B */
+   sU8            __unknown1;       /* @0x337C           Reads 0x00  */
+   sU8            pattern_len;      /* @0x337D           Is this really used ?
+                                     *                   Track len and this value change when pattern length is changed
+                                     */
+   sU8            __unknown2;       /* @0x337E           Reads 0x00 */
+   sU8            __unknown3;       /* @0x337F           Reads 0x01 */
+   sU8            __unknown4;       /* @0x3380           Reads 0x00 */
+   sU8            __unknown5;       /* @0x3381           Reads 0x00 */
+   sU8            __unknown6;       /* @0x3382           Reads 0x00 */
+   sU8            pattern_speed;    /* @0x3383           See AR_SPD_xxx. */
+   sU8            __unknown7;       /* @0x3384           Reads 0x00 */
+   sU8            __unknown8;       /* @0x3385           Reads 0x00 */
+} ar_pattern_t;
+
+
+/*
+ * Create pattern sysex request.
+ *
+ *  Arguments:
+ *     _dstbuf - Destination buffer. Must be large enough to hold the request string (15 bytes, see AR_SYSEX_REQUEST_MSG_SZ).
+ *      _devId - Sysex device id (0..15).
+ *  _patternNr - Determine pattern number. 0=A01, 1=A02, .. 16=B01, ..127=H15.
+ *
+ *  Returns:
+ *   AR_ERR_OK if the request was created successfully.
+ *
+ */
+S_EXTERN ar_error_t ar_pattern_request(sU8 *_dstBuf, sU8 _devId, sU8 _patternNr);
+
+
+/*
+ * Create pattern workbuffer sysex request.
+ *
+ *  Arguments:
+ *     _dstbuf - Destination buffer. Must be large enough to hold the request string (15 bytes, see AR_SYSEX_REQUEST_MSG_SZ).
+ *      _devId - Sysex device id (0..15).
+ *
+ *  Returns:
+ *   AR_ERR_OK if the request was created successfully.
+ *
+ */
+S_EXTERN ar_error_t ar_pattern_request_x(sU8 *_dstBuf, sU8 _devId, sU8 _patternNr);
+
+
+/*
+ * Convert pattern sysex dump (starting with 0xF0) to 'raw' 8bit data.
+ *
+ *  Arguments:
+ *          _rawBuf - Destination buffer. Must be large enough to hold the decoded 'raw' 8bit data.
+ *                     Pass NULL to query the required buffer size.
+ *          _syxBuf - Source buffer that stores the encoded 7bit MIDI data (starting with 0xF0)
+ *      _syxBufSize - Size of the source buffer (number of bytes)
+ *   _retRawBufSize - If not NULL, returns the required size of the 'raw' 8bit data buffer.
+ *         _retMeta - If not NULL, returns additional meta data like version / pattern number.
+ *
+ *  Returns:
+ *   AR_ERR_OK if the request was created successfully.
+ *
+ */
+S_EXTERN ar_error_t ar_pattern_syx_to_raw(sU8             *_rawBuf,
+                                          const sU8       *_syxBuf,
+                                          sU32             _syxBufSize,
+                                          sU32            *_retRawBufSize,
+                                          ar_sysex_meta_t *_meta
+                                          );
+
+
+/*
+ * Convert 'raw' 8bit data to 7bit MIDI sysex data (starting with 0xF0).
+ *
+ *  Arguments:
+ *          _syxBuf - Destination buffer. Must be large enough to hold the encoded 7bit MIDI sysex data.
+ *                     Pass NULL to query the required buffer size.
+ *          _rawBuf - Source buffer that stores the 'raw' 8bit data.
+ *      _rawBufSize - Size of source buffer (number of bytes).
+ *   _retSyxBufSize - If not NULL, returns the required size of the 7bit MIDI sysex data buffer.
+ *            _meta - Determines pattern number, format version(s). Must not be NULL.
+ *
+ *  Returns:
+ *   AR_ERR_OK if the request was created successfully.
+ *
+ */
+S_EXTERN ar_error_t ar_pattern_raw_to_syx(sU8                   *_syxBuf,
+                                          const sU8             *_rawBuf,
+                                          sU32                   _rawBufSize,
+                                          sU32                  *_retSyxBufSize,
+                                          const ar_sysex_meta_t *_meta
+                                          );
+
+
+#pragma pack(pop)
+
+#include "cplusplus_end.h"
+
+#endif /* __AR_PATTERN_H__ */

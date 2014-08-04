@@ -1,0 +1,3647 @@
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000005 0000007b
+[dbg] ar_sysex_to_raw: calc chksum= 00000005 0000007b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[   0] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000005 0x0000007b
+[   0] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000005 00000049
+[dbg] ar_sysex_to_raw: calc chksum= 00000005 00000049
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[   1] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000005 0x00000049
+[   1] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000004 00000034
+[dbg] ar_sysex_to_raw: calc chksum= 00000004 00000034
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[   2] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000004 0x00000034
+[   2] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003e 00000029
+[dbg] ar_sysex_to_raw: calc chksum= 0000003e 00000029
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[   3] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003e 0x00000029
+[   3] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000053 0000003f
+[dbg] ar_sysex_to_raw: calc chksum= 00000053 0000003f
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[   4] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000053 0x0000003f
+[   4] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000054 0000002c
+[dbg] ar_sysex_to_raw: calc chksum= 00000054 0000002c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[   5] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000054 0x0000002c
+[   5] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000078 00000021
+[dbg] ar_sysex_to_raw: calc chksum= 00000078 00000021
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[   6] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000078 0x00000021
+[   6] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000001 00000064
+[dbg] ar_sysex_to_raw: calc chksum= 00000001 00000064
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[   7] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000001 0x00000064
+[   7] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000038
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000038
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[   8] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000038
+[   8] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000076
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000076
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[   9] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000076
+[   9] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000005f 00000033
+[dbg] ar_sysex_to_raw: calc chksum= 0000005f 00000033
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  10] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000005f 0x00000033
+[  10] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000054 0000005f
+[dbg] ar_sysex_to_raw: calc chksum= 00000054 0000005f
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  11] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000054 0x0000005f
+[  11] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000064 00000026
+[dbg] ar_sysex_to_raw: calc chksum= 00000064 00000026
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  12] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000064 0x00000026
+[  12] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000016 00000002
+[dbg] ar_sysex_to_raw: calc chksum= 00000016 00000002
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  13] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000016 0x00000002
+[  13] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000023 00000015
+[dbg] ar_sysex_to_raw: calc chksum= 00000023 00000015
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  14] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000023 0x00000015
+[  14] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000068 0000002d
+[dbg] ar_sysex_to_raw: calc chksum= 00000068 0000002d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  15] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000068 0x0000002d
+[  15] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000000e 00000073
+[dbg] ar_sysex_to_raw: calc chksum= 0000000e 00000073
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  16] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000000e 0x00000073
+[  16] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000009 0000000a
+[dbg] ar_sysex_to_raw: calc chksum= 00000009 0000000a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  17] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000009 0x0000000a
+[  17] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003c 0000002a
+[dbg] ar_sysex_to_raw: calc chksum= 0000003c 0000002a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  18] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003c 0x0000002a
+[  18] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000002e 00000051
+[dbg] ar_sysex_to_raw: calc chksum= 0000002e 00000051
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  19] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000002e 0x00000051
+[  19] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000032 0000001c
+[dbg] ar_sysex_to_raw: calc chksum= 00000032 0000001c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  20] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000032 0x0000001c
+[  20] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000048 00000003
+[dbg] ar_sysex_to_raw: calc chksum= 00000048 00000003
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  21] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000048 0x00000003
+[  21] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000041 00000048
+[dbg] ar_sysex_to_raw: calc chksum= 00000041 00000048
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  22] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000041 0x00000048
+[  22] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000075 00000050
+[dbg] ar_sysex_to_raw: calc chksum= 00000075 00000050
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  23] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000075 0x00000050
+[  23] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000006 00000006
+[dbg] ar_sysex_to_raw: calc chksum= 00000006 00000006
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  24] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000006 0x00000006
+[  24] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000013 00000039
+[dbg] ar_sysex_to_raw: calc chksum= 00000013 00000039
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  25] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000013 0x00000039
+[  25] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000062 0000000e
+[dbg] ar_sysex_to_raw: calc chksum= 00000062 0000000e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  26] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000062 0x0000000e
+[  26] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000004e 0000000e
+[dbg] ar_sysex_to_raw: calc chksum= 0000004e 0000000e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  27] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000004e 0x0000000e
+[  27] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000007b 00000046
+[dbg] ar_sysex_to_raw: calc chksum= 0000007b 00000046
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  28] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000007b 0x00000046
+[  28] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000044 0000007e
+[dbg] ar_sysex_to_raw: calc chksum= 00000044 0000007e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  29] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000044 0x0000007e
+[  29] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000066 0000005d
+[dbg] ar_sysex_to_raw: calc chksum= 00000066 0000005d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  30] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000066 0x0000005d
+[  30] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000046 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000046 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  31] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000046 0x00000001
+[  31] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  32] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  32] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  33] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  33] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  34] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  34] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  35] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  35] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  36] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  36] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  37] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000008
+[  37] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  38] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000008
+[  38] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  39] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000008
+[  39] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  40] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000008
+[  40] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  41] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000008
+[  41] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  42] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000008
+[  42] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  43] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000008
+[  43] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  44] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000008
+[  44] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  45] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000008
+[  45] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  46] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000008
+[  46] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  47] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  47] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  48] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  48] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  49] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  49] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  50] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  50] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  51] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  51] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  52] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  52] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  53] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  53] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  54] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  54] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  55] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  55] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  56] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  56] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  57] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000040
+[  57] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  58] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  58] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  59] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  59] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  60] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  60] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  61] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  61] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  62] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  62] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000003b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  63] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003b 0x00000008
+[  63] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  64] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  64] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  65] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  65] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  66] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  66] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  67] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  67] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  68] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  68] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  69] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  69] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  70] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  70] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  71] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  71] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  72] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  72] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  73] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  73] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  74] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  74] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  75] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  75] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  76] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  76] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  77] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  77] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  78] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  78] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  79] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  79] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  80] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  80] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  81] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  81] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  82] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  82] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  83] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  83] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  84] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  84] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  85] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  85] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  86] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  86] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  87] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  87] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  88] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  88] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  89] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  89] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  90] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  90] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  91] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  91] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  92] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  92] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  93] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  93] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  94] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  94] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  95] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  95] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  96] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  96] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  97] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  97] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  98] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  98] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[  99] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[  99] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 100] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 100] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 101] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 101] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 102] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 102] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 103] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 103] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 104] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 104] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 105] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 105] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 106] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 106] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 107] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 107] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 108] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 108] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 109] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 109] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 110] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 110] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 111] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 111] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 112] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 112] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 113] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 113] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 114] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 114] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 115] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 115] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 116] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 116] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 117] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 117] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 118] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 118] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 119] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 119] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 120] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 120] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 121] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 121] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 122] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 122] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 123] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 123] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 124] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 124] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 125] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 125] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 126] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 126] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=3095
+[dbg] ar_sysex_to_raw: syxDatSz=3080
+[dbg] ar_sysex_to_raw:  syx chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 00000039 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000018 0x0000000d (0x0c0d)
+[ 127] meta obj_type = 0
+[dbg] ar_sysex_encode: encoded 2695 raw bytes to 3080 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000039 0x00000078
+[ 127] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 0000002f
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 0000002f
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 128] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x0000002f
+[ 128] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000000
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000000
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 129] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000000
+[ 129] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000069
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000069
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 130] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000069
+[ 130] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 00000021
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 00000021
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 131] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x00000021
+[ 131] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000022 00000058
+[dbg] ar_sysex_to_raw: calc chksum= 00000022 00000058
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 132] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000022 0x00000058
+[ 132] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000061
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000061
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 133] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000061
+[ 133] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 0000006b
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 0000006b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 134] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x0000006b
+[ 134] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000054
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000054
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 135] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000054
+[ 135] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000051
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000051
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 136] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000051
+[ 136] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000024
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000024
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 137] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000024
+[ 137] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 0000001d
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 0000001d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 138] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x0000001d
+[ 138] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000003
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000003
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 139] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000003
+[ 139] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000027
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000027
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 140] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000027
+[ 140] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000064
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000064
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 141] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000064
+[ 141] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 00000050
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 00000050
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 142] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x00000050
+[ 142] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 0000006a
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 0000006a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 143] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x0000006a
+[ 143] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 00000035
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 00000035
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 144] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x00000035
+[ 144] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000017
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000017
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 145] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000017
+[ 145] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000030
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000030
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 146] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000030
+[ 146] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 0000005e
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 0000005e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 147] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x0000005e
+[ 147] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000065
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000065
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 148] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000065
+[ 148] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 0000003b
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 0000003b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 149] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x0000003b
+[ 149] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000034
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000034
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 150] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000034
+[ 150] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000029
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000029
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 151] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000029
+[ 151] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 0000006a
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 0000006a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 152] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x0000006a
+[ 152] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001a 0000000b
+[dbg] ar_sysex_to_raw: calc chksum= 0000001a 0000000b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 153] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001a 0x0000000b
+[ 153] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000019 00000063
+[dbg] ar_sysex_to_raw: calc chksum= 00000019 00000063
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 154] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000019 0x00000063
+[ 154] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000040
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000040
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 155] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000040
+[ 155] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 156] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x00000008
+[ 156] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000037
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000037
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 157] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000037
+[ 157] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000032
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000032
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 158] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000032
+[ 158] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 00000044
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 00000044
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 159] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x00000044
+[ 159] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 0000007a
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 0000007a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 160] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x0000007a
+[ 160] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000042
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000042
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 161] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000042
+[ 161] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 0000007e
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 0000007e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 162] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x0000007e
+[ 162] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000054
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000054
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 163] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000054
+[ 163] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 0000005a
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 0000005a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 164] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x0000005a
+[ 164] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000077
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000077
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 165] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000077
+[ 165] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000009
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000009
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 166] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000009
+[ 166] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 0000004b
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 0000004b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 167] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x0000004b
+[ 167] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000019
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000019
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 168] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000019
+[ 168] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000038
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000038
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 169] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000038
+[ 169] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 0000007f
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 0000007f
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 170] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x0000007f
+[ 170] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 00000026
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 00000026
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 171] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x00000026
+[ 171] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000009
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000009
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 172] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000009
+[ 172] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000048
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000048
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 173] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000048
+[ 173] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000005
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000005
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 174] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000005
+[ 174] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 0000002f
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 0000002f
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 175] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x0000002f
+[ 175] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000013
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000013
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 176] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000013
+[ 176] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000013
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000013
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 177] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000013
+[ 177] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 0000007d
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 0000007d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 178] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x0000007d
+[ 178] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 00000038
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 00000038
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 179] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x00000038
+[ 179] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000000
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000000
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 180] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000000
+[ 180] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 0000001f
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 0000001f
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 181] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x0000001f
+[ 181] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 0000003c
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 0000003c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 182] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x0000003c
+[ 182] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000017
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000017
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 183] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000017
+[ 183] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000043
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000043
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 184] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000043
+[ 184] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000062
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000062
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 185] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000062
+[ 185] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 0000007b
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 0000007b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 186] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x0000007b
+[ 186] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 00000077
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 00000077
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 187] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x00000077
+[ 187] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 00000066
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 00000066
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 188] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x00000066
+[ 188] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000002
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000002
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 189] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000002
+[ 189] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 00000073
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 00000073
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 190] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x00000073
+[ 190] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 0000007e
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 0000007e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 191] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x0000007e
+[ 191] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000052
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000052
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 192] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000052
+[ 192] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 0000000a
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 0000000a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 193] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x0000000a
+[ 193] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 0000000f
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 0000000f
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 194] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x0000000f
+[ 194] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 00000033
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 00000033
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 195] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x00000033
+[ 195] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000021 00000033
+[dbg] ar_sysex_to_raw: calc chksum= 00000021 00000033
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 196] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000021 0x00000033
+[ 196] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 0000005b
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 0000005b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 197] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x0000005b
+[ 197] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 0000000c
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 0000000c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 198] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x0000000c
+[ 198] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 00000031
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 00000031
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 199] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x00000031
+[ 199] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000022 00000048
+[dbg] ar_sysex_to_raw: calc chksum= 00000022 00000048
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 200] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000022 0x00000048
+[ 200] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000022 0000004b
+[dbg] ar_sysex_to_raw: calc chksum= 00000022 0000004b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 201] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000022 0x0000004b
+[ 201] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000022 00000024
+[dbg] ar_sysex_to_raw: calc chksum= 00000022 00000024
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 202] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000022 0x00000024
+[ 202] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000021 00000067
+[dbg] ar_sysex_to_raw: calc chksum= 00000021 00000067
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 203] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000021 0x00000067
+[ 203] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000022 00000063
+[dbg] ar_sysex_to_raw: calc chksum= 00000022 00000063
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 204] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000022 0x00000063
+[ 204] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000077
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000077
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 205] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000077
+[ 205] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000022 00000036
+[dbg] ar_sysex_to_raw: calc chksum= 00000022 00000036
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 206] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000022 0x00000036
+[ 206] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000022 0000001a
+[dbg] ar_sysex_to_raw: calc chksum= 00000022 0000001a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 207] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000022 0x0000001a
+[ 207] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 00000033
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 00000033
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 208] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x00000033
+[ 208] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000021 0000004e
+[dbg] ar_sysex_to_raw: calc chksum= 00000021 0000004e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 209] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000021 0x0000004e
+[ 209] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 0000002c
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 0000002c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 210] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x0000002c
+[ 210] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000021 00000023
+[dbg] ar_sysex_to_raw: calc chksum= 00000021 00000023
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 211] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000021 0x00000023
+[ 211] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000023 00000037
+[dbg] ar_sysex_to_raw: calc chksum= 00000023 00000037
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 212] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000023 0x00000037
+[ 212] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000022 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 00000022 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 213] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000022 0x00000008
+[ 213] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000022 0000003b
+[dbg] ar_sysex_to_raw: calc chksum= 00000022 0000003b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 214] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000022 0x0000003b
+[ 214] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000062
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000062
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 215] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000062
+[ 215] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 00000027
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 00000027
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 216] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x00000027
+[ 216] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 0000004c
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 0000004c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 217] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x0000004c
+[ 217] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 0000002f
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 0000002f
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 218] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x0000002f
+[ 218] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 0000005d
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 0000005d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 219] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x0000005d
+[ 219] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000028
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000028
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 220] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000028
+[ 220] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 00000053
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 00000053
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 221] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x00000053
+[ 221] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000027
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000027
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 222] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000027
+[ 222] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000067
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000067
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 223] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000067
+[ 223] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001b 00000000
+[dbg] ar_sysex_to_raw: calc chksum= 0000001b 00000000
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 224] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001b 0x00000000
+[ 224] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 0000001b
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 0000001b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 225] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x0000001b
+[ 225] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000009
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000009
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 226] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000009
+[ 226] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001b 00000053
+[dbg] ar_sysex_to_raw: calc chksum= 0000001b 00000053
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 227] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001b 0x00000053
+[ 227] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001b 0000000b
+[dbg] ar_sysex_to_raw: calc chksum= 0000001b 0000000b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 228] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001b 0x0000000b
+[ 228] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000021
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000021
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 229] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000021
+[ 229] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000017
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000017
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 230] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000017
+[ 230] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000005
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000005
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 231] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000005
+[ 231] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 0000007d
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 0000007d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 232] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x0000007d
+[ 232] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000050
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000050
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 233] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000050
+[ 233] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 0000007a
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 0000007a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 234] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x0000007a
+[ 234] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000021 00000069
+[dbg] ar_sysex_to_raw: calc chksum= 00000021 00000069
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 235] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000021 0x00000069
+[ 235] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000056
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000056
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 236] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000056
+[ 236] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000018
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000018
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 237] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000018
+[ 237] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 0000001c
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 0000001c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 238] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x0000001c
+[ 238] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000021 00000029
+[dbg] ar_sysex_to_raw: calc chksum= 00000021 00000029
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 239] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000021 0x00000029
+[ 239] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000004
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000004
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 240] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000004
+[ 240] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000068
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000068
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 241] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000068
+[ 241] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000006
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000006
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 242] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000006
+[ 242] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000002
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000002
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 243] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000002
+[ 243] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000020 00000075
+[dbg] ar_sysex_to_raw: calc chksum= 00000020 00000075
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 244] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000020 0x00000075
+[ 244] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000021 0000005e
+[dbg] ar_sysex_to_raw: calc chksum= 00000021 0000005e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 245] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000021 0x0000005e
+[ 245] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000021 00000050
+[dbg] ar_sysex_to_raw: calc chksum= 00000021 00000050
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 246] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000021 0x00000050
+[ 246] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 00000021 00000058
+[dbg] ar_sysex_to_raw: calc chksum= 00000021 00000058
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 247] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000021 0x00000058
+[ 247] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 0000004a
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 0000004a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 248] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x0000004a
+[ 248] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000028
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000028
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 249] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000028
+[ 249] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001e 00000038
+[dbg] ar_sysex_to_raw: calc chksum= 0000001e 00000038
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 250] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001e 0x00000038
+[ 250] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 0000001b
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 0000001b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 251] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x0000001b
+[ 251] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000063
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000063
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 252] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000063
+[ 252] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001c 0000006e
+[dbg] ar_sysex_to_raw: calc chksum= 0000001c 0000006e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 253] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001c 0x0000006e
+[ 253] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000044
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000044
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 254] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000044
+[ 254] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=212
+[dbg] ar_sysex_to_raw: syxDatSz=197
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001f 00000051
+[dbg] ar_sysex_to_raw: calc chksum= 0000001f 00000051
+[dbg] ar_sysex_to_raw: syx data size = 0x00000001 0x0000004a (0x00ca)
+[ 255] meta obj_type = 1
+[dbg] ar_sysex_encode: encoded 172 raw bytes to 197 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001f 0x00000051
+[ 255] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000053 0000007d
+[dbg] ar_sysex_to_raw: calc chksum= 00000053 0000007d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 256] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000053 0x0000007d
+[ 256] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000009 00000002
+[dbg] ar_sysex_to_raw: calc chksum= 00000009 00000002
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 257] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000009 0x00000002
+[ 257] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000065 0000005d
+[dbg] ar_sysex_to_raw: calc chksum= 00000065 0000005d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 258] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000065 0x0000005d
+[ 258] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000065 0000005d
+[dbg] ar_sysex_to_raw: calc chksum= 00000065 0000005d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 259] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000065 0x0000005d
+[ 259] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000064 00000012
+[dbg] ar_sysex_to_raw: calc chksum= 00000064 00000012
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 260] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000064 0x00000012
+[ 260] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000065 0000005d
+[dbg] ar_sysex_to_raw: calc chksum= 00000065 0000005d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 261] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000065 0x0000005d
+[ 261] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000065 0000005d
+[dbg] ar_sysex_to_raw: calc chksum= 00000065 0000005d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 262] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000065 0x0000005d
+[ 262] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000072 0000005a
+[dbg] ar_sysex_to_raw: calc chksum= 00000072 0000005a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 263] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000072 0x0000005a
+[ 263] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000078 00000028
+[dbg] ar_sysex_to_raw: calc chksum= 00000078 00000028
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 264] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000078 0x00000028
+[ 264] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000073 0000001e
+[dbg] ar_sysex_to_raw: calc chksum= 00000073 0000001e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 265] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000073 0x0000001e
+[ 265] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000073 0000001e
+[dbg] ar_sysex_to_raw: calc chksum= 00000073 0000001e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 266] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000073 0x0000001e
+[ 266] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006c 00000041
+[dbg] ar_sysex_to_raw: calc chksum= 0000006c 00000041
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 267] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006c 0x00000041
+[ 267] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000072 00000055
+[dbg] ar_sysex_to_raw: calc chksum= 00000072 00000055
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 268] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000072 0x00000055
+[ 268] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000073 0000000e
+[dbg] ar_sysex_to_raw: calc chksum= 00000073 0000000e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 269] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000073 0x0000000e
+[ 269] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000071 00000055
+[dbg] ar_sysex_to_raw: calc chksum= 00000071 00000055
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 270] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000071 0x00000055
+[ 270] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000073 0000001d
+[dbg] ar_sysex_to_raw: calc chksum= 00000073 0000001d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 271] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000073 0x0000001d
+[ 271] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006d 0000002f
+[dbg] ar_sysex_to_raw: calc chksum= 0000006d 0000002f
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 272] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006d 0x0000002f
+[ 272] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000000c 0000007c
+[dbg] ar_sysex_to_raw: calc chksum= 0000000c 0000007c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 273] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000000c 0x0000007c
+[ 273] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000005d 00000072
+[dbg] ar_sysex_to_raw: calc chksum= 0000005d 00000072
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 274] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000005d 0x00000072
+[ 274] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006f 00000006
+[dbg] ar_sysex_to_raw: calc chksum= 0000006f 00000006
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 275] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006f 0x00000006
+[ 275] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000007f 00000074
+[dbg] ar_sysex_to_raw: calc chksum= 0000007f 00000074
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 276] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000007f 0x00000074
+[ 276] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000051 00000038
+[dbg] ar_sysex_to_raw: calc chksum= 00000051 00000038
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 277] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000051 0x00000038
+[ 277] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000007c 00000018
+[dbg] ar_sysex_to_raw: calc chksum= 0000007c 00000018
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 278] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000007c 0x00000018
+[ 278] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000005f 00000026
+[dbg] ar_sysex_to_raw: calc chksum= 0000005f 00000026
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 279] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000005f 0x00000026
+[ 279] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000050 0000006e
+[dbg] ar_sysex_to_raw: calc chksum= 00000050 0000006e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 280] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000050 0x0000006e
+[ 280] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 00000004
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 00000004
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 281] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x00000004
+[ 281] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 00000055
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 00000055
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 282] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x00000055
+[ 282] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000000d 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 0000000d 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 283] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000000d 0x00000001
+[ 283] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006c 00000012
+[dbg] ar_sysex_to_raw: calc chksum= 0000006c 00000012
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 284] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006c 0x00000012
+[ 284] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001b 0000006e
+[dbg] ar_sysex_to_raw: calc chksum= 0000001b 0000006e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 285] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001b 0x0000006e
+[ 285] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000073 0000001e
+[dbg] ar_sysex_to_raw: calc chksum= 00000073 0000001e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 286] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000073 0x0000001e
+[ 286] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000073 0000001c
+[dbg] ar_sysex_to_raw: calc chksum= 00000073 0000001c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 287] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000073 0x0000001c
+[ 287] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000051 0000006e
+[dbg] ar_sysex_to_raw: calc chksum= 00000051 0000006e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 288] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000051 0x0000006e
+[ 288] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000010 0000004e
+[dbg] ar_sysex_to_raw: calc chksum= 00000010 0000004e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 289] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000010 0x0000004e
+[ 289] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001a 0000006b
+[dbg] ar_sysex_to_raw: calc chksum= 0000001a 0000006b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 290] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001a 0x0000006b
+[ 290] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000060 00000047
+[dbg] ar_sysex_to_raw: calc chksum= 00000060 00000047
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 291] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000060 0x00000047
+[ 291] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000019 00000038
+[dbg] ar_sysex_to_raw: calc chksum= 00000019 00000038
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 292] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000019 0x00000038
+[ 292] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 293] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 293] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 294] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 294] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 295] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 295] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 296] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 296] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 297] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 297] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 298] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 298] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 299] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 299] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 300] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 300] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 301] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 301] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 302] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 302] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 303] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 303] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000025 0000006f
+[dbg] ar_sysex_to_raw: calc chksum= 00000025 0000006f
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 304] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000025 0x0000006f
+[ 304] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000001 0000006c
+[dbg] ar_sysex_to_raw: calc chksum= 00000001 0000006c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 305] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000001 0x0000006c
+[ 305] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000018 00000075
+[dbg] ar_sysex_to_raw: calc chksum= 00000018 00000075
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 306] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000018 0x00000075
+[ 306] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000004c 00000011
+[dbg] ar_sysex_to_raw: calc chksum= 0000004c 00000011
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 307] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000004c 0x00000011
+[ 307] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000005a 00000002
+[dbg] ar_sysex_to_raw: calc chksum= 0000005a 00000002
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 308] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000005a 0x00000002
+[ 308] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001d 00000067
+[dbg] ar_sysex_to_raw: calc chksum= 0000001d 00000067
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 309] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001d 0x00000067
+[ 309] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000040 00000051
+[dbg] ar_sysex_to_raw: calc chksum= 00000040 00000051
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 310] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000040 0x00000051
+[ 310] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000002d 0000001d
+[dbg] ar_sysex_to_raw: calc chksum= 0000002d 0000001d
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 311] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000002d 0x0000001d
+[ 311] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000003d 00000079
+[dbg] ar_sysex_to_raw: calc chksum= 0000003d 00000079
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 312] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000003d 0x00000079
+[ 312] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000043 0000007e
+[dbg] ar_sysex_to_raw: calc chksum= 00000043 0000007e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 313] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000043 0x0000007e
+[ 313] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000049 0000000b
+[dbg] ar_sysex_to_raw: calc chksum= 00000049 0000000b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 314] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000049 0x0000000b
+[ 314] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000001 0000001c
+[dbg] ar_sysex_to_raw: calc chksum= 00000001 0000001c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 315] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000001 0x0000001c
+[ 315] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000053 00000072
+[dbg] ar_sysex_to_raw: calc chksum= 00000053 00000072
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 316] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000053 0x00000072
+[ 316] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000009 00000079
+[dbg] ar_sysex_to_raw: calc chksum= 00000009 00000079
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 317] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000009 0x00000079
+[ 317] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 318] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 318] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 319] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 319] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006d 0000004b
+[dbg] ar_sysex_to_raw: calc chksum= 0000006d 0000004b
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 320] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006d 0x0000004b
+[ 320] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000017 00000044
+[dbg] ar_sysex_to_raw: calc chksum= 00000017 00000044
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 321] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000017 0x00000044
+[ 321] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000009 0000005e
+[dbg] ar_sysex_to_raw: calc chksum= 00000009 0000005e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 322] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000009 0x0000005e
+[ 322] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000077 00000002
+[dbg] ar_sysex_to_raw: calc chksum= 00000077 00000002
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 323] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000077 0x00000002
+[ 323] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000000f 00000066
+[dbg] ar_sysex_to_raw: calc chksum= 0000000f 00000066
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 324] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000000f 0x00000066
+[ 324] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000005f 00000026
+[dbg] ar_sysex_to_raw: calc chksum= 0000005f 00000026
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 325] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000005f 0x00000026
+[ 325] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006c 00000041
+[dbg] ar_sysex_to_raw: calc chksum= 0000006c 00000041
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 326] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006c 0x00000041
+[ 326] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006c 00000012
+[dbg] ar_sysex_to_raw: calc chksum= 0000006c 00000012
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 327] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006c 0x00000012
+[ 327] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 00000004
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 00000004
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 328] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x00000004
+[ 328] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000073 0000000e
+[dbg] ar_sysex_to_raw: calc chksum= 00000073 0000000e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 329] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000073 0x0000000e
+[ 329] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006d 00000039
+[dbg] ar_sysex_to_raw: calc chksum= 0000006d 00000039
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 330] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006d 0x00000039
+[ 330] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000072 00000055
+[dbg] ar_sysex_to_raw: calc chksum= 00000072 00000055
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 331] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000072 0x00000055
+[ 331] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 00000055
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 00000055
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 332] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x00000055
+[ 332] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000067 00000006
+[dbg] ar_sysex_to_raw: calc chksum= 00000067 00000006
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 333] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000067 0x00000006
+[ 333] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000005f 00000035
+[dbg] ar_sysex_to_raw: calc chksum= 0000005f 00000035
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 334] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000005f 0x00000035
+[ 334] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 00000004
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 00000004
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 335] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x00000004
+[ 335] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000002d 00000078
+[dbg] ar_sysex_to_raw: calc chksum= 0000002d 00000078
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 336] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000002d 0x00000078
+[ 336] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000035 00000025
+[dbg] ar_sysex_to_raw: calc chksum= 00000035 00000025
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 337] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000035 0x00000025
+[ 337] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000001b 0000006e
+[dbg] ar_sysex_to_raw: calc chksum= 0000001b 0000006e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 338] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000001b 0x0000006e
+[ 338] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000073 0000000e
+[dbg] ar_sysex_to_raw: calc chksum= 00000073 0000000e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 339] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000073 0x0000000e
+[ 339] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000000d 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 0000000d 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 340] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000000d 0x00000001
+[ 340] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000073 0000000e
+[dbg] ar_sysex_to_raw: calc chksum= 00000073 0000000e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 341] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000073 0x0000000e
+[ 341] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000071 00000055
+[dbg] ar_sysex_to_raw: calc chksum= 00000071 00000055
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 342] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000071 0x00000055
+[ 342] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000001 00000051
+[dbg] ar_sysex_to_raw: calc chksum= 00000001 00000051
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 343] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000001 0x00000051
+[ 343] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000047 00000042
+[dbg] ar_sysex_to_raw: calc chksum= 00000047 00000042
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 344] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000047 0x00000042
+[ 344] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000073 0000001c
+[dbg] ar_sysex_to_raw: calc chksum= 00000073 0000001c
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 345] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000073 0x0000001c
+[ 345] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000005d 00000072
+[dbg] ar_sysex_to_raw: calc chksum= 0000005d 00000072
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 346] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000005d 0x00000072
+[ 346] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006f 00000006
+[dbg] ar_sysex_to_raw: calc chksum= 0000006f 00000006
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 347] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006f 0x00000006
+[ 347] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 348] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 348] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 349] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 349] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 350] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 350] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 351] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 351] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000023 0000006a
+[dbg] ar_sysex_to_raw: calc chksum= 00000023 0000006a
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 352] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000023 0x0000006a
+[ 352] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 353] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 353] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 354] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 354] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 355] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 355] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000079 0000004e
+[dbg] ar_sysex_to_raw: calc chksum= 00000079 0000004e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 356] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000079 0x0000004e
+[ 356] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 357] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 357] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 358] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 358] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 359] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 359] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 360] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 360] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 361] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 361] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 362] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 362] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 363] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 363] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 364] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 364] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 365] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 365] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 366] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 366] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 367] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 367] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000063 00000006
+[dbg] ar_sysex_to_raw: calc chksum= 00000063 00000006
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 368] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000063 0x00000006
+[ 368] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000005b 00000032
+[dbg] ar_sysex_to_raw: calc chksum= 0000005b 00000032
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 369] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000005b 0x00000032
+[ 369] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 00000023 00000031
+[dbg] ar_sysex_to_raw: calc chksum= 00000023 00000031
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 370] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000023 0x00000031
+[ 370] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 371] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 371] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 372] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 372] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 373] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 373] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 374] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 374] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 375] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 375] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 376] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 376] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 377] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 377] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 378] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 378] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 379] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 379] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 380] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 380] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 381] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 381] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 382] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 382] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=15090
+[dbg] ar_sysex_to_raw: syxDatSz=15075
+[dbg] ar_sysex_to_raw:  syx chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: calc chksum= 0000006e 0000002e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000075 0x00000068 (0x3ae8)
+[ 383] meta obj_type = 2
+[dbg] ar_sysex_encode: encoded 13190 raw bytes to 15075 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000006e 0x0000002e
+[ 383] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000009 0000002f
+[dbg] ar_sysex_to_raw: calc chksum= 00000009 0000002f
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 384] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000009 0x0000002f
+[ 384] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 0000000b 00000008
+[dbg] ar_sysex_to_raw: calc chksum= 0000000b 00000008
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 385] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x0000000b 0x00000008
+[ 385] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 386] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 386] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 387] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 387] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 388] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 388] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 389] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 389] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 390] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 390] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 391] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 391] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 392] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 392] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 393] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 393] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 394] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 394] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 395] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 395] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 396] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 396] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 397] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 397] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 398] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 398] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=1506
+[dbg] ar_sysex_to_raw: syxDatSz=1491
+[dbg] ar_sysex_to_raw:  syx chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: calc chksum= 00000000 00000001
+[dbg] ar_sysex_to_raw: syx data size = 0x0000000b 0x00000058 (0x05d8)
+[ 399] meta obj_type = 3
+[dbg] ar_sysex_encode: encoded 1304 raw bytes to 1491 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000000 0x00000001
+[ 399] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=107
+[dbg] ar_sysex_to_raw: syxDatSz=92
+[dbg] ar_sysex_to_raw:  syx chksum= 00000004 00000041
+[dbg] ar_sysex_to_raw: calc chksum= 00000004 00000041
+[dbg] ar_sysex_to_raw: syx data size = 0x00000000 0x00000061 (0x0061)
+[ 400] meta obj_type = 5
+[dbg] ar_sysex_encode: encoded 80 raw bytes to 92 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000004 0x00000041
+[ 400] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=107
+[dbg] ar_sysex_to_raw: syxDatSz=92
+[dbg] ar_sysex_to_raw:  syx chksum= 00000003 0000007e
+[dbg] ar_sysex_to_raw: calc chksum= 00000003 0000007e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000000 0x00000061 (0x0061)
+[ 401] meta obj_type = 5
+[dbg] ar_sysex_encode: encoded 80 raw bytes to 92 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000003 0x0000007e
+[ 401] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=107
+[dbg] ar_sysex_to_raw: syxDatSz=92
+[dbg] ar_sysex_to_raw:  syx chksum= 00000003 0000007e
+[dbg] ar_sysex_to_raw: calc chksum= 00000003 0000007e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000000 0x00000061 (0x0061)
+[ 402] meta obj_type = 5
+[dbg] ar_sysex_encode: encoded 80 raw bytes to 92 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000003 0x0000007e
+[ 402] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=107
+[dbg] ar_sysex_to_raw: syxDatSz=92
+[dbg] ar_sysex_to_raw:  syx chksum= 00000003 0000007e
+[dbg] ar_sysex_to_raw: calc chksum= 00000003 0000007e
+[dbg] ar_sysex_to_raw: syx data size = 0x00000000 0x00000061 (0x0061)
+[ 403] meta obj_type = 5
+[dbg] ar_sysex_encode: encoded 80 raw bytes to 92 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000003 0x0000007e
+[ 403] ok (to syx)
+[dbg] ar_sysex_to_raw: syxMsgSz=2395
+[dbg] ar_sysex_to_raw: syxDatSz=2380
+[dbg] ar_sysex_to_raw:  syx chksum= 00000014 00000077
+[dbg] ar_sysex_to_raw: calc chksum= 00000014 00000077
+[dbg] ar_sysex_to_raw: syx data size = 0x00000012 0x00000051 (0x0951)
+[ 404] meta obj_type = 4
+[ 404] settings
+[dbg] ar_sysex_encode: encoded 2082 raw bytes to 2380 syx bytes
+[dbg] ar_raw_to_sysex: chksum= 0x00000014 0x00000077
+[ 404] ok (to syx)
+ok, all done. parsed 405 sysex messages.
