@@ -42,4 +42,6 @@
 #endif /* AR_DEBUG */
 
 
+#include "cplusplus_end.h"
+
 #endif /* __AR_DEBUG_H__ */

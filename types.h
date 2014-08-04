@@ -135,6 +135,8 @@ typedef union {
       sU8 lo;
    } b;
 
+   sU8 a[2];
+
    sU16 v; /* only access for RAM copies, endianess is undefined */
 } s_u16_t;
 

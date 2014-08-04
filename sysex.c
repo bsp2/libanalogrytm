@@ -434,7 +434,6 @@ ar_error_t ar_sysex_to_raw(sU8             *_dstBuf,
 
       if(AR_ERR_OK == ret)
       {
-         /* (note) regarding the 'unknown' 2 bytes: see loc_write_sysex_magic2() */
          sU32 syxDatSz = (syxMsgSz - 10u/*header*/ - 2u/*chksum*/ - 2u/*data_size*/ - 1u/*0xF7*/);
          sU32 rawDatSz;
          sU32 fullPkgSz = syxDatSz;
