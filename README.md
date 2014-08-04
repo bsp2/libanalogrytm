@@ -4,7 +4,7 @@ libanalogrytm
 Portable Sysex Library for the Elektron Analog Rytm Drum Computer
 
 
-== Introduction ==
+## Introduction
 
 The aim of this project is to create an open-source library that can be used to
 decode, modify, and encode system exclusive messages sent/received by the Analog Rytm MIDI synthesizer.
@@ -12,7 +12,7 @@ decode, modify, and encode system exclusive messages sent/received by the Analog
 By design, the library itself does _NOT_ contain any actual MIDI I/O or user interface code.
 
 
-== Legal ==
+## Legal
 
 This is not an official Elektron development.
 
@@ -21,7 +21,7 @@ All file format information has been found out by analyzing/comparing hundreds o
 This library may be used in both open and closed source software (see LICENSE).
 
 
-== Status ==
+## Status
 
 - The basic AR sysex object types (kit, sound, pattern, song, settings, global) have been identified.
 
