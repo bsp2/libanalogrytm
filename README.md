@@ -30,4 +30,4 @@ This library may be used in both open and closed source software (see [LICENSE](
 - Most of the pattern format has been analyzed. See [pattern.h](../master/pattern.h).
 
 - The library can convert a "whole project" .syx file (sent by the AR) to raw data, and back to .syx again.
-  See [testcases/main.c](../master/testcases/main.c).
+  See [testcases/main.c](../master/testcases/main.c). Example output: [log.txt](../master/vs2013/libanalogrytm_test/Debug/log.txt).
