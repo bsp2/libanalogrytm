@@ -77,6 +77,8 @@
 #endif
 
 
+#ifndef LIBANALOGRYTM_SKIP_TYPEDEFS
+
 typedef char                sChar; /* (note) system dependent: either signed or unsigned */
 typedef unsigned char       sU8;
 typedef signed char         sS8;
@@ -96,6 +98,8 @@ typedef sSI                 s_error_t;
 
 typedef float               sF32;
 typedef double              sF64;
+
+#endif // LIBANALOGRYTM_SKIP_TYPEDEFS
 
 
 #define S_TRUE   (1)

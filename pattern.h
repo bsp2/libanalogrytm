@@ -279,14 +279,14 @@ typedef struct { /* 0x3386 bytes */
    sU8            pattern_len;      /* @0x337D           Is this really used ?
                                      *                   Track len and this value change when pattern length is changed
                                      */
-   sU8            __unknown2;       /* @0x337E           Reads 0x00 */
-   sU8            __unknown3;       /* @0x337F           Reads 0x01 */
-   sU8            __unknown4;       /* @0x3380           Reads 0x00 */
-   sU8            __unknown5;       /* @0x3381           Reads 0x00 */
-   sU8            __unknown6;       /* @0x3382           Reads 0x00 */
+   sU8            __unknown2;       /* @0x337E           Reads 0x00 <void> masterChange MSB */
+   sU8            __unknown3;       /* @0x337F           Reads 0x01 <void> masterChange LSB */
+   sU8            __unknown4;       /* @0x3380           Reads 0x00 <void> kitnr */
+   sU8            __unknown5;       /* @0x3381           Reads 0x00 <void> swingAmount */
+   sU8            __unknown6;       /* @0x3382           Reads 0x00 <void> timeMode (normal or advanced) */
    sU8            pattern_speed;    /* @0x3383           See AR_SPD_xxx. */
-   sU8            __unknown7;       /* @0x3384           Reads 0x00 */
-   sU8            __unknown8;       /* @0x3385           Reads 0x00 */
+   sU8            __unknown7;       /* @0x3384           Reads 0x00 <void> timeScale */
+   sU8            __unknown8;       /* @0x3385           Reads 0x00 <void> quantize */
 } ar_pattern_t;
 
 

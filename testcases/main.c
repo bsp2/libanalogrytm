@@ -84,6 +84,14 @@ static void tc_pattern_request(sU8 *buf) {
    }
 }
 
+/* ---------------------------------------------------------------------------- tc_kit_request */
+static void tc_kit_request(sU8 *buf) {
+   if(AR_ERR_OK == ar_kit_request(buf, 0, (0 * 16) + 0))
+   {
+      printf("ok\n");
+   }
+}
+
 /* ---------------------------------------------------------------------------- tc_syx_to_raw */
 static void tc_syx_to_raw(sU8 *raw, sU8 *syx, const char *fname) {
    sU32 syxSz;
@@ -401,7 +409,7 @@ int main(int argc, char**argv) {
 
    memset(buf, 0xCC, BUF_SIZE * 3);
 
-   //tc_pattern_request(buf);
+   // tc_pattern_request(buf);
 
    //tc_syx_to_raw(buf, syx, SYX_PATH "pat/d01_empty.syx");
    //tc_syx_to_raw(buf, syx, SYX_PATH "kit_funkydrummer.syx");
@@ -416,11 +424,14 @@ int main(int argc, char**argv) {
    //tc_syx_to_raw_to_syx(buf, syx, resyx, SYX_PATH "song.syx");
    //tc_syx_to_raw_to_syx(buf, syx, resyx, SYX_PATH "sound.syx");
 
-   tc_multi_syx_to_raw_to_syx(buf, syx, resyx, SYX_PATH "whole_project_dmx.syx");
+   // tc_multi_syx_to_raw_to_syx(buf, syx, resyx, SYX_PATH "whole_project_dmx.syx");
 
    //tc_pattern_syx_to_raw_to_syx(buf, syx, resyx, SYX_PATH "pat/a01_64steps_t1all.syx");
    
+   // tc_kit_request(buf);
 
+   // tc_syx_to_raw(buf, syx, SYX_PATH "kit/kit_01.syx");
+   tc_syx_to_raw_to_syx(buf, syx, resyx, SYX_PATH "kit/kit_01.syx");
 
    free(buf);
 

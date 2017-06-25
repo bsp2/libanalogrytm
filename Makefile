@@ -12,6 +12,7 @@ EXE_OBJ= \
 
 LIB_OBJ= \
 	pattern.o \
+	kit.o \
 	sysex.o
 
 OBJ= \

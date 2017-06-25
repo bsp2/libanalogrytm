@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 01Aug2014, 04Aug2014
+ * ---- changed: 01Aug2014, 04Aug2014, 28Feb2016
  * ----
  * ----
  */
@@ -39,6 +39,7 @@
 #include "error.h"
 #include "sysex.h"
 #include "pattern.h"
+#include "kit.h"
 
 
 #endif /* __AR_INC_H__ */
