@@ -409,6 +409,44 @@ int main(int argc, char**argv) {
 
    memset(buf, 0xCC, BUF_SIZE * 3);
 
+#if 1
+   printf("sizeof(ar_kit_t)=%d (0x%08x)\n", sizeof(ar_kit_t), sizeof(ar_kit_t));
+   printf("sizeof(ar_kit_track_t)=%d (0x%08x)\n", sizeof(ar_kit_track_t), sizeof(ar_kit_track_t));
+   {
+      ar_kit_t kit;
+#define Dprintoff(n) printf("offset of " #n " = %d (0x%08x)\n", (((sU8*)&(n)) - ((sU8*)&kit)), (((sU8*)&(n)) - ((sU8*)&kit)))
+      Dprintoff(kit.tracks[0].sample_tune);
+      Dprintoff(kit.tracks[1].sample_tune);
+      Dprintoff(kit.fx_delay_time);
+      Dprintoff(kit.fx_reverb_decay);
+      Dprintoff(kit.fx_dist_amount);
+      Dprintoff(kit.fx_comp_threshold);
+      Dprintoff(kit.fx_comp_release);
+      Dprintoff(kit.fx_lfo_depth_msb);
+      Dprintoff(kit.perf_ctl[0]);
+      Dprintoff(kit.scene_ctl[0]);
+      Dprintoff(kit.current_scene_id);
+#undef Dprintoff
+      printf("\n\n");
+   }
+#endif
+
+#if 1
+   printf("sizeof(ar_pattern_t)=%d (0x%08x)\n", sizeof(ar_pattern_t), sizeof(ar_pattern_t));
+   printf("sizeof(ar_pattern_track_t)=%d (0x%08x)\n", sizeof(ar_pattern_track_t), sizeof(ar_pattern_track_t));
+   {
+      ar_pattern_t pat;
+#define Dprintoff(n) printf("offset of " #n " = %d (0x%08x)\n", (((sU8*)&(n)) - ((sU8*)&pat)), (((sU8*)&(n)) - ((sU8*)&pat)))
+      Dprintoff(pat.tracks[0].num_steps);
+      Dprintoff(pat.tracks[1].num_steps);
+      Dprintoff(pat.plock_seqs[0].data[0]);
+      Dprintoff(pat.plock_seqs[1].data[0]);
+      Dprintoff(pat.pattern_len);
+      Dprintoff(pat.pattern_speed);
+#undef Dprintoff
+   }
+#endif
+
    // tc_pattern_request(buf);
 
    //tc_syx_to_raw(buf, syx, SYX_PATH "pat/d01_empty.syx");
@@ -431,7 +469,7 @@ int main(int argc, char**argv) {
    // tc_kit_request(buf);
 
    // tc_syx_to_raw(buf, syx, SYX_PATH "kit/kit_01.syx");
-   tc_syx_to_raw_to_syx(buf, syx, resyx, SYX_PATH "kit/kit_01.syx");
+   // tc_syx_to_raw_to_syx(buf, syx, resyx, SYX_PATH "kit/kit_01.syx");
 
    free(buf);
 

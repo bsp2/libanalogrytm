@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 28Feb2016, 29Mar2016, 04Apr2016, 21Nov2016
+ * ---- changed: 28Feb2016, 29Mar2016, 04Apr2016, 21Nov2016, 07Jul2017
  * ----
  * ----
  */
@@ -52,15 +52,15 @@
 #define AR_KIT_V2_SZ      (0x0A57u)  /* total size of pattern 'raw' 8bit data                */
 #define AR_KIT_MAX_SZ     AR_KIT_V1_SZ
 
-#define AR_KIT_TRACK_SZ  (172u)   /* total size of per track 'raw' kit data */
+#define AR_KIT_TRACK_SZ  (168u)   /* total size of per track 'raw' kit data (v2) (v1=0xAC bytes) */
 
 #define AR_KIT_TRACK1_SAMPLE_START_OFFSET  (0x62)  /* offset to first track sample start offset (byte) */
 #define AR_KIT_TRACK1_SAMPLE_END_OFFSET    (0x64)  /* offset to first track sample end offset (byte) */
 
 
-typedef struct { /* 0xAC (172) bytes */
+typedef struct { /* 0xA8 (168) bytes */
 
-   sU8 __unknown_arr1[0x4a];
+   sU8 __unknown_arr1[0x1a];
 
    sU8 synth_param_8;         /* @0x004a  sdhard: level (8)
                                           bdhard: level (8)
@@ -262,131 +262,138 @@ typedef struct { /* 0xAC (172) bytes */
                                            8:         9:            10:         11:
                                           12:        13:bd fm       14:sd fm    15:
                               */
+   sU8 __unknown_arr3[45 /*0xA8-0x7b*/];
 } ar_kit_track_t;
 
 
 /*
  *
- ** Pattern structure
+ ** Kit structure
  *
  */
 typedef struct { /* 0x0A87 bytes in v1, 0x0a57 bytes in v2 */
-   ar_kit_track_t tracks[12];    /* @0x0000..0x080f */
+   sU8 __unknown_arr1[0x30];
 
-   sU8 __unknown_arr1[0x32];   /* @0x0810..0x0842 */
+   ar_kit_track_t tracks[12];    /* @0x0030..0x080f */
+
+   /* /\* sU8 __unknown_arr1[0x32];   /\\* @0x0810..0x0842 *\\/ *\/ */
+   sU8 __unknown_arr2[0x2];    /* @0x0810..0x0812 */
 
    // FX-track parameters:
-   sU8 fx_delay_time;          /* @0x0842   */
-   sU8 __unused_pad1;          /* @0x0843   */
+   sU8 fx_delay_time;          /* @0x0812   */
+   sU8 __unused_pad1;          /* @0x0813   */
 
-   sU8 fx_delay_pingpong;      /* @0x0844  0x00=off, 0x01=on */
-   sU8 __unused_pad2;          /* @0x0845   */
+   sU8 fx_delay_pingpong;      /* @0x0814  0x00=off, 0x01=on */
+   sU8 __unused_pad2;          /* @0x0815   */
 
-   sU8 fx_delay_stereo_width;  /* @0x0846  0x40=+0 */
-   sU8 __unused_pad3;          /* @0x0847   */
+   sU8 fx_delay_stereo_width;  /* @0x0816  0x40=+0 */
+   sU8 __unused_pad3;          /* @0x0817   */
 
-   sU8 fx_delay_feedback;      /* @0x0848   */
-   sU8 __unused_pad4;          /* @0x0849   */
+   sU8 fx_delay_feedback;      /* @0x0818   */
+   sU8 __unused_pad4;          /* @0x0819   */
 
-   sU8 fx_delay_hpf;           /* @0x084a   */
-   sU8 __unused_pad5;          /* @0x084b   */
+   sU8 fx_delay_hpf;           /* @0x081a   */
+   sU8 __unused_pad5;          /* @0x081b   */
 
-   sU8 fx_delay_lpf;           /* @0x084c   */
-   sU8 __unused_pad6;          /* @0x084d   */
+   sU8 fx_delay_lpf;           /* @0x081c   */
+   sU8 __unused_pad6;          /* @0x081d   */
 
-   sU8 fx_delay_reverb_send;   /* @0x084e   */
-   sU8 __unused_pad7;          /* @0x084f   */
+   sU8 fx_delay_reverb_send;   /* @0x081e   */
+   sU8 __unused_pad7;          /* @0x081f   */
 
-   sU8 fx_delay_volume;        /* @0x0850   */
-   sU8 __unused_pad8;          /* @0x0851   */
+   sU8 fx_delay_volume;        /* @0x0820   */
+   sU8 __unused_pad8;          /* @0x0821   */
 
-   sU8 fx_dist_reverb_send;    /* @0x0852   */
-   sU8 __unused_pad9;          /* @0x0853   */
+   sU8 fx_dist_reverb_send;    /* @0x0822   */
+   sU8 __unused_pad9;          /* @0x0823   */
 
-   sU8 fx_dist_delay_pre_post; /* @0x0854   */
-   sU8 __unused_pad11;         /* @0x0855   */
+   sU8 fx_dist_delay_pre_post; /* @0x0824   */
+   sU8 __unused_pad11;         /* @0x0825   */
 
-   sU8 fx_reverb_pre;          /* @0x0856   */
-   sU8 __unused_pad12;         /* @0x0857   */
+   sU8 fx_reverb_pre;          /* @0x0826   */
+   sU8 __unused_pad12;         /* @0x0827   */
 
-   sU8 fx_reverb_decay;        /* @0x0858   */
-   sU8 __unused_pad13;         /* @0x0859   */
+   sU8 fx_reverb_decay;        /* @0x0828   */
+   sU8 __unused_pad13;         /* @0x0829   */
 
-   sU8 fx_reverb_freq;         /* @0x085a   */
-   sU8 __unused_pad14;         /* @0x085b   */
+   sU8 fx_reverb_freq;         /* @0x082a   */
+   sU8 __unused_pad14;         /* @0x082b   */
 
-   sU8 fx_reverb_gain;         /* @0x085c   */
-   sU8 __unused_pad15;         /* @0x085d   */
+   sU8 fx_reverb_gain;         /* @0x082c   */
+   sU8 __unused_pad15;         /* @0x082d   */
 
-   sU8 fx_reverb_hpf;          /* @0x085e   */
-   sU8 __unused_pad16;         /* @0x085f   */
+   sU8 fx_reverb_hpf;          /* @0x082e   */
+   sU8 __unused_pad16;         /* @0x082f   */
 
-   sU8 fx_reverb_lpf;          /* @0x0860   */
-   sU8 __unused_pad17;         /* @0x0861   */
+   sU8 fx_reverb_lpf;          /* @0x0830   */
+   sU8 __unused_pad17;         /* @0x0831   */
 
-   sU8 fx_reverb_volume;       /* @0x0862   */
-   sU8 __unused_pad18;         /* @0x0863   */
+   sU8 fx_reverb_volume;       /* @0x0832   */
+   sU8 __unused_pad18;         /* @0x0833   */
 
-   sU8 fx_dist_reverb_pre_post; /* @0x0864  */
-   sU8 __unused_pad19;          /* @0x0865  */
+   sU8 fx_dist_reverb_pre_post; /* @0x0834  */
+   sU8 __unused_pad19;          /* @0x0835  */
 
-   sU8 fx_dist_amount;         /* @0x0866   */
-   sU8 __unused_pad20;         /* @0x0867   */
+   sU8 fx_dist_amount;         /* @0x0836   */
+   sU8 __unused_pad20;         /* @0x0837   */
 
-   sU8 fx_dist_sym;            /* @0x0868   */
-   sU8 __unused_pad21;         /* @0x0869   */
+   sU8 fx_dist_sym;            /* @0x0838   */
+   sU8 __unused_pad21;         /* @0x0839   */
 
-   sU8 fx_comp_threshold;      /* @0x086C   */
-   sU8 __unused_pad22;         /* @0x086D   */
+   sU8 __unknown_fx_1;         /* @0x083A   */
+   sU8 __unknown_fx_2;         /* @0x083B   */
 
-   sU8 fx_comp_attack;         /* @0x086E   */
-   sU8 __unused_pad23;         /* @0x086F   */
+   sU8 fx_comp_threshold;      /* @0x083C   */
+   sU8 __unused_pad22;         /* @0x083D   */
 
-   sU8 fx_comp_release;        /* @0x0870   */
-   sU8 __unused_pad24;         /* @0x0871   */
+   sU8 fx_comp_attack;         /* @0x083E   */
+   sU8 __unused_pad23;         /* @0x083F   */
 
-   sU8 fx_comp_ratio;          /* @0x0872   */
-   sU8 __unused_pad25;         /* @0x0873   */
+   sU8 fx_comp_release;        /* @0x0840   */
+   sU8 __unused_pad24;         /* @0x0841   */
 
-   sU8 fx_comp_seq;            /* @0x0874   */
-   sU8 __unused_pad26;         /* @0x0875   */
+   sU8 fx_comp_ratio;          /* @0x0842   */
+   sU8 __unused_pad25;         /* @0x0843   */
 
-   sU8 fx_comp_gain;           /* @0x0876   */
-   sU8 __unused_pad27;         /* @0x0877   */
+   sU8 fx_comp_seq;            /* @0x0844   */
+   sU8 __unused_pad26;         /* @0x0845   */
 
-   sU8 fx_comp_mix;            /* @0x0878   */
-   sU8 __unused_pad28;         /* @0x0879   */
+   sU8 fx_comp_gain;           /* @0x0846   */
+   sU8 __unused_pad27;         /* @0x0847   */
 
-   sU8 fx_comp_volume;         /* @0x087a   */
-   sU8 __unused_pad29;         /* @0x087b   */
+   sU8 fx_comp_mix;            /* @0x0848   */
+   sU8 __unused_pad28;         /* @0x0849   */
 
-   sU8 fx_lfo_speed;           /* @0x087c   */
-   sU8 __unused_pad30;         /* @0x087d   */
+   sU8 fx_comp_volume;         /* @0x084a   */
+   sU8 __unused_pad29;         /* @0x084b   */
 
-   sU8 fx_lfo_multiplier;      /* @0x087e   */
-   sU8 __unused_pad31;         /* @0x087f   */
+   sU8 fx_lfo_speed;           /* @0x084c   */
+   sU8 __unused_pad30;         /* @0x084d   */
 
-   sU8 fx_lfo_fade;            /* @0x0880   */
-   sU8 __unused_pad32;         /* @0x0881   */
+   sU8 fx_lfo_multiplier;      /* @0x084e   */
+   sU8 __unused_pad31;         /* @0x084f   */
 
-   sU8 fx_lfo_dest;            /* @0x0882   */
-   sU8 __unused_pad33;         /* @0x0883   */
+   sU8 fx_lfo_fade;            /* @0x0850   */
+   sU8 __unused_pad32;         /* @0x0851   */
 
-   sU8 fx_lfo_wave;            /* @0x0884   */
-   sU8 __unused_pad34;         /* @0x0885   */
+   sU8 fx_lfo_dest;            /* @0x0852   */
+   sU8 __unused_pad33;         /* @0x0853   */
 
-   sU8 fx_lfo_start_phase;     /* @0x0886   */
-   sU8 __unused_pad35;         /* @0x0887   */
+   sU8 fx_lfo_wave;            /* @0x0854   */
+   sU8 __unused_pad34;         /* @0x0855   */
 
-   sU8 fx_lfo_mode;            /* @0x0888   */
-   sU8 __unused_pad36;         /* @0x0889   */
+   sU8 fx_lfo_start_phase;     /* @0x0856   */
+   sU8 __unused_pad35;         /* @0x0857   */
 
-   sU8 fx_lfo_depth_msb;       /* @0x088a   */
-   sU8 fx_lfo_depth_lsb;       /* @0x088b   */
+   sU8 fx_lfo_mode;            /* @0x0858   */
+   sU8 __unused_pad36;         /* @0x0859   */
 
-   sU8 __unknown_arr2[0x2e];   /* @0x088c..0x08b9 */
+   sU8 fx_lfo_depth_msb;       /* @0x085a   */
+   sU8 fx_lfo_depth_lsb;       /* @0x085b   */
 
-   sU8 perf_ctl[48 * 4];       /* @0x08ba..0x0979 */
+   sU8 __unknown_arr3[0x2E];   /* @0x085c..0x088A */
+
+   sU8 perf_ctl[48 * 4];       /* @0x088a..0x0949 */
 
    /* @0x08ba: perf1: (clear)
                  off=2234 (0x8ba) a=0x01 b=0x00
@@ -423,9 +430,9 @@ typedef struct { /* 0x0A87 bytes in v1, 0x0a57 bytes in v2 */
                  off=2249 (0x8c9) a=0x00 b=0x01  <-- perf id
    */
 
-   sU8 __unknown_arr3[0x15];   /* @0x097a..0x098e */
+   sU8 __unknown_arr4[0x15];   /* @0x094a..0x095e */
 
-   sU8 scene_ctl[48 * 4];      /* @0x098f..0x0A4e */
+   sU8 scene_ctl[48 * 4];      /* @0x095f..0x0A1e */
 
    /*          scene1: (assign sample tune +1)
                  off=2447 (0x98f) a=0x00 b=0x41
@@ -446,14 +453,11 @@ typedef struct { /* 0x0A87 bytes in v1, 0x0a57 bytes in v2 */
                  off=2640 (0xa50) a=0x00 b=0x01
    */
 
-   sU8 __unknown_pad37;        /* @0x0a4f */
-   sU8 current_scene_id;       /* @0x0a50 */
+   sU8 __unknown_pad37;        /* @0x0a1f */
+   sU8 current_scene_id;       /* @0x0a20 */
 
    /* (note) 54 unknown bytes not present in v1 kit data */
-   /*sU8  __unknown_arr4[AR_KIT_V1_SZ - 0x0a51];*/   /* @0x0a51..0x0a86 */
-
-   /* (note) 6 unknown bytes not present in v2 kit data */
-   /*sU8  __unknown_arr4[AR_KIT_V2_SZ - 0x0a51];*/   /* @0x0a51..0x0a56 */
+   sU8  __unknown_arr5[54];    /* @0x0a21..0x0a56 */
 } ar_kit_t;
 
 

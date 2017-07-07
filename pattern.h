@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 30Jul2014, 01Aug2014, 04Aug2014
+ * ---- changed: 30Jul2014, 01Aug2014, 04Aug2014, 07Jul2017
  * ----
  * ----
  */
@@ -180,7 +180,7 @@
 
 /*
  *
- ** Track trigger types  (see ar_track_t.trigs)
+ ** Track trigger types  (see ar_pattern_track_t.trigs)
  *
  */
 
@@ -208,14 +208,39 @@
  *                  sw.on: 1st step byte | 0x04       0x47 0x81
  */
 
+/* re-test [07Jul2017]:
+ *
+ *      off: 0x0200
+ *           0x0300
+ *           0x0000 (after pattern clear)
+ *  regular: 0x0201
+ *           0x0301
+ *      syn: 0x0b81 (on)
+ *      syn: 0x0b01 (off)
+ *      smp: 0x1a01 (off)
+ *      smp: 0x1b01 (on)
+ *      env: 0x2101 (off)
+ *      env: 0x2301 (on)
+ *      lfo: 0x4301 (off)
+ *      lfo: 0x4701 (on)
+ *    slide: 0x0321 (on)
+ *    swing: 0x0311 (on)
+ *     mute: 0x0305 (on)
+ *   accent: 0x0309 (on)
+ *   retrig: 0x8301 (on)
+ * trigless: 0x7801 (on) (retrig etc is off)
+ *
+ *
+ *
+
 /* (note) big endian */
-#define AR_TRIG_UNKNOWN4  (0x0010u)  /* <void> swing                       */
+#define AR_TRIG_SWING     (0x0010u)  /* <void> swing                       */
 #define AR_TRIG_NOTE_ON   (0x0001u)  /* note trig ("enable")               */
-#define AR_TRIG_UNKNOWN5  (0x0020u)  /* <void> slide                       */
-#define AR_TRIG_UNKNOWN1  (0x0002u)  /* <void> trigless                    */
+#define AR_TRIG_SLIDE     (0x0020u)  /* <void> slide                       */
+#define AR_TRIG_UNKNOWN1  (0x0002u)  /* ?                                  */
 #define AR_TRIG_UNKNOWN6  (0x0040u)  /* ?                                  */
-#define AR_TRIG_UNKNOWN2  (0x0004u)  /* <void> mute                        */
-#define AR_TRIG_UNKNOWN3  (0x0008u)  /* <void> accent                      */
+#define AR_TRIG_MUTE      (0x0004u)  /* <void> mute                        */
+#define AR_TRIG_ACCENT    (0x0008u)  /* <void> accent                      */
 #define AR_TRIG_SYN_EN    (0x0800u)  /* enable synswitch p-lock            */
 #define AR_TRIG_SYN_SW    (0x0080u)  /* synswitch bit (set=on, unset=off)  */
 #define AR_TRIG_SMP_EN    (0x1000u)  /* enable smpswitch p-lock            */
@@ -224,7 +249,8 @@
 #define AR_TRIG_ENVF_SW   (0x0200u)  /* filter env bit (set=on, unset=off) */
 #define AR_TRIG_LFO_EN    (0x4000u)  /* enable LFO p-lock                  */
 #define AR_TRIG_LFO_SW    (0x0400u)  /* LFO bit (set=on, unset=off)        */
-#define AR_TRIG_UNKNOWN15 (0x8000u)  /* <void> retrig                      */
+#define AR_TRIG_RETRIG    (0x8000u)  /* <void> retrig                      */
+#define AR_TRIG_TRIGLESS  (0x7801u)  /* trigless trig (mask=0x7801)        */
 
 
 
@@ -234,24 +260,30 @@
  *
  */
 typedef struct { /* 0x288 bytes */
-   s_u16_t trigs[64];                   /* @0x0000..0x007F.  See AR_TRIG_xxx flags.                   */
-   sU8     notes[64];                   /* @0x0080..0x00BF.  0xFF=unset, MIDI note otherwise
-                                         *                    (default is C-4 == 0x3C, 0x3B="-1", 0x3D="+1") */
-   sU8     velocities[64];              /* @0x00C0..0x00FF.  0xFF=unset, 0x00=0, 0x7F=127             */
-   sU8     note_lengths[64];            /* @0x0100..0x013F.  0=0.125, 1=0.188, 2=1/64, 3=0.313, 6=1/32, .., 126=128, 127=inf */
-   sS8     micro_timings[64];           /* @0x0140..0x017F.  Micro timing (-23..+23) */
-   sU8     retrig_lengths[64];          /* @0x0180..0x01bF.  Retrig lengths (0..126(=128), 127=inf)   */
-   sU8     retrig_rates[64];            /* @0x01C0..0x01FF.  Retrig rates (0(=1/1)..16(=1/80))        */
-   sS8     retrig_velocity_offsets[64]; /* @0x0200..0x023F.  Retrig velocity offsets (-128..+127)     */
-   sU8     trig_note;                   /* @0x0240           <void> trigNote                          */
-   sU8     trig_velocity;               /* @0x0241           <void> trigVelocity                      */
-   sU8     trig_note_length;            /* @0x0242           <void> trigLength                        */
-   s_u16_t trig_flags;                  /* @0x0243           <void> trigFlags                         */
-   sU8     __unknown2;                  /* @0x0245           <void> unknown                           */
-   sU8     num_steps;                   /* @0x0246           Number of steps (1..64)                  */
-   sU8     quantize_amount;             /* @0x0247           <void> quantizeAmount                    */
-   sU8     sound_locks[64];             /* @0x0248..0x0287   <void> soundLocks                        */
-} ar_track_t;
+   s_u16_t trigs[64];                   /* @0x0004..0x0083.  See AR_TRIG_xxx flags. (BIG ENDIAN!)     */
+   sU8     notes[64];                   /* @0x0084..0x00C3.  0xFF=unset, MIDI note otherwise (lower 7 bits)
+                                         *                    (default is C-4 == 0x3C, 0x3B="-1", 0x3D="+1")
+                                         *                   bit7: 1=no trig condition, 0=have trig condition
+                                         *                          ==> 0x7F = default note with trig cond
+                                         *                          ==> 0xFF = default note without trig cond
+                                         */
+   sU8     velocities[64];              /* @0x00C4..0x0103.  0xFF=unset, 0x00=0, 0x7F=127             */
+   sU8     note_lengths[64];            /* @0x0104..0x0143.  0=0.125, 1=0.188, 2=1/64, 3=0.313, 6=1/32, .., 126=128, 127=inf */
+   sS8     micro_timings[64];           /* @0x0144..0x0183.  Micro timing (-23..+23) */
+   sU8     retrig_lengths[64];          /* @0x0184..0x01C3.  Retrig lengths (0..126(=128), 127=inf)   */
+   sU8     retrig_rates[64];            /* @0x01C4..0x0203.  Retrig rates (0(=1/1)..16(=1/80))
+                                         *                    Changing the trig condition of step 1 updates 0x1c4
+                                         */
+   sS8     retrig_velocity_offsets[64]; /* @0x0204..0x0243.  Retrig velocity offsets (-128..+127)     */
+   sU8     trig_note;                   /* @0x0244           <void> trigNote                          */
+   sU8     trig_velocity;               /* @0x0245           <void> trigVelocity                      */
+   sU8     trig_note_length;            /* @0x0246           <void> trigLength                        */
+   s_u16_t trig_flags;                  /* @0x0247           <void> trigFlags (BIG ENDIAN!)           */
+   sU8     __unknown1;                  /* @0x0249           <void> unknown                           */
+   sU8     num_steps;                   /* @0x024A           Number of steps (1..64)                  */
+   sU8     quantize_amount;             /* @0x024B           <void> quantizeAmount                    */
+   sU8     sound_locks[64];             /* @0x024C..0x028B   <void> soundLocks                        */
+} ar_pattern_track_t;
 
 
 /*
@@ -260,9 +292,9 @@ typedef struct { /* 0x288 bytes */
  *
  */
 typedef struct { /* 0x42 bytes */
-   sU8 plock_type;  /* @0x0000           0xFF=unused seq. See AR_PLOCK_TYPE_xxx               */
-   sU8 track_nr;    /* @0x0001           0xFF=unused seq. Tracknr (0..12)                     */
-   sU8 data[64];    /* @0x0002..0x0041.  Plock data (64 steps, value range is type dependent) */
+   sU8 plock_type;  /* @0x20ec           0xFF=unused seq. See AR_PLOCK_TYPE_xxx               */
+   sU8 track_nr;    /* @0x20ed           0xFF=unused seq. Tracknr (0..12)                     */
+   sU8 data[64];    /* @0x20ee..0x212d.  Plock data (64 steps, value range is type dependent) */
 } ar_plock_seq_t;
                     
 
@@ -272,21 +304,21 @@ typedef struct { /* 0x42 bytes */
  *
  */
 typedef struct { /* 0x3386 bytes */
-   sU8            magic_header[4];  /* ??? a version number ??? reads '00 00 00 01' */
-   ar_track_t     tracks[13];       /* @0x0004..0x20EB */
-   ar_plock_seq_t plock_seqs[72];   /* @0x20EC..0x337B */
-   sU8            __unknown1;       /* @0x337C           Reads 0x00  */
-   sU8            pattern_len;      /* @0x337D           Is this really used ?
-                                     *                   Track len and this value change when pattern length is changed
-                                     */
-   sU8            __unknown2;       /* @0x337E           Reads 0x00 <void> masterChange MSB */
-   sU8            __unknown3;       /* @0x337F           Reads 0x01 <void> masterChange LSB */
-   sU8            __unknown4;       /* @0x3380           Reads 0x00 <void> kitnr */
-   sU8            __unknown5;       /* @0x3381           Reads 0x00 <void> swingAmount */
-   sU8            __unknown6;       /* @0x3382           Reads 0x00 <void> timeMode (normal or advanced) */
-   sU8            pattern_speed;    /* @0x3383           See AR_SPD_xxx. */
-   sU8            __unknown7;       /* @0x3384           Reads 0x00 <void> timeScale */
-   sU8            __unknown8;       /* @0x3385           Reads 0x00 <void> quantize */
+   sU8                magic_header[4];  /* ??? a version number ??? reads '00 00 00 01' */
+   ar_pattern_track_t tracks[13];       /* @0x0004..0x20EB */
+   ar_plock_seq_t     plock_seqs[72];   /* @0x20EC..0x337B */
+   sU8                __unknown1;       /* @0x337C           Reads 0x00  */
+   sU8                pattern_len;      /* @0x337D           Is this really used ?
+                                         *                   Track len and this value change when pattern length is changed
+                                         */
+   sU8                __unknown2;       /* @0x337E           Reads 0x00 <void> masterChange MSB */
+   sU8                __unknown3;       /* @0x337F           Reads 0x01 <void> masterChange LSB */
+   sU8                __unknown4;       /* @0x3380           Reads 0x00 <void> kitnr */
+   sU8                __unknown5;       /* @0x3381           Reads 0x00 <void> swingAmount */
+   sU8                __unknown6;       /* @0x3382           Reads 0x00 <void> timeMode (normal or advanced) */
+   sU8                pattern_speed;    /* @0x3383           See AR_SPD_xxx. */
+   sU8                __unknown7;       /* @0x3384           Reads 0x00 <void> timeScale */
+   sU8                __unknown8;       /* @0x3385           Reads 0x00 <void> quantize */
 } ar_pattern_t;
 
 
