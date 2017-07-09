@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 28Feb2016, 29Mar2016, 04Apr2016, 21Nov2016, 07Jul2017
+ * ---- changed: 28Feb2016, 29Mar2016, 04Apr2016, 21Nov2016, 07Jul2017, 09Jul2017
  * ----
  * ----
  */
@@ -242,19 +242,6 @@ typedef struct { /* 0xA8 (168) bytes */
    sU8 lfo_depth_msb;         /* @0x009A  */
    sU8 lfo_depth_lsb;         /* @0x009B  */
 
-   // firmware 1.22b bug:
-   //  sample_trig/def_val/env_trig/synth_trig/lfo_wav/lfo_trig overwrite the LFO settings
-   //   (when changed on the AR or via MIDI CC)
-   /* sU8 sample_trig;           /\* @0x008c  0x01=enable, 0x00=disable (initially 0x40 == on ?!) *\/ */
-   /* sU8 def_vel;               /\* @0x008e  0x65=101 (initially 0=100 ?!) */
-   /* sU8 env_trig;              /\* @0x0090  0x01=enable, 0x00=disable (initially 0x40 == on ?!) *\/ */
-   /* sU8 synth_trig;            /\* @0x0092 */
-   /*                                 0x29: synth trig enable */
-   /*                                 0x22: synth trig disable */
-   /*                             *\/ */
-   /* sU8 def_len;               /\* @0x0094  0x0=0.125, 0x1=0.188, 0x2=1/64, 0xE=1/16, 0x7e=128, 0x7f=inf *\/ */
-   /* sU8 lfo_trig;              /\* @0x0096  0x01=enable, 0x00=disable *\/ */
-
    sU8 def_note;              /* @0x009c  0x3c=0, 0x3d=+1, 0x3b=-1 (initially 0x00 == +0 ?!) */
    sU8 __unknown_arr2[0xd];   /* @0x009d..0x00A9  (correct location of trig/vel/def_len/.. ?) */
    sU8 machine_type;          /* @0x00AA   0:bdhard   1:bdclassic    2:sdhard    3:sdclassic
@@ -272,14 +259,20 @@ typedef struct { /* 0xA8 (168) bytes */
  *
  */
 typedef struct { /* 0x0A87 bytes in v1, 0x0a57 bytes in v2 */
-   sU8 __unknown_arr1[0x30];
+   sU8 __unknown_arr1[0x14];
 
-   ar_kit_track_t tracks[12];    /* @0x0030..0x080f */
+   struct {                    /* @0x0014..0x002b */
+      sU8 level;               /*  actually BIG ENDIAN shorts but LSB is unused (always 0x00) */
+      sU8 __unused_pad1;
+   } track_levels[12];
 
-   /* /\* sU8 __unknown_arr1[0x32];   /\\* @0x0810..0x0842 *\\/ *\/ */
+   sU8 __unknown_arr1b[0x4];   /* @0x002c..0x002f */
+
+   ar_kit_track_t tracks[12];  /* @0x0030..0x080f */
+
    sU8 __unknown_arr2[0x2];    /* @0x0810..0x0812 */
 
-   // FX-track parameters:
+   /* FX-track parameters: */
    sU8 fx_delay_time;          /* @0x0812   */
    sU8 __unused_pad1;          /* @0x0813   */
 
@@ -396,7 +389,7 @@ typedef struct { /* 0x0A87 bytes in v1, 0x0a57 bytes in v2 */
    sU8 perf_ctl[48 * 4];       /* @0x088a..0x0949 */
 
    /* @0x08ba: perf1: (clear)
-                 off=2234 (0x8ba) a=0x01 b=0x00
+                 off=2234 (0x8ba) a=0x01 b=0x00   (note: pre OS1.31 debug output, perf_ctl are now at 0x88a)
                  off=2235 (0x8bb) a=0x00 b=0xff
                  off=2236 (0x8bc) a=0x08 b=0x00
 
