@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 28Feb2016, 29Mar2016, 04Apr2016, 21Nov2016, 07Jul2017, 09Jul2017
+ * ---- changed: 28Feb2016, 29Mar2016, 04Apr2016, 21Nov2016, 07Jul2017, 09Jul2017, 21Aug2017
  * ----
  * ----
  */
@@ -58,9 +58,14 @@
 #define AR_KIT_TRACK1_SAMPLE_END_OFFSET    (0x64)  /* offset to first track sample end offset (byte) */
 
 
+#if 0
+//
+// (note) [21Aug2017] see "sound.h":ar_sound_t
+//
 typedef struct { /* 0xA8 (168) bytes */
 
-   sU8 __unknown_arr1[0x1a];
+   sU8 __unknown_arr1[0x1c];  /* @0x002E  (track1)    name@0x2e+0xc
+                               */
 
    sU8 synth_param_8;         /* @0x004a  sdhard: level (8)
                                           bdhard: level (8)
@@ -249,8 +254,11 @@ typedef struct { /* 0xA8 (168) bytes */
                                            8:         9:            10:         11:
                                           12:        13:bd fm       14:sd fm    15:
                               */
-   sU8 __unknown_arr3[45 /*0xA8-0x7b*/];
+   sU8 __unknown_arr3[43 /*0xA8-0x7b*/];
 } ar_kit_track_t;
+#else
+#define ar_kit_track_t ar_sound_t
+#endif
 
 
 /*
@@ -266,11 +274,11 @@ typedef struct { /* 0x0A87 bytes in v1, 0x0a57 bytes in v2 */
       sU8 __unused_pad1;
    } track_levels[12];
 
-   sU8 __unknown_arr1b[0x4];   /* @0x002c..0x002f */
+   sU8 __unknown_arr1b[0x2];   /* @0x002c..0x002d */
 
-   ar_kit_track_t tracks[12];  /* @0x0030..0x080f */
+   ar_sound_t tracks[12];  /* @0x002E..0x080f */
 
-   sU8 __unknown_arr2[0x2];    /* @0x0810..0x0812 */
+   sU8 __unknown_arr2[0x4];    /* @0x080E..0x0812 */
 
    /* FX-track parameters: */
    sU8 fx_delay_time;          /* @0x0812   */

@@ -447,6 +447,15 @@ int main(int argc, char**argv) {
    }
 #endif
 
+
+#if 1
+   printf("sizeof(ar_sound_t)=%d (0x%08x)\n", sizeof(ar_sound_t), sizeof(ar_sound_t));
+   {
+      ar_sound_t sound;
+      tc_syx_to_raw(buf, syx, SYX_PATH "sound/sound_0.syx");
+   }
+#endif
+
    // tc_pattern_request(buf);
 
    //tc_syx_to_raw(buf, syx, SYX_PATH "pat/d01_empty.syx");

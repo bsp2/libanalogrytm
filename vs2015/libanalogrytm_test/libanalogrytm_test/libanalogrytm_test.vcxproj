@@ -72,12 +72,14 @@
     <ClInclude Include="..\..\..\inc_ar.h" />
     <ClInclude Include="..\..\..\kit.h" />
     <ClInclude Include="..\..\..\pattern.h" />
+    <ClInclude Include="..\..\..\sound.h" />
     <ClInclude Include="..\..\..\sysex.h" />
     <ClInclude Include="..\..\..\types.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\kit.c" />
     <ClCompile Include="..\..\..\pattern.c" />
+    <ClCompile Include="..\..\..\sound.c" />
     <ClCompile Include="..\..\..\sysex.c" />
     <ClCompile Include="..\..\..\testcases\main.c" />
   </ItemGroup>

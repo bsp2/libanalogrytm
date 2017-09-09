@@ -13,6 +13,7 @@ EXE_OBJ= \
 LIB_OBJ= \
 	pattern.o \
 	kit.o \
+	sound.o \
 	sysex.o
 
 OBJ= \

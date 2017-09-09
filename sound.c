@@ -1,5 +1,5 @@
 /* ----
- * ---- file   : kit.c
+ * ---- file   : sound.c
  * ---- author : bsp
  * ---- legal  : Distributed under terms of the MIT LICENSE (MIT).
  * ----
@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 28Feb2016, 21Aug2017
+ * ---- changed: 21Aug2017
  * ----
  * ----
  */
@@ -32,41 +32,40 @@
 #include "debug.h"
 #include "error.h"
 #include "sysex.h"
-#include "sound.h"
-#include "kit.h"
+#include "pattern.h"
 
 
-/* ---------------------------------------------------------------------------- ar_kit_request */
-ar_error_t ar_kit_request(sU8 *_dstBuf, sU8 _devId, sU8 _kitNr) {
+/* ---------------------------------------------------------------------------- ar_sound_request */
+ar_error_t ar_sound_request(sU8 *_dstBuf, sU8 _devId, sU8 _soundNr) {
    ar_sysex_meta_t meta;
    ar_error_t ret;
 
-   AR_SYSEX_META_INIT(meta, _devId, AR_TYPE_KIT, _kitNr);
+   AR_SYSEX_META_INIT(meta, _devId, AR_TYPE_SOUND, _soundNr);
 
    ret = ar_sysex_request(_dstBuf, &meta);
 
    return ret;
 }
 
-/* ---------------------------------------------------------------------------- ar_kit_request_x */
-ar_error_t ar_kit_request_x(sU8 *_dstBuf, sU8 _devId, sU8 _kitNr) {
+/* ---------------------------------------------------------------------------- ar_sound_request_x */
+ar_error_t ar_sound_request_x(sU8 *_dstBuf, sU8 _devId, sU8 _soundNr) {
    ar_sysex_meta_t meta;
    ar_error_t ret;
 
-   AR_SYSEX_META_INIT(meta, _devId, AR_TYPE_KIT, (128u + (_kitNr & 127u)));
+   AR_SYSEX_META_INIT(meta, _devId, AR_TYPE_SOUND, (128u + (_soundNr & 127u)));
 
    ret = ar_sysex_request(_dstBuf, &meta);
 
    return ret;
 }
 
-/* ---------------------------------------------------------------------------- ar_kit_syx_to_raw */
-ar_error_t ar_kit_syx_to_raw(sU8               *_rawBuf,
-                             const sU8         *_syxBuf,
-                             sU32               _syxBufSize,
-                             sU32              *_retRawBufSize,
-                             ar_sysex_meta_t   *_meta
-                             ) {
+/* ---------------------------------------------------------------------------- ar_sound_syx_to_raw */
+ar_error_t ar_sound_syx_to_raw(sU8               *_rawBuf,
+                               const sU8         *_syxBuf,
+                               sU32               _syxBufSize,
+                               sU32              *_retRawBufSize,
+                               ar_sysex_meta_t   *_meta
+                               ) {
    ar_error_t ret;
    sU32 datSz;
    ar_sysex_meta_t meta;
@@ -85,26 +84,26 @@ ar_error_t ar_kit_syx_to_raw(sU8               *_rawBuf,
          *_meta = meta;
       }
 
-      if(AR_TYPE_KIT == meta.obj_type)
+      if(AR_TYPE_SOUND == meta.obj_type)
       {
          /* Succeeded */
       }
       else
       {
-         ret = AR_ERR_NOT_A_KIT;
+         ret = AR_ERR_NOT_A_SOUND;
       }
    }
 
    return ret;
 }
 
-/* ---------------------------------------------------------------------------- ar_kit_raw_to_syx */
-ar_error_t ar_kit_raw_to_syx(sU8                   *_syxBuf,
-                             const sU8             *_rawBuf,
-                             sU32                   _rawBufSize,
-                             sU32                  *_retSyxBufSize,
-                             const ar_sysex_meta_t *_meta
-                             ) {
+/* ---------------------------------------------------------------------------- ar_sound_raw_to_syx */
+ar_error_t ar_sound_raw_to_syx(sU8                   *_syxBuf,
+                               const sU8             *_rawBuf,
+                               sU32                   _rawBufSize,
+                               sU32                  *_retSyxBufSize,
+                               const ar_sysex_meta_t *_meta
+                               ) {
    ar_error_t ret;
 
    if(NULL != _meta)

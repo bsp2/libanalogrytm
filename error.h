@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 01Aug2014, 02Aug2014, 04Aug2014, 28Feb2016
+ * ---- changed: 01Aug2014, 02Aug2014, 04Aug2014, 28Feb2016, 21Aug2017
  * ----
  * ----
  */
@@ -51,6 +51,7 @@ typedef enum {
    AR_ERR_INVALID_OBJ_NR          = 11,  /* invalid object number (out of range) */
    AR_ERR_NOT_A_PATTERN           = 12,  /* trying to convert syx that does not contain pattern data */
    AR_ERR_NOT_A_KIT               = 13,  /* trying to convert syx that does not contain kit data */
+   AR_ERR_NOT_A_SOUND             = 14,  /* trying to convert syx that does not contain sound data */
 
    NUM_AR_ERROR_CODES
 } ar_error_t;
