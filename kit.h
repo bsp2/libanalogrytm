@@ -24,6 +24,8 @@
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
  * ---- changed: 28Feb2016, 29Mar2016, 04Apr2016, 21Nov2016, 07Jul2017, 09Jul2017, 21Aug2017
+ * ----          19Nov2018, 21Oct2019
+ * ----
  * ----
  * ----
  */
@@ -43,13 +45,17 @@
  *
  */
 #define AR_KIT_SYX_V1_SZ  (0x0C17u)  /* total size of pattern sysex dump (starting with 0xF0, ending with 0xF7) */
-#define AR_KIT_SYX_V2_SZ  (0x0BE1u)  /* total size of pattern sysex dump (starting with 0xF0, ending with 0xF7) */
+#define AR_KIT_SYX_V2_SZ  (0x0BE1u)  /* os v1.31b */
+#define AR_KIT_SYX_V3_SZ  (0x0c07u)  /* os v1.45b */
+#define AR_KIT_SYX_V4_SZ  (0x0c09u)  /* os v1.50 */
 
 #define AR_KIT_SYX_MIN_SZ  AR_KIT_SYX_V2_SZ
 #define AR_KIT_SYX_MAX_SZ  AR_KIT_SYX_V1_SZ
 
-#define AR_KIT_V1_SZ      (0x0A87u)  /* total size of pattern 'raw' 8bit data                */
-#define AR_KIT_V2_SZ      (0x0A57u)  /* total size of pattern 'raw' 8bit data                */
+#define AR_KIT_V1_SZ      (0x0A87u)  /* total size of pattern 'raw' 8bit data  */
+#define AR_KIT_V2_SZ      (0x0A57u)  /* os v1.31b                              */
+#define AR_KIT_V3_SZ      (0x0A79u)  /* os v1.45b                              */
+#define AR_KIT_V4_SZ      (0x0A7Au)  /* os v1.50                               */
 #define AR_KIT_MAX_SZ     AR_KIT_V1_SZ
 
 #define AR_KIT_TRACK_SZ  (168u)   /* total size of per track 'raw' kit data (v2) (v1=0xAC bytes) */
@@ -249,10 +255,14 @@ typedef struct { /* 0xA8 (168) bytes */
 
    sU8 def_note;              /* @0x009c  0x3c=0, 0x3d=+1, 0x3b=-1 (initially 0x00 == +0 ?!) */
    sU8 __unknown_arr2[0xd];   /* @0x009d..0x00A9  (correct location of trig/vel/def_len/.. ?) */
-   sU8 machine_type;          /* @0x00AA   0:bdhard   1:bdclassic    2:sdhard    3:sdclassic
-                                           4:         5:             6:          7:
-                                           8:         9:            10:         11:
-                                          12:        13:bd fm       14:sd fm    15:
+   sU8 machine_type;          /* @0x00AA   0:bdhard     1:bd classic   2:sd hard    3:sd classic
+                                           4:           5:             6:           7:
+                                           8:           9:            10:          11:
+                                          12:          13:bd fm       14:sd fm     15:noise gen
+                                          16:impulse   17:            18:          19:
+                                          20:          21:bd plastic  22:bd silky  23:sd natural
+                                          24:          25:            26:bd sharp  27:disable
+                                          28:dual vco  29:            30:          31:
                               */
    sU8 __unknown_arr3[43 /*0xA8-0x7b*/];
 } ar_kit_track_t;
@@ -263,10 +273,10 @@ typedef struct { /* 0xA8 (168) bytes */
 
 /*
  *
- ** Kit structure
+ ** Kit v4 (v1.5.0) structure
  *
  */
-typedef struct { /* 0x0A87 bytes in v1, 0x0a57 bytes in v2 */
+typedef struct { /* 0x0A87 bytes in v1, 0x0a57 bytes in v2, 0x0a79 bytes in v3, 0x0a7a bytes in v4(1.5.0) */
    sU8 __unknown_arr1[0x14];
 
    struct {                    /* @0x0014..0x002b */
@@ -454,11 +464,13 @@ typedef struct { /* 0x0A87 bytes in v1, 0x0a57 bytes in v2 */
                  off=2640 (0xa50) a=0x00 b=0x01
    */
 
-   sU8 __unknown_pad37;        /* @0x0a1f */
+   sU8 __unknown_pad37;        /* @0x0a1f (scene_id MSB?) */
    sU8 current_scene_id;       /* @0x0a20 */
 
    /* (note) 54 unknown bytes not present in v1 kit data */
-   sU8  __unknown_arr5[54];    /* @0x0a21..0x0a56 */
+   sU8 __unknown_arr5[54];     /* @0x0a21..0x0a56 */
+
+   sU8 __unknown_arr6[36];     /* 0xa57..0x0a79 */
 } ar_kit_t;
 
 

@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 30Jul2014, 01Aug2014, 04Aug2014, 07Jul2017
+ * ---- changed: 30Jul2014, 01Aug2014, 04Aug2014, 07Jul2017, 21Oct2019
  * ----
  * ----
  */
@@ -44,14 +44,28 @@
  */
 #define AR_PATTERN_SYX_PATNR        (0x0009u)  /* offset of pattern number (byte) in sysex data     */
 #define AR_PATTERN_SYX_DATA         (0x000Au)  /* start of (encoded) 'raw' bytes in sysex data      */
+
+#if 0
+// v1
 #define AR_PATTERN_SYX_CHECKSUM     (0x3AEDu)  /* offset to 2 byte (14bit) checksum (sum of 'raw' data bytes) */
 #define AR_PATTERN_SYX_DATASIZE     (0x3AEFu)  /* offset to 2 byte (14bit) data size (size includes data+chksum+data size) */
+#else
+#define AR_PATTERN_SYX_CHECKSUM     (0x3AFEu)  /* offset to 2 byte (14bit) checksum (sum of 'raw' data bytes) */
+#define AR_PATTERN_SYX_DATASIZE     (0x3AB0u)  /* offset to 2 byte (14bit) data size (size includes data+chksum+data size) */
+#endif
 
-#define AR_PATTERN_SYX_SZ           (0x3AF2u)  /* total size of pattern sysex dump (starting with 0xF0, ending with 0xF7) */
+#define AR_PATTERN_SYX_V1_SZ        (0x3AF2u)  /* total size of pattern sysex dump (starting with 0xF0, ending with 0xF7) */
+#define AR_PATTERN_SYX_V4_SZ        (0x3B03u)  /* v1.50 (starting with 0xF0, ending with 0xF7) */
+#define AR_PATTERN_SYX_MIN_SZ       (0x3AF2u)
+#define AR_PATTERN_SYX_MAX_SZ       (0x3B03u)
 
-#define AR_PATTERN_SZ    (0x3386u)  /* total size of pattern 'raw' 8bit data                */
-#define AR_TRACK_SZ      (0x0288u)  /* total size of track 'raw' 8bit data                  */
-#define AR_PLOCK_SEQ_SZ  (0x0042u)  /* total size of pattern plock sequence 'raw' 8bit data */
+#define AR_PATTERN_V1_SZ  (0x3386u)  /* total size of pattern 'raw' 8bit data                */
+#define AR_PATTERN_V4_SZ  (0x3395u)  /* total size of pattern 'raw' 8bit data                */
+#define AR_PATTERN_MIN_SZ (0x3386u)  /*                 */
+#define AR_PATTERN_MAX_SZ (0x3395u)  /*                 */
+
+#define AR_TRACK_SZ      (0x0288u)   /* total size of track 'raw' 8bit data                  */
+#define AR_PLOCK_SEQ_SZ  (0x0042u)   /* total size of pattern plock sequence 'raw' 8bit data */
 
 #define AR_NUM_TRACKS                  (13u)   /* trk1..trk12, fx */
 #define AR_NUM_PLOCK_SEQS_PER_PATTERN  (72u)
@@ -303,7 +317,7 @@ typedef struct { /* 0x42 bytes */
  ** Pattern structure
  *
  */
-typedef struct { /* 0x3386 bytes */
+typedef struct { /* 0x3386 bytes (v1), 0x3395 bytes (v4 / v1.50) */
    sU8                magic_header[4];  /* ??? a version number ??? reads '00 00 00 01' */
    ar_pattern_track_t tracks[13];       /* @0x0004..0x20EB */
    ar_plock_seq_t     plock_seqs[72];   /* @0x20EC..0x337B */
@@ -319,6 +333,7 @@ typedef struct { /* 0x3386 bytes */
    sU8                pattern_speed;    /* @0x3383           See AR_SPD_xxx. */
    sU8                __unknown7;       /* @0x3384           Reads 0x00 <void> timeScale */
    sU8                __unknown8;       /* @0x3385           Reads 0x00 <void> quantize */
+   sU8                __unknown9[15];   /* @0x3386..0x3394 */
 } ar_pattern_t;
 
 

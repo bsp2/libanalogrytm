@@ -637,12 +637,10 @@ ar_error_t ar_raw_to_sysex(sU8                   *_dstBuf,
          /* Write checksum */
          _dstBuf[0] = chksum.b.hi;
          _dstBuf[1] = chksum.b.lo;
-
          _dstBuf += 2;
 
          /* Write the data size */
          S_U14_SET(*((s_u16_t*)_dstBuf), syxDatSz + 2u/*chksum*/ + 2u/*data_size*/ + 1u/*0xF7*/);
-
          _dstBuf += 2;
 
          /* End of sysex message */
