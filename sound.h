@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 21Aug2017
+ * ---- changed: 21Aug2017, 21Oct2019
  * ----
  * ----
  */
@@ -46,40 +46,294 @@
 
 typedef struct { /* 0xA8 (168) bytes */
 
-   sU8 __unknown_arr1[0xc];
+   /* track01 kit offset:   46 (0x002E)
+      track02 kit offset:  214 (0x00D6)
+      track03 kit offset:  382 (0x017E)
+      track04 kit offset:  550 (0x0226)
+      track05 kit offset:  718 (0x02CE)
+      track06 kit offset:  886 (0x0376)
+      track07 kit offset: 1054 (0x041E)
+      track08 kit offset: 1222 (0x04C6)
+      track09 kit offset: 1390 (0x056E)
+      track10 kit offset: 1558 (0x0616)
+      track11 kit offset: 1726 (0x06BE)
+      track12 kit offset: 1894 (0x0766)
+   */
+
+   sU8 __unknown_arr1[0xc];   /* @0x0000 */
 
    sU8 name[0xf];
    sU8 __pad_name;            /* @0x001B  (ASCIIZ?) */
 
-   sU8 synth_param_1;         /* @0x001C  sdhard: level */
-   sU8 __pad1;
+   sU8 synth_param_1;         /* @0x001C  
+                                          0:bd hard     : lev
+                                          1:bd classic  : lev
+                                          2:sd hard     : lev
+                                          3:sd classic  : lev
+                                          4:rs hard     : lev
+                                          5:rs classic  : lev
+                                          6:cp classic  : lev
+                                          7:bt classic  : lev
+                                          8:xt classic  : lev
+                                          9:ch classic  : lev
+                                         10:oh classic  : lev
+                                         11:cy classic  : lev
+                                         12:cb classic  : lev
+                                         13:bd fm       : lev
+                                         14:sd fm       : lev
+                                         15:noise gen   : lev
+                                         16:impulse     : lev
+                                         17:ch metallic : lev
+                                         18:oh metallic : lev
+                                         19:cy metallic : lev
+                                         20:cb metallic : lev
+                                         21:bd plastic  : lev
+                                         22:bd silky    : lev
+                                         23:sd natural  : lev
+                                         24:hh basic    : lev
+                                         25:cy ride     : lev
+                                         26:bd sharp    : lev
+                                         27:DISABLE     : -
+                                         28:dual vco    : lev
+                               */
+   sU8 __unused_pad1;  /* synth_param_1_lsb. unused, always 0 */
 
-   sU8 synth_param_2;         /* @0x001E  sdhard: tune  */
-   sU8 __pad2;
+   sU8 synth_param_2;         /* @0x001E
+                                          0:bd hard     : tun (64=+0)
+                                          1:bd classic  : tun (64=+0)
+                                          2:sd hard     : tun (64=+0)
+                                          3:sd classic  : tun (64=+0)
+                                          4:rs hard     : tun (64=+0)
+                                          5:rs classic  : t1  (64=+0)
+                                          6:cp classic  : ton
+                                          7:bt classic  : tun (64=+0)
+                                          8:xt classic  : tun (64=+0)
+                                          9:ch classic  : tun (64=+0)
+                                         10:oh classic  : tun (64=+0)
+                                         11:cy classic  : tun (64=+0)
+                                         12:cb classic  : tun (64=+0)
+                                         13:bd fm       : tun (64=+0)
+                                         14:sd fm       : tun (64=+0)
+                                         15:noise gen   : lpf
+                                         16:impulse     : atk
+                                         17:ch metallic : tun (64=+0)
+                                         18:oh metallic : tun (64=+0)
+                                         19:cy metallic : tun (64=+0)
+                                         20:cb metallic : tun (64=+0)
+                                         21:bd plastic  : tun (64=+0)
+                                         22:bd silky    : tun (64=+0)
+                                         23:sd natural  : tun (64=+0)
+                                         24:hh basic    : tun (64=+0)
+                                         25:cy ride     : tun (64=+0)
+                                         26:bd sharp    : tun (64=+0)
+                                         27:DISABLE     : -
+                                         28:dual vco    : tun
+                              */
+   sU8 __unused_pad2;  /* synth_param_2_lsb. unused, always 0 */
 
-   sU8 synth_param_3;         /* @0x0020  sdhard: dcy   */
-   sU8 __pad3;
+   sU8 synth_param_3;         /* @0x0020
+                                          0:bd hard     : dec
+                                          1:bd classic  : dec
+                                          2:sd hard     : dec
+                                          3:sd classic  : dec
+                                          4:rs hard     : dec
+                                          5:rs classic  : dec
+                                          6:cp classic  : nod
+                                          7:bt classic  : dec
+                                          8:xt classic  : dec
+                                          9:ch classic  : dec
+                                         10:oh classic  : dec
+                                         11:cy classic  : dec
+                                         12:cb classic  : dec
+                                         13:bd fm       : dec
+                                         14:sd fm       : dec
+                                         15:noise gen   : dec
+                                         16:impulse     : dec
+                                         17:ch metallic : dec
+                                         18:oh metallic : dec
+                                         19:cy metallic : dec
+                                         20:cb metallic : dec
+                                         21:bd plastic  : dec
+                                         22:bd silky    : dec
+                                         23:sd natural  : bdy
+                                         24:hh basic    : dec
+                                         25:cy ride     : dec
+                                         26:bd sharp    : dec
+                                         27:DISABLE     : -
+                                         28:dual vco    : dec#1
+                              */
+   sU8 __unused_pad3;  /* synth_param_3_lsb. unused, always 0 */
 
-   sU8 synth_param_4;         /* @0x0022  sdhard: swd   */
-   sU8 __pad4;
+   sU8 synth_param_4;         /* @0x0022
+                                          0:bd hard     : hld
+                                          1:bd classic  : hld
+                                          2:sd hard     : swd
+                                          3:sd classic  : det
+                                          4:rs hard     : swd
+                                          5:rs classic  : bal (64=+0)
+                                          6:cp classic  : num
+                                          7:bt classic  : -
+                                          8:xt classic  : swd
+                                          9:ch classic  : col (64=+0)
+                                         10:oh classic  : col (64=+0)
+                                         11:cy classic  : col (64=+0)
+                                         12:cb classic  : det
+                                         13:bd fm       : fma
+                                         14:sd fm       : fmt (64=+0)
+                                         15:noise gen   : hpf
+                                         16:impulse     : -
+                                         17:ch metallic : -
+                                         18:oh metallic : -
+                                         19:cy metallic : ton (64=+0) 
+                                         20:cb metallic : det
+                                         21:bd plastic  : typ
+                                         22:bd silky    : hld
+                                         23:sd natural  : dec
+                                         24:hh basic    : ton (64=+0)
+                                         25:cy ride     : typ (0..3=A..D)
+                                         26:bd sharp    : hld
+                                         27:DISABLE     : -
+                                         28:dual vco    : det
+                              */
+   sU8 __unused_pad4;  /* synth_param_4_lsb. unused, always 0 */
 
-   sU8 synth_param_5;         /* @0x0024  sdhard: tic   */
-   sU8 __pad5;
+   sU8 synth_param_5;         /* @0x0024
+                                          0:bd hard     : swt
+                                          1:bd classic  : swt
+                                          2:sd hard     : tic
+                                          3:sd classic  : snp
+                                          4:rs hard     : tic
+                                          5:rs classic  : t2  (64=+0)
+                                          6:cp classic  : rat
+                                          7:bt classic  : -
+                                          8:xt classic  : swt
+                                          9:ch classic  : -
+                                         10:oh classic  : -
+                                         11:cy classic  : ton (64=+0)
+                                         12:cb classic  : 
+                                         13:bd fm       : swt 
+                                         14:sd fm       : fmd
+                                         15:noise gen   : lpq
+                                         16:impulse     : -
+                                         17:ch metallic : -
+                                         18:oh metallic : -
+                                         19:cy metallic : trd
+                                         20:cb metallic : -
+                                         21:bd plastic  : mod
+                                         22:bd silky    : swt
+                                         23:sd natural  : bal
+                                         24:hh basic    : trd
+                                         25:cy ride     : hit
+                                         26:bd sharp    : swt
+                                         27:DISABLE     : -
+                                         28:dual vco    : dec#2
+                              */
+   sU8 __unused_pad5;  /* synth_param_5_lsb. unused, always 0 */
 
-   sU8 synth_param_6;         /* @0x0026  sdhard: nod   */
-   sU8 __pad6;
+   sU8 synth_param_6;         /* @0x0026
+                                          0:bd hard     : snp
+                                          1:bd classic  : swd
+                                          2:sd hard     : nod
+                                          3:sd classic  : nod
+                                          4:rs hard     : nol
+                                          5:rs classic  : sym (64=+0)
+                                          6:cp classic  : nol
+                                          7:bt classic  : snp
+                                          8:xt classic  : nod
+                                          9:ch classic  : -
+                                         10:oh classic  : -
+                                         11:cy classic  : -
+                                         12:cb classic  : -
+                                         13:bd fm       : fms
+                                         14:sd fm       : nod
+                                         15:noise gen   : atk
+                                         16:impulse     : -
+                                         17:ch metallic : -
+                                         18:oh metallic : -
+                                         19:cy metallic : -
+                                         20:cb metallic : -
+                                         21:bd plastic  : swt
+                                         22:bd silky    : swd
+                                         23:sd natural  : lpf
+                                         24:hh basic    : rst (0 or 1)
+                                         25:cy ride     : c1
+                                         26:bd sharp    : swd
+                                         27:DISABLE     : -
+                                         28:dual vco    : bal (64=+0)
+                              */
+   sU8 __unused_pad6;  /* synth_param_6_lsb. unused, always 0 */
 
-   sU8 synth_param_7;         /* @0x0028  sdhard: nol   */
-   sU8 __pad7;
+   sU8 synth_param_7;         /* @0x0028
+                                          0:bd hard     : wav
+                                          1:bd classic  : wav
+                                          2:sd hard     : nol
+                                          3:sd classic  : nol
+                                          4:rs hard     : syn
+                                          5:rs classic  : nol
+                                          6:cp classic  : rnd
+                                          7:bt classic  : -
+                                          8:xt classic  : nol
+                                          9:ch classic  : -
+                                         10:oh classic  : -
+                                         11:cy classic  : -
+                                         12:cb classic  : -
+                                         13:bd fm       : fmd
+                                         14:sd fm       : nol
+                                         15:noise gen   : swt
+                                         16:impulse     : -
+                                         17:ch metallic : -
+                                         18:oh metallic : -
+                                         19:cy metallic : -
+                                         20:cb metallic : -
+                                         21:bd plastic  : swd
+                                         22:bd silky    : dus
+                                         23:sd natural  : hpf
+                                         24:hh basic    : -
+                                         25:cy ride     : c2
+                                         26:bd sharp    : wav
+                                         27:DISABLE     : -
+                                         28:dual vco    : bnd (64=+0)
+                              */
+   sU8 __unused_pad7;  /* synth_param_7_lsb. unused, always 0 */
 
-   sU8 synth_param_8;         /* @0x002A  sdhard: swt   */
-   sU8 __pad8;
+   sU8 synth_param_8;         /* @0x002A  sdhard:
+                                          0:bd hard     : tic
+                                          1:bd classic  : tra
+                                          2:sd hard     : swt
+                                          3:sd classic  : bal
+                                          4:rs hard     : swt
+                                          5:rs classic  : tic
+                                          6:cp classic  : cpd
+                                          7:bt classic  : -
+                                          8:xt classic  : ton (64=+0)
+                                          9:ch classic  : -
+                                         10:oh classic  : -
+                                         11:cy classic  : -
+                                         12:cb classic  : -
+                                         13:bd fm       : fmt (64=+0)
+                                         14:sd fm       : fma
+                                         15:noise gen   : swd (64=+0)
+                                         16:impulse     : pol
+                                         17:ch metallic : -
+                                         18:oh metallic : -
+                                         19:cy metallic : -
+                                         20:cb metallic : -
+                                         21:bd plastic  : tic
+                                         22:bd silky    : clk
+                                         23:sd natural  : res
+                                         24:hh basic    : -
+                                         25:cy ride     : c3
+                                         26:bd sharp    : tic
+                                         27:DISABLE     : -
+                                         28:dual vco    : cfg
+                              */
+   sU8 __unused_pad8;  /* synth_param_8_lsb. unused, always 0 */
 
    sU8 sample_tune;           /* @0x002c  0x40=0, 0x41=+1, .. */
-   sU8 __unused_pad9;         /* @0x002d */
+   sU8 __unused_pad9;         /* @0x002d (lsb, always 0) */
 
    sU8 sample_fine_tune;      /* @0x002e  0x40=0, 0x41=+1, .. */
-   sU8 __unused_pad10;        /* @0x002f */
+   sU8 __unused_pad10;        /* @0x002f (lsb, always 0) */
 
    sU8 sample_nr;             /* @0x0030  0=off, 1..127
                                           (note) changing the sample also changes:
@@ -98,94 +352,94 @@ typedef struct { /* 0xA8 (168) bytes */
                                                    off=146 (0x92) a=0x00 b=0x12
                                                    off=147 (0x93) a=0x00 b=0x36
                               */
-   sU8 __unused_pad11;        /* @0x0031 */
+   sU8 __unused_pad11;        /* @0x0031 (lsb, always 0) */
 
    sU8 sample_br;             /* @0x0032  */
-   sU8 __unused_pad12;        /* @0x0033 */
+   sU8 __unused_pad12;        /* @0x0033 (lsb, always 0) */
 
    sU8 sample_start_offset;   /* @0x0034 */
-   sU8 __unused_pad13;        /* @0x0035 */
+   sU8 __unused_pad13;        /* @0x0035 (lsb, always 0) */
 
    sU8 sample_end_offset;     /* @0x0036 */
-   sU8 __unused_pad14;        /* @0x0037 */
+   sU8 __unused_pad14;        /* @0x0037 (lsb, always 0) */
 
    sU8 sample_loop_flag;      /* @0x0038  0x00=off, 0x01=on */
    sU8 __unused_pad15;        /* @0x0039 */
 
    sU8 sample_volume;         /* @0x003a */
-   sU8 __unused_pad16;        /* @0x003b */
+   sU8 __unused_pad16;        /* @0x003b (lsb, always 0) */
 
    sU8 flt_attack;            /* @0x003c */
-   sU8 __unused_pad17;        /* @0x003d */
+   sU8 __unused_pad17;        /* @0x003d (lsb, always 0) */
 
    sU8 flt_sustain;           /* @0x003e */
-   sU8 __unused_pad18;        /* @0x003f */
+   sU8 __unused_pad18;        /* @0x003f (lsb, always 0) */
 
    sU8 flt_decay;             /* @0x0040 */
-   sU8 __unused_pad19;        /* @0x0041 */
+   sU8 __unused_pad19;        /* @0x0041 (lsb, always 0) */
 
    sU8 flt_release;           /* @0x0042 */
-   sU8 __unused_pad20;        /* @0x0043 */
+   sU8 __unused_pad20;        /* @0x0043 (lsb, always 0) */
 
    sU8 flt_cutoff;            /* @0x0044 */
-   sU8 __unused_pad21;        /* @0x0045 */
+   sU8 __unused_pad21;        /* @0x0045 (lsb, always 0) */
 
    sU8 flt_res;               /* @0x0046 */
-   sU8 __unused_pad22;        /* @0x0047 */
+   sU8 __unused_pad22;        /* @0x0047 (lsb, always 0) */
 
    sU8 flt_type;              /* @0x0048 */
-   sU8 __unused_pad23;        /* @0x0049 */
+   sU8 __unused_pad23;        /* @0x0049 (lsb, always 0) */
 
    sU8 flt_env;               /* @0x004a    64=0, 127=+63, 0=-64*/
-   sU8 __unused_pad24;        /* @0x004b */
+   sU8 __unused_pad24;        /* @0x004b (lsb, always 0) */
 
    sU8 amp_attack;            /* @0x004c */
-   sU8 __unused_pad25;        /* @0x004d */
+   sU8 __unused_pad25;        /* @0x004d (lsb, always 0) */
 
    sU8 amp_hold;              /* @0x004e */
-   sU8 __unused_pad26;        /* @0x004f */
+   sU8 __unused_pad26;        /* @0x004f (lsb, always 0) */
 
    sU8 amp_decay;             /* @0x0050 */
-   sU8 __unused_pad27;        /* @0x0051 */
+   sU8 __unused_pad27;        /* @0x0051 (lsb, always 0) */
 
    sU8 amp_overdrive;         /* @0x0052 */
-   sU8 __unused_pad28;        /* @0x0053 */
+   sU8 __unused_pad28;        /* @0x0053 (lsb, always 0) */
 
    sU8 amp_delay_send;        /* @0x0054 */
-   sU8 __unused_pad29;        /* @0x0055 */
+   sU8 __unused_pad29;        /* @0x0055 (lsb, always 0) */
 
    sU8 amp_reverb_send;       /* @0x0056 */
-   sU8 __unused_pad30;        /* @0x0057 */
+   sU8 __unused_pad30;        /* @0x0057 (lsb, always 0) */
 
    sU8 amp_pan;               /* @0x0058 */
-   sU8 __unused_pad31;        /* @0x0059 */
+   sU8 __unused_pad31;        /* @0x0059 (lsb, always 0) */
 
    sU8 amp_volume;            /* @0x005a */
-   sU8 __unused_pad32;        /* @0x005b */
+   sU8 __unused_pad32;        /* @0x005b (lsb, always 0) */
 
    sU8 __unknown2;            /* @0x005c */
    sU8 __unknown3;            /* @0x005d */
 
    sU8 lfo_speed;             /* @0x005e */
-   sU8 __unused_pad33;        /* @0x005f */
+   sU8 __unused_pad33;        /* @0x005f (lsb, always 0) */
 
    sU8 lfo_multiplier;        /* @0x0060 */
-   sU8 __unused_pad34;        /* @0x0061 */
+   sU8 __unused_pad34;        /* @0x0061 (lsb, always 0) */
 
    sU8 lfo_fade;              /* @0x0062  0x40=0 */
-   sU8 __unused_pad35;        /* @0x0063 */
+   sU8 __unused_pad35;        /* @0x0063 (lsb, always 0) */
 
    sU8 lfo_dest;              /* @0x0064  0x29=none, 0x0=BDHD:Level, .. */
-   sU8 __unused_pad36;        /* @0x0065 */
+   sU8 __unused_pad36;        /* @0x0065 (lsb, always 0) */
 
    sU8 lfo_wav;               /* @0x0066  0x0=tri, 0x1=sin, .. */
-   sU8 __unused_pad37;        /* @0x0067 */
+   sU8 __unused_pad37;        /* @0x0067 (lsb, always 0) */
 
-   sU8 lfo_start_phase;       /* @0x0068   */
-   sU8 __unused_pad38;        /* @0x0069 */
+   sU8 lfo_start_phase;       /* @0x0068 */
+   sU8 __unused_pad38;        /* @0x0069 (lsb, always 0) */
 
    sU8 lfo_mode;              /* @0x006a  0x0=free, 0x1=trg, .. */
-   sU8 __unused_pad39;        /* @0x006b */
+   sU8 __unused_pad39;        /* @0x006b (lsb, always 0) */
 
    sU8 lfo_depth_msb;         /* @0x006c  */
    sU8 lfo_depth_lsb;         /* @0x006d  */
@@ -195,13 +449,27 @@ typedef struct { /* 0xA8 (168) bytes */
                                */
    sU8 __unknown_arr2[0xd];   /* @0x006f..0x007B  (correct location of trig/vel/def_len/.. ?) */
 
-   sU8 machine_type;          /* @0x007C   0:bdhard    1:bdclassic    2:sdhard     3:sdclassic
-                                           4:          5:             6:           7:
-                                           8:          9:            10:          11:
-                                          12:         13:bd fm       14:sd fm     15:noise gen
-                                          16:impulse  17:            18:          19:
-                                          20:         21:bd plastic  22:bd silky  23:sd natural
-                                          24:         25:            26:bd sharp  27:DISABLE
+   sU8 machine_type;          /* @0x007C   0:bd hard       1:bd classic    2:sd hard       3:sd classic
+                                           4:rs hard       5:rs classic    6:cp classic    7:bt classic
+                                           8:xt classic    9:ch classic   10:oh classic   11:cy classic
+                                          12:cb classic   13:bd fm        14:sd fm        15:noise gen
+                                          16:impulse      17:ch metallic  18:oh metallic  19:cy metallic
+                                          20:cb metallic  21:bd plastic   22:bd silky     23:sd natural
+                                          24:hh basic     25:cy ride      26:bd sharp     27:DISABLE
+                                          28:dual vco     29:             30:             31:
+
+                                          track01: kit off=170
+                                          track02: kit off=338
+                                          track03: kit off=506
+                                          track04: kit off=674
+                                          track05: kit off=842
+                                          track06: kit off=1010
+                                          track07: kit off=1178
+                                          track08: kit off=1346
+                                          track09: kit off=1514
+                                          track10: kit off=1682
+                                          track11: kit off=1850
+                                          track12: kit off=2018
                               */
 
    sU8 __unknown_arr3[43 /*0xA8-0x7d*/];
