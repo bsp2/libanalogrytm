@@ -317,7 +317,9 @@ typedef struct { /* 0x288 bytes (v1), 0x289 bytes (v4 / v1.50) */
    sU8     num_steps;                   /* @0x024A           Number of steps (1..64)                  */
    sU8     quantize_amount;             /* @0x024B           <void> quantizeAmount                    */
    sU8     sound_locks[64];             /* @0x024C..0x028B   <void> soundLocks                        */
-   sU8     flags;                       /* @0x028C. bit7=send MIDI. bit2=? (reads 1) bit0=? */
+   sU8     flags_and_speed;             /* @0x028C. bit7=send MIDI. 
+                                                    bit2..0: speed, 0=2x, 1=3/2x, 2=1x, 3=3/4x, 4=1/2x, 5=1/4x, 6=1/8x
+                                        */
 } ar_pattern_track_t;
 
 

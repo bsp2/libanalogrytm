@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 21Aug2017, 21Oct2019
+ * ---- changed: 21Aug2017, 21Oct2019, 24Oct2019
  * ----
  * ----
  */
@@ -296,7 +296,7 @@ typedef struct { /* 0xA8 (168) bytes */
                               */
    sU8 __unused_pad7;  /* synth_param_7_lsb. unused, always 0 */
 
-   sU8 synth_param_8;         /* @0x002A  sdhard:
+   sU8 synth_param_8;         /* @0x002A
                                           0:bd hard     : tic
                                           1:bd classic  : tra
                                           2:sd hard     : swt
