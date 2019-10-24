@@ -290,8 +290,20 @@ typedef struct { /* 0x288 bytes (v1), 0x289 bytes (v4 / v1.50) */
                                          *                          ==> 0xFF = default note without trig cond
                                          */
    sU8     velocities[64];              /* @0x00C4..0x0103.  0xFF=unset, 0x00=0, 0x7F=127             */
-   sU8     note_lengths[64];            /* @0x0104..0x0143.  0=0.125, 1=0.188, 2=1/64, 3=0.313, 6=1/32, .., 126=128, 127=inf */
-   sS8     micro_timings[64];           /* @0x0144..0x0183.  Micro timing (0xE9..0x17 => -23..+23) */
+   sU8     note_lengths[64];            /* @0x0104..0x0143.  0=0.125 (1/128), 1=0.1875, 
+                                                             2=1/64 (0.25), 3=0.3125, 4=0.375, 5=0.4375, 
+                                                             6=1/32, 7=0.5625, 8=0.625, 9=0.6875, .., 13=0.9375,
+                                                             14=1/16, 15=1.0625, 16=1.25, .., 29=1.9375,
+                                                             30=1/8, 31=2.125, 32=2.25, .., 38=3, 39=3.125, .., 45=3.875
+                                                             46=1/4 47=4.25, .., 61=7.75
+                                                             62=1/2, 63=8.5, .., 77=15.5,
+                                                             78=16 (1/1), 79=17, .., 93=31,
+                                                             94=32 (2/1), 95=34, .., 109=62, 
+                                                             110=64 (4/1), 111=68, .., 121=108, 122=112, 123=116, 124=120, 125=124,
+                                                             126=128 (8/1),
+                                                             127=inf 
+                                        */
+   sS8     micro_timings[64];           /* @0x0144..0x0183.  Micro timing (0xE9..0xFF => -23..-1, 0xC0..0xD7 => +0..+23) */
    sU8     retrig_lengths[64];          /* @0x0184..0x01C3.  Retrig lengths (0..126(=128), 127=inf)   */
    sU8     retrig_rates[64];            /* @0x01C4..0x0203.  Retrig rates (0(=1/1)..16(=1/80))
                                          *                    Changing the trig condition of step 1 updates 0x1c4
@@ -339,8 +351,8 @@ typedef struct { /* 0x3386 bytes (v1),  0x3395 bytes (v4 / v1.50) */
    sU8                __unknown6;       /* @0x338F           Reads 0x00 <void> timeMode (normal or advanced) */
    sU8                pattern_speed;    /* @0x3390           See AR_SPD_xxx. */
    sU8                global_quantize;  /* @0x3391 */
-   sU8                __unknown8;       /* @0x3392           Reads 0x00 <void> quantize */
-   sU8                __unknown9;       /* @0x3393 */
+   sU8                bpm_msb;          /* @0x3392 multiplied by 120 */
+   sU8                bpm_lsb;          /* @0x3393                   */
    sU8                __unknown10;      /* @0x3394 */
 } ar_pattern_t;
 
