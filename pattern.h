@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 30Jul2014, 01Aug2014, 04Aug2014, 07Jul2017, 21Oct2019
+ * ---- changed: 30Jul2014, 01Aug2014, 04Aug2014, 07Jul2017, 21Oct2019, 24Oct2019
  * ----
  * ----
  */
@@ -50,6 +50,7 @@
 #define AR_PATTERN_SYX_CHECKSUM     (0x3AEDu)  /* offset to 2 byte (14bit) checksum (sum of 'raw' data bytes) */
 #define AR_PATTERN_SYX_DATASIZE     (0x3AEFu)  /* offset to 2 byte (14bit) data size (size includes data+chksum+data size) */
 #else
+// v4 (FW v1.50)
 #define AR_PATTERN_SYX_CHECKSUM     (0x3AFEu)  /* offset to 2 byte (14bit) checksum (sum of 'raw' data bytes) */
 #define AR_PATTERN_SYX_DATASIZE     (0x3AB0u)  /* offset to 2 byte (14bit) data size (size includes data+chksum+data size) */
 #endif
@@ -64,7 +65,14 @@
 #define AR_PATTERN_MIN_SZ (0x3386u)  /*                 */
 #define AR_PATTERN_MAX_SZ (0x3395u)  /*                 */
 
+#if 0
+// v1 (original FW)
 #define AR_TRACK_SZ      (0x0288u)   /* total size of track 'raw' 8bit data                  */
+#else
+// v4 (FW v1.50)
+#define AR_TRACK_SZ      (0x0289u)   /* total size of track 'raw' 8bit data                  */
+#endif
+
 #define AR_PLOCK_SEQ_SZ  (0x0042u)   /* total size of pattern plock sequence 'raw' 8bit data */
 
 #define AR_NUM_TRACKS                  (13u)   /* trk1..trk12, fx */
@@ -273,7 +281,7 @@
  ** Track structure
  *
  */
-typedef struct { /* 0x288 bytes */
+typedef struct { /* 0x288 bytes (v1), 0x289 bytes (v4 / v1.50) */
    s_u16_t trigs[64];                   /* @0x0004..0x0083.  See AR_TRIG_xxx flags. (BIG ENDIAN!)     */
    sU8     notes[64];                   /* @0x0084..0x00C3.  0xFF=unset, MIDI note otherwise (lower 7 bits)
                                          *                    (default is C-4 == 0x3C, 0x3B="-1", 0x3D="+1")
@@ -283,7 +291,7 @@ typedef struct { /* 0x288 bytes */
                                          */
    sU8     velocities[64];              /* @0x00C4..0x0103.  0xFF=unset, 0x00=0, 0x7F=127             */
    sU8     note_lengths[64];            /* @0x0104..0x0143.  0=0.125, 1=0.188, 2=1/64, 3=0.313, 6=1/32, .., 126=128, 127=inf */
-   sS8     micro_timings[64];           /* @0x0144..0x0183.  Micro timing (-23..+23) */
+   sS8     micro_timings[64];           /* @0x0144..0x0183.  Micro timing (0xE9..0x17 => -23..+23) */
    sU8     retrig_lengths[64];          /* @0x0184..0x01C3.  Retrig lengths (0..126(=128), 127=inf)   */
    sU8     retrig_rates[64];            /* @0x01C4..0x0203.  Retrig rates (0(=1/1)..16(=1/80))
                                          *                    Changing the trig condition of step 1 updates 0x1c4
@@ -297,6 +305,7 @@ typedef struct { /* 0x288 bytes */
    sU8     num_steps;                   /* @0x024A           Number of steps (1..64)                  */
    sU8     quantize_amount;             /* @0x024B           <void> quantizeAmount                    */
    sU8     sound_locks[64];             /* @0x024C..0x028B   <void> soundLocks                        */
+   sU8     flags;                       /* @0x028C. bit7=send MIDI. bit2=? (reads 1) bit0=? */
 } ar_pattern_track_t;
 
 
@@ -317,23 +326,22 @@ typedef struct { /* 0x42 bytes */
  ** Pattern structure
  *
  */
-typedef struct { /* 0x3386 bytes (v1), 0x3395 bytes (v4 / v1.50) */
-   sU8                magic_header[4];  /* ??? a version number ??? reads '00 00 00 01' */
-   ar_pattern_track_t tracks[13];       /* @0x0004..0x20EB */
-   ar_plock_seq_t     plock_seqs[72];   /* @0x20EC..0x337B */
-   sU8                __unknown1;       /* @0x337C           Reads 0x00  */
-   sU8                pattern_len;      /* @0x337D           Is this really used ?
-                                         *                   Track len and this value change when pattern length is changed
-                                         */
-   sU8                __unknown2;       /* @0x337E           Reads 0x00 <void> masterChange MSB */
-   sU8                __unknown3;       /* @0x337F           Reads 0x01 <void> masterChange LSB */
-   sU8                __unknown4;       /* @0x3380           Reads 0x00 <void> kitnr */
-   sU8                __unknown5;       /* @0x3381           Reads 0x00 <void> swingAmount */
-   sU8                __unknown6;       /* @0x3382           Reads 0x00 <void> timeMode (normal or advanced) */
-   sU8                pattern_speed;    /* @0x3383           See AR_SPD_xxx. */
-   sU8                __unknown7;       /* @0x3384           Reads 0x00 <void> timeScale */
-   sU8                __unknown8;       /* @0x3385           Reads 0x00 <void> quantize */
-   sU8                __unknown9[15];   /* @0x3386..0x3394 */
+typedef struct { /* 0x3386 bytes (v1),  0x3395 bytes (v4 / v1.50) */
+   sU8                magic_header[4];  /* ??? a version number ??? reads '00 00 00 01' (v1) and '00 00 00 03' (v4 / v1.50) */
+   ar_pattern_track_t tracks[13];       /* @0x0004..0x20F8 (0x289 bytes per track in v4, 0x288 in v1) */
+   ar_plock_seq_t     plock_seqs[72];   /* @0x20F9..0x3388 */
+   sU8                __unknown2;       /* @0x3389           Reads 0x00  */
+   sU8                pattern_len;      /* @0x338A           Master length (in adv mode) */
+   sU8                master_chg_msb;   /* @0x338B           <void> masterChange MSB */
+   sU8                master_chg_lsb;   /* @0x338C           <void> masterChange LSB (1=OFF, 2=2, 3=3, ..,  ) */
+   sU8                __unknown5;       /* @0x338D           Reads 0x00 <void> kitnr */
+   sU8                swing_amount;     /* @0x338E           <void> swingAmount (0..) */
+   sU8                __unknown6;       /* @0x338F           Reads 0x00 <void> timeMode (normal or advanced) */
+   sU8                pattern_speed;    /* @0x3390           See AR_SPD_xxx. */
+   sU8                global_quantize;  /* @0x3391 */
+   sU8                __unknown8;       /* @0x3392           Reads 0x00 <void> quantize */
+   sU8                __unknown9;       /* @0x3393 */
+   sU8                __unknown10;      /* @0x3394 */
 } ar_pattern_t;
 
 
