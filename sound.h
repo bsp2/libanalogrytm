@@ -680,10 +680,10 @@ sBool ar_sound_get_lfo_dest_name (const ar_sound_t *_sound, char *_retBuf, sUI _
  *    _listIdx - UI list index  (0..AR_NUM_SOUND_LFO_DEST_UI)
  *
  *  Returns:
- *   Synth internal LFO destination index. AR_SOUND_LFO_DEST_NONE if an error occured (invalid listIdx).
+ *   Synth internal LFO destination index. -1 if an error occured (invalid listIdx).
  *
  */
-sUI ar_sound_get_lfo_dest_by_list_idx (sUI _listIdx);
+sSI ar_sound_get_lfo_dest_by_list_idx (sUI _listIdx);
 
 
 /*
@@ -693,10 +693,10 @@ sUI ar_sound_get_lfo_dest_by_list_idx (sUI _listIdx);
  *    _lfoDest - Synth-internal LFO destination index  (0..AR_NUM_SOUND_LFO_DEST_INT)
  *
  *  Returns:
- *   UI list index. 0 if an error occured (invalid internal index).
+ *   UI list index. -1 if an error occured (invalid internal index).
  *
  */
-sUI ar_sound_get_list_idx_by_lfo_dest (sUI _lfoDest);
+sSI ar_sound_get_list_idx_by_lfo_dest (sUI _lfoDest);
 
 
 /*

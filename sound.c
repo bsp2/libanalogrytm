@@ -603,13 +603,18 @@ sBool ar_sound_get_lfo_dest_name(const ar_sound_t *_sound, char *_retBuf, sUI _r
             }
             else if(_sound->lfo_dest < AR_NUM_SOUND_LFO_DEST_INT)
             {
-               // e.g. "SAMP:Bit Reduction"
-               Dsnprintf(_retBuf,
-                         _retBufSz,
-                         "%s",
-                         ar_sound_lfo_dest_names_ui[ar_sound_lfo_dest_ids_int[_sound->lfo_dest]]
-                         );
-               ret = S_TRUE;
+               sSI listIdx = ar_sound_lfo_dest_ids_int[_sound->lfo_dest];
+
+               if(-1 != listIdx)
+               {
+                  // e.g. "SAMP:Bit Reduction"
+                  Dsnprintf(_retBuf,
+                            _retBufSz,
+                            "%s",
+                            ar_sound_lfo_dest_names_ui[listIdx]
+                            );
+                  ret = S_TRUE;
+               }
             }
             else
             {
@@ -623,22 +628,30 @@ sBool ar_sound_get_lfo_dest_name(const ar_sound_t *_sound, char *_retBuf, sUI _r
 
 
 /* ---------------------------------------------------------------------------- ar_sound_get_lfo_dest_by_list_idx */
-sUI ar_sound_get_lfo_dest_by_list_idx(sUI _listIdx) {
-   sUI ret = AR_SOUND_LFO_DEST_NONE;
+sSI ar_sound_get_lfo_dest_by_list_idx(sUI _listIdx) {
+   sSI ret;
    if(_listIdx < AR_NUM_SOUND_LFO_DEST_UI)
    {
       ret = ar_sound_lfo_dest_ids_ui[_listIdx];
+   }
+   else
+   {
+      ret = -1;
    }
    return ret;
 }
 
 
 /* ---------------------------------------------------------------------------- ar_sound_get_list_idx_by_lfo_dest */
-sUI ar_sound_get_list_idx_by_lfo_dest(sUI _lfoDest) {
-   sUI ret = 0u;
+sSI ar_sound_get_list_idx_by_lfo_dest(sUI _lfoDest) {
+   sSI ret;
    if(_lfoDest < AR_NUM_SOUND_LFO_DEST_INT)
    {
       ret = ar_sound_lfo_dest_ids_int[_lfoDest];
+   }
+   else
+   {
+      ret = -1;
    }
    return ret;
 }
