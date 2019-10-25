@@ -345,7 +345,7 @@ typedef struct { /* 0x3386 bytes (v1),  0x3395 bytes (v4 / v1.50) */
    ar_pattern_track_t tracks[13];       /* @0x0004..0x20F8 (0x289 bytes per track in v4, 0x288 in v1) */
    ar_plock_seq_t     plock_seqs[72];   /* @0x20F9..0x3388 */
    sU8                __unknown2;       /* @0x3389           Reads 0x00  */
-   sU8                pattern_len;      /* @0x338A           Master length (in adv mode) */
+   sU8                pattern_len;      /* @0x338A           Master length (in adv mode). 1=inf */
    sU8                master_chg_msb;   /* @0x338B           <void> masterChange MSB */
    sU8                master_chg_lsb;   /* @0x338C           <void> masterChange LSB (1=OFF, 2=2, 3=3, ..,  ) */
    sU8                __unknown5;       /* @0x338D           Reads 0x00 <void> kitnr */
