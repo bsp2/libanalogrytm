@@ -150,6 +150,13 @@ typedef union {
 #define S_U14_GET(Xu) ((sU16) ((Xu).b.lo | ((((Xu).b.hi)&127u) << 7)))
 
 
+#ifdef HAVE_CC_MSVC
+#define Dsnprintf _snprintf
+#else
+#define Dsnprintf snprintf
+#endif // HAVE_CC_MSVC
+
+
 #pragma pack(pop)
 
 #include "cplusplus_end.h"

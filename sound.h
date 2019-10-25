@@ -23,7 +23,8 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 21Aug2017, 21Oct2019, 24Oct2019
+ * ---- created: 21Aug2017
+ * ---- changed: 21Oct2019, 24Oct2019, 25Oct2019
  * ----
  * ----
  */
@@ -40,6 +41,84 @@
 #define AR_SOUND_SYX_SZ  (207)   /* SysEx size, including F0 / F7 */
 
 #define AR_SOUND_SZ      (168)   /* Raw, decoded size */
+
+#define AR_SOUND_MACHINE_BD_HARD      ( 0)
+#define AR_SOUND_MACHINE_BD_CLASSIC   ( 1)
+#define AR_SOUND_MACHINE_SD_HARD      ( 2)
+#define AR_SOUND_MACHINE_SD_CLASSIC   ( 3)
+#define AR_SOUND_MACHINE_RS_HARD      ( 4)
+#define AR_SOUND_MACHINE_RS_CLASSIC   ( 5)
+#define AR_SOUND_MACHINE_CP_CLASSIC   ( 6)
+#define AR_SOUND_MACHINE_BT_CLASSIC   ( 7)
+#define AR_SOUND_MACHINE_XT_CLASSIC   ( 8)
+#define AR_SOUND_MACHINE_CH_CLASSIC   ( 9)
+#define AR_SOUND_MACHINE_OH_CLASSIC   (10)
+#define AR_SOUND_MACHINE_CY_CLASSIC   (11)
+#define AR_SOUND_MACHINE_CB_CLASSIC   (12)
+#define AR_SOUND_MACHINE_BD_FM        (13)
+#define AR_SOUND_MACHINE_SD_FM        (14)
+#define AR_SOUND_MACHINE_NOISE_GEN    (15)
+#define AR_SOUND_MACHINE_IMPULSE      (16)
+#define AR_SOUND_MACHINE_CH_METALLIC  (17)
+#define AR_SOUND_MACHINE_OH_METALLIC  (18)
+#define AR_SOUND_MACHINE_CY_METALLIC  (19)
+#define AR_SOUND_MACHINE_CB_METALLIC  (20)
+#define AR_SOUND_MACHINE_BD_PLASTIC   (21)
+#define AR_SOUND_MACHINE_BD_SILKY     (22)
+#define AR_SOUND_MACHINE_SD_NATURAL   (23)
+#define AR_SOUND_MACHINE_HH_BASIC     (24)
+#define AR_SOUND_MACHINE_CY_RIDE      (25)
+#define AR_SOUND_MACHINE_BD_SHARP     (26)
+#define AR_SOUND_MACHINE_DISABLE      (27)
+#define AR_SOUND_MACHINE_DUAL_VCO     (28)
+#define AR_NUM_SOUND_MACHINES         (29)
+
+extern const char *const ar_sound_machine_names [AR_NUM_SOUND_MACHINES];
+
+// (note) in UI list order
+#define AR_SOUND_LFO_DEST_NONE     (41)  // 0x29
+#define AR_SOUND_LFO_DEST_SYN_1    ( 0)  // 0x00 (e.g. LEV) (machine-dependent)
+#define AR_SOUND_LFO_DEST_SYN_2    ( 1)  // 0x01 (e.g. TUN)
+#define AR_SOUND_LFO_DEST_SYN_3    ( 2)  // 0x02 (e.g. DEC)
+#define AR_SOUND_LFO_DEST_SYN_4    ( 3)  // 0x03 (e.g. TYP)
+#define AR_SOUND_LFO_DEST_SYN_5    ( 4)  // 0x04 (e.g. MOD)
+#define AR_SOUND_LFO_DEST_SYN_6    ( 5)  // 0x05 (e.g. SWT)
+#define AR_SOUND_LFO_DEST_SYN_7    ( 6)  // 0x06 (e.g. SWD)
+#define AR_SOUND_LFO_DEST_SYN_8    ( 7)  // 0x07 (e.g. TIC)
+#define AR_SOUND_LFO_DEST_SMP_TUN  ( 8)  // 0x08
+#define AR_SOUND_LFO_DEST_SMP_FIN  ( 9)  // 0x09
+#define AR_SOUND_LFO_DEST_SMP_SMP  (10)  // 0x0A
+#define AR_SOUND_LFO_DEST_SMP_BR   (11)  // 0x0B
+#define AR_SOUND_LFO_DEST_SMP_STA  (12)  // 0x0C
+#define AR_SOUND_LFO_DEST_SMP_END  (13)  // 0x0D
+#define AR_SOUND_LFO_DEST_SMP_LOP  (14)  // 0x0E
+#define AR_SOUND_LFO_DEST_SMP_LEV  (15)  // 0x0F
+#define AR_SOUND_LFO_DEST_FLT_ENV  (23)  // 0x17
+#define AR_SOUND_LFO_DEST_FLT_ATK  (16)  // 0x10
+#define AR_SOUND_LFO_DEST_FLT_DEC  (18)  // 0x12
+#define AR_SOUND_LFO_DEST_FLT_SUS  (17)  // 0x11
+#define AR_SOUND_LFO_DEST_FLT_REL  (19)  // 0x13
+#define AR_SOUND_LFO_DEST_FLT_FRQ  (20)  // 0x14
+#define AR_SOUND_LFO_DEST_FLT_RES  (21)  // 0x15
+#define AR_SOUND_LFO_DEST_AMP_ATK  (24)  // 0x18
+#define AR_SOUND_LFO_DEST_AMP_HLD  (25)  // 0x19
+#define AR_SOUND_LFO_DEST_AMP_DEC  (26)  // 0x1A
+#define AR_SOUND_LFO_DEST_AMP_OVR  (27)  // 0x1B
+#define AR_SOUND_LFO_DEST_AMP_VOL  (31)  // 0x1F
+#define AR_SOUND_LFO_DEST_AMP_PAN  (30)  // 0x1E
+#define AR_SOUND_LFO_DEST_AMP_ACC  (32)  // 0x20  ("AMP:Accent Level", [FUNC]+[BANK B/F])
+#define AR_SOUND_LFO_DEST_AMP_DLY  (28)  // 0x1C
+#define AR_SOUND_LFO_DEST_AMP_REV  (29)  // 0x1D
+
+#define AR_NUM_SOUND_LFO_DEST_UI   (33)
+#define AR_NUM_SOUND_LFO_DEST_INT  (42)
+
+#define AR_SOUND_MAX_LFO_DEST_NAME  (24)
+
+extern const char *const ar_sound_lfo_dest_names_ui [AR_NUM_SOUND_LFO_DEST_UI];
+extern const sUI         ar_sound_lfo_dest_ids_ui   [AR_NUM_SOUND_LFO_DEST_UI];  // maps UI list index to dest index
+extern const sUI         ar_sound_lfo_dest_ids_int  [AR_NUM_SOUND_LFO_DEST_INT]; // maps dest index to UI list index
+
 
 
 /* (note) request sound workbuffers 0..11 ("SOUNDX") to retrieve track sounds 1..12 */
@@ -65,7 +144,7 @@ typedef struct { /* 0xA8 (168) bytes */
    sU8 name[0xf];
    sU8 __pad_name;            /* @0x001B  (ASCIIZ?) */
 
-   sU8 synth_param_1;         /* @0x001C  
+   sU8 synth_param_1;         /* @0x001C
                                           0:bd hard     : lev
                                           1:bd classic  : lev
                                           2:sd hard     : lev
@@ -184,7 +263,7 @@ typedef struct { /* 0xA8 (168) bytes */
                                          16:impulse     : -
                                          17:ch metallic : -
                                          18:oh metallic : -
-                                         19:cy metallic : ton (64=+0) 
+                                         19:cy metallic : ton (64=+0)
                                          20:cb metallic : det
                                          21:bd plastic  : typ
                                          22:bd silky    : hld
@@ -210,8 +289,8 @@ typedef struct { /* 0xA8 (168) bytes */
                                           9:ch classic  : -
                                          10:oh classic  : -
                                          11:cy classic  : ton (64=+0)
-                                         12:cb classic  : 
-                                         13:bd fm       : swt 
+                                         12:cb classic  :
+                                         13:bd fm       : swt
                                          14:sd fm       : fmd
                                          15:noise gen   : lpq
                                          16:impulse     : -
@@ -429,7 +508,7 @@ typedef struct { /* 0xA8 (168) bytes */
    sU8 lfo_fade;              /* @0x0062  0x40=0 */
    sU8 __unused_pad35;        /* @0x0063 (lsb, always 0) */
 
-   sU8 lfo_dest;              /* @0x0064  0x29=none, 0x0=BDHD:Level, .. */
+   sU8 lfo_dest;              /* @0x0064  see LFO_DEST_xxx */
    sU8 __unused_pad36;        /* @0x0065 (lsb, always 0) */
 
    sU8 lfo_wav;               /* @0x0066  0x0=tri, 0x1=sin, .. */
@@ -550,6 +629,90 @@ S_EXTERN ar_error_t ar_sound_raw_to_syx(sU8                   *_syxBuf,
                                         sU32                  *_retSyxBufSize,
                                         const ar_sysex_meta_t *_meta
                                         );
+
+
+/*
+ * Query machine name
+ *
+ *  Arguments:
+ *   _sound - Pointer to ar_sound_t (e.g. &kit.tracks[4])
+ *
+ *  Returns:
+ *   Machine name or NULL if the machine type is invalid or _sound is NULL.
+ *
+ */
+const char *ar_sound_get_machine_name (const ar_sound_t *_sound);
+
+
+/*
+ * Query machine parameter short name (synth param 1..8)
+ *
+ *  Arguments:
+ *           _sound - Pointer to ar_sound_t (e.g. &kit.tracks[4])
+ *   _synthParamIdx - Synth parameter index (0..7)
+ *
+ *  Returns:
+ *   Parameter name (TUN, LEV, ..) or NULL if the machine type or _synthParamIdx is invalid, or _sound is NULL.
+ *
+ */
+const char *ar_sound_get_machine_param_short_name (const ar_sound_t *_sound, sUI _synthParamIdx);
+
+
+/*
+ * Query LFO destination name
+ *
+ *  Arguments:
+ *      _sound - Pointer to ar_sound_t (e.g. &kit.tracks[4])
+ *     _retBuf - Returns the null-terminated LFO destination name
+ *   _retBufSz - Size of the char buffer (at least AR_SOUND_MAX_LFO_DEST_NAME (24) chars)
+ *
+ *  Returns:
+ *   S_TRUE when the query succeeded or S_FALSE if the machine type is invalid or _sound is NULL.
+ *
+ */
+sBool ar_sound_get_lfo_dest_name (const ar_sound_t *_sound, char *_retBuf, sUI _retBufSz);
+
+
+/*
+ * Map LFO destination UI list idx to synth-internal index.
+ *
+ *  Arguments:
+ *    _listIdx - UI list index  (0..AR_NUM_SOUND_LFO_DEST_UI)
+ *
+ *  Returns:
+ *   Synth internal LFO destination index. AR_SOUND_LFO_DEST_NONE if an error occured (invalid listIdx).
+ *
+ */
+sUI ar_sound_get_lfo_dest_by_list_idx (sUI _listIdx);
+
+
+/*
+ * Map LFO destination synth-internal index to list idx.
+ *
+ *  Arguments:
+ *    _lfoDest - Synth-internal LFO destination index  (0..AR_NUM_SOUND_LFO_DEST_INT)
+ *
+ *  Returns:
+ *   UI list index. 0 if an error occured (invalid internal index).
+ *
+ */
+sUI ar_sound_get_list_idx_by_lfo_dest (sUI _lfoDest);
+
+
+/*
+ * Query LFO destination name by UI list index
+ *
+ *  Arguments:
+ *      _sound - Pointer to ar_sound_t (e.g. &kit.tracks[4])
+ *    _listIdx - UI list index  (0..AR_NUM_SOUND_LFO_DEST_UI)
+ *     _retBuf - Returns the null-terminated LFO destination name
+ *   _retBufSz - Size of the char buffer (at least AR_SOUND_MAX_LFO_DEST_NAME (24) chars)
+ *
+ *  Returns:
+ *   S_TRUE when the query succeeded or S_FALSE if the machine type is invalid or _sound is NULL.
+ *
+ */
+sBool ar_sound_get_lfo_dest_name_by_list_idx (const ar_sound_t *_sound, sUI _listIdx, char *_retBuf, sUI _retBufSz);
 
 
 #pragma pack(pop)
