@@ -24,7 +24,7 @@
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
  * ---- created: 21Aug2017
- * ---- changed: 25Oct2019
+ * ---- changed: 25Oct2019, 26Oct2019
  * ----
  * ----
  */
@@ -71,6 +71,258 @@ const char *const ar_sound_machine_names[AR_NUM_SOUND_MACHINES] = {
    "bd sharp",     // 26
    "DISABLE",      // 27
    "dual vco",     // 28
+};
+
+
+static const sSI ar_sound_compatible_machines_01[] =
+   // 01: BD  (bd_sd_dualvco_noise_impulse)
+   {
+      AR_SOUND_MACHINE_BD_HARD,
+      AR_SOUND_MACHINE_BD_CLASSIC,
+      AR_SOUND_MACHINE_BD_FM,
+      AR_SOUND_MACHINE_BD_PLASTIC,
+      AR_SOUND_MACHINE_BD_SILKY,
+      AR_SOUND_MACHINE_BD_SHARP,
+
+      AR_SOUND_MACHINE_SD_HARD,
+      AR_SOUND_MACHINE_SD_CLASSIC,
+      AR_SOUND_MACHINE_SD_FM,
+      AR_SOUND_MACHINE_SD_NATURAL,
+
+      AR_SOUND_MACHINE_DUAL_VCO,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+static const sSI ar_sound_compatible_machines_02[] =
+   // 02: SD  (bd_sd_dualvco_noise_impulse)
+   {
+      AR_SOUND_MACHINE_BD_HARD,
+      AR_SOUND_MACHINE_BD_CLASSIC,
+      AR_SOUND_MACHINE_BD_FM,
+      AR_SOUND_MACHINE_BD_PLASTIC,
+      AR_SOUND_MACHINE_BD_SILKY,
+      AR_SOUND_MACHINE_BD_SHARP,
+
+      AR_SOUND_MACHINE_SD_HARD,
+      AR_SOUND_MACHINE_SD_CLASSIC,
+      AR_SOUND_MACHINE_SD_FM,
+      AR_SOUND_MACHINE_SD_NATURAL,
+
+      AR_SOUND_MACHINE_DUAL_VCO,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+static const sSI ar_sound_compatible_machines_03[] =
+   // 03: RS  (bd_sd_rs_cp_dualvco_noise_impulse)
+   {
+      AR_SOUND_MACHINE_BD_HARD,
+      AR_SOUND_MACHINE_BD_CLASSIC,
+      AR_SOUND_MACHINE_BD_FM,
+      AR_SOUND_MACHINE_BD_PLASTIC,
+      AR_SOUND_MACHINE_BD_SILKY,
+      AR_SOUND_MACHINE_BD_SHARP,
+
+      AR_SOUND_MACHINE_SD_HARD,
+      AR_SOUND_MACHINE_SD_CLASSIC,
+      AR_SOUND_MACHINE_SD_FM,
+      AR_SOUND_MACHINE_SD_NATURAL,
+
+      AR_SOUND_MACHINE_RS_HARD,
+      AR_SOUND_MACHINE_RS_CLASSIC,
+
+      AR_SOUND_MACHINE_CP_CLASSIC,
+
+      AR_SOUND_MACHINE_DUAL_VCO,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+static const sSI ar_sound_compatible_machines_04[] =
+   // 04: CP  (bd_sd_rs_cp_dualvco_noise_impulse)
+   {
+      AR_SOUND_MACHINE_BD_HARD,
+      AR_SOUND_MACHINE_BD_CLASSIC,
+      AR_SOUND_MACHINE_BD_FM,
+      AR_SOUND_MACHINE_BD_PLASTIC,
+      AR_SOUND_MACHINE_BD_SILKY,
+      AR_SOUND_MACHINE_BD_SHARP,
+
+      AR_SOUND_MACHINE_SD_HARD,
+      AR_SOUND_MACHINE_SD_CLASSIC,
+      AR_SOUND_MACHINE_SD_FM,
+      AR_SOUND_MACHINE_SD_NATURAL,
+
+      AR_SOUND_MACHINE_RS_HARD,
+      AR_SOUND_MACHINE_RS_CLASSIC,
+
+      AR_SOUND_MACHINE_CP_CLASSIC,
+
+      AR_SOUND_MACHINE_DUAL_VCO,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+static const sSI ar_sound_compatible_machines_05[] =
+   // 05: BT  (bt_noise_impulse)
+   {
+      AR_SOUND_MACHINE_BT_CLASSIC,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+static const sSI ar_sound_compatible_machines_06[] =
+   // 06: LT  (xt_noise_impulse)
+   {
+      AR_SOUND_MACHINE_XT_CLASSIC,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+static const sSI ar_sound_compatible_machines_07[] =
+   // 07: MT  (xt_noise_impulse)
+   {
+      AR_SOUND_MACHINE_XT_CLASSIC,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+static const sSI ar_sound_compatible_machines_08[] =
+   // 08: HT  (xt_noise_impulse)
+   {
+      AR_SOUND_MACHINE_XT_CLASSIC,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+static const sSI ar_sound_compatible_machines_09[] =
+   // 09: CH  (ch_oh_noise_impulse)
+   {
+      AR_SOUND_MACHINE_CH_CLASSIC,
+      AR_SOUND_MACHINE_CH_METALLIC,
+
+      AR_SOUND_MACHINE_OH_CLASSIC,
+      AR_SOUND_MACHINE_OH_METALLIC,
+
+      AR_SOUND_MACHINE_HH_BASIC,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+static const sSI ar_sound_compatible_machines_10[] =
+   // 10: OH  (ch_oh_noise_impulse)
+   {
+      AR_SOUND_MACHINE_CH_CLASSIC,
+      AR_SOUND_MACHINE_CH_METALLIC,
+
+      AR_SOUND_MACHINE_OH_CLASSIC,
+      AR_SOUND_MACHINE_OH_METALLIC,
+
+      AR_SOUND_MACHINE_HH_BASIC,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+static const sSI ar_sound_compatible_machines_11[] =
+   // 11: CY  (cy_cb_noise_impulse)
+   {
+      AR_SOUND_MACHINE_CY_CLASSIC,
+      AR_SOUND_MACHINE_CY_METALLIC,
+      AR_SOUND_MACHINE_CY_RIDE,
+
+      AR_SOUND_MACHINE_CB_CLASSIC,
+      AR_SOUND_MACHINE_CB_METALLIC,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+static const sSI ar_sound_compatible_machines_12[] =
+   // 12: CB  (cy_cb_noise_impulse)
+   {
+      AR_SOUND_MACHINE_CY_CLASSIC,
+      AR_SOUND_MACHINE_CY_METALLIC,
+      AR_SOUND_MACHINE_CY_RIDE,
+
+      AR_SOUND_MACHINE_CB_CLASSIC,
+      AR_SOUND_MACHINE_CB_METALLIC,
+
+      AR_SOUND_MACHINE_NOISE_GEN,
+      AR_SOUND_MACHINE_IMPULSE,
+
+      AR_SOUND_MACHINE_DISABLE,
+      -1
+   }
+   ;
+
+const sSI *ar_sound_compatible_machines[/*12 num_tracks*/] = {
+   ar_sound_compatible_machines_01,
+   ar_sound_compatible_machines_02,
+   ar_sound_compatible_machines_03,
+   ar_sound_compatible_machines_04,
+   ar_sound_compatible_machines_05,
+   ar_sound_compatible_machines_06,
+   ar_sound_compatible_machines_07,
+   ar_sound_compatible_machines_08,
+   ar_sound_compatible_machines_09,
+   ar_sound_compatible_machines_10,
+   ar_sound_compatible_machines_11,
+   ar_sound_compatible_machines_12
 };
 
 
@@ -234,7 +486,7 @@ const char *const ar_sound_machine_param_short_names[8][AR_NUM_SOUND_MACHINES] =
       "TUN",  //  3:sd classic  : tun (64=+0)
       "TUN",  //  4:rs hard     : tun (64=+0)
       "T1",   //  5:rs classic  : t1  (64=+0)
-      "TON",  //  6:cp classic  : ton
+      "TON",  //  6:cp classic  : ton (0..127)
       "TUN",  //  7:bt classic  : tun (64=+0)
       "TUN",  //  8:xt classic  : tun (64=+0)
       "TUN",  //  9:ch classic  : tun (64=+0)
@@ -256,7 +508,7 @@ const char *const ar_sound_machine_param_short_names[8][AR_NUM_SOUND_MACHINES] =
       "TUN",  // 25:cy ride     : tun (64=+0)
       "TUN",  // 26:bd sharp    : tun (64=+0)
       "-",    // 27:DISABLE     : -
-      "TUN",  // 28:dual vco    : tun
+      "TUN",  // 28:dual vco    : tun (64=+0)
    },
 
    // synth_param_3:
@@ -328,34 +580,34 @@ const char *const ar_sound_machine_param_short_names[8][AR_NUM_SOUND_MACHINES] =
    // synth_param_5:
    {
       "SWT",  //  0:bd hard     : swt
-      "SWT",        //  1:bd classic  : swt
-      "TIC",        //  2:sd hard     : tic
-      "SNP",        //  3:sd classic  : snp
-      "TIC",        //  4:rs hard     : tic
-      "T2",         //  5:rs classic  : t2  (64=+0)
-      "RAT",        //  6:cp classic  : rat
-      "-",          //  7:bt classic  : -
-      "SWT",        //  8:xt classic  : swt
-      "-",          //  9:ch classic  : -
-      "-",          // 10:oh classic  : -
-      "TON",        // 11:cy classic  : ton (64=+0)
-      "-",          // 12:cb classic  : -
-      "SWT",        // 13:bd fm       : swt
-      "FMD",        // 14:sd fm       : fmd
-      "LPQ",        // 15:noise gen   : lpq
-      "-",          // 16:impulse     : -
-      "-",          // 17:ch metallic : -
-      "-",          // 18:oh metallic : -
-      "TRD",        // 19:cy metallic : trd
-      "-",          // 20:cb metallic : -
-      "MOD",        // 21:bd plastic  : mod
-      "SWT",        // 22:bd silky    : swt
-      "BAL",        // 23:sd natural  : bal
-      "TRD",        // 24:hh basic    : trd
-      "HIT",        // 25:cy ride     : hit
-      "SWT",        // 26:bd sharp    : swt
-      "-",          // 27:DISABLE     : -
-      "DEC2",       // 28:dual vco    : dec#2
+      "SWT",  //  1:bd classic  : swt
+      "TIC",  //  2:sd hard     : tic
+      "SNP",  //  3:sd classic  : snp
+      "TIC",  //  4:rs hard     : tic
+      "T2",   //  5:rs classic  : t2  (64=+0)
+      "RAT",  //  6:cp classic  : rat
+      "NOL",  //  7:bt classic  : nol
+      "SWT",  //  8:xt classic  : swt
+      "-",    //  9:ch classic  : -
+      "-",    // 10:oh classic  : -
+      "TON",  // 11:cy classic  : ton (64=+0)
+      "-",    // 12:cb classic  : -
+      "SWT",  // 13:bd fm       : swt
+      "FMD",  // 14:sd fm       : fmd
+      "LPQ",  // 15:noise gen   : lpq
+      "-",    // 16:impulse     : -
+      "-",    // 17:ch metallic : -
+      "-",    // 18:oh metallic : -
+      "TRD",  // 19:cy metallic : trd
+      "-",    // 20:cb metallic : -
+      "MOD",  // 21:bd plastic  : mod
+      "SWT",  // 22:bd silky    : swt
+      "BAL",  // 23:sd natural  : bal (0..127)
+      "TRD",  // 24:hh basic    : trd
+      "HIT",  // 25:cy ride     : hit
+      "SWT",  // 26:bd sharp    : swt
+      "-",    // 27:DISABLE     : -
+      "DEC2", // 28:dual vco    : dec#2
    },
 
    // synth_param_6:
@@ -429,7 +681,7 @@ const char *const ar_sound_machine_param_short_names[8][AR_NUM_SOUND_MACHINES] =
       "TIC",  //  0:bd hard     : tic
       "TRA",  //  1:bd classic  : tra
       "SWT",  //  2:sd hard     : swt
-      "BAL",  //  3:sd classic  : bal
+      "BAL",  //  3:sd classic  : bal (64=+0)
       "SWT",  //  4:rs hard     : swt
       "TIC",  //  5:rs classic  : tic
       "CPD",  //  6:cp classic  : cpd
@@ -442,7 +694,7 @@ const char *const ar_sound_machine_param_short_names[8][AR_NUM_SOUND_MACHINES] =
       "FMT",  // 13:bd fm       : fmt (64=+0)
       "FMA",  // 14:sd fm       : fma
       "SWD",  // 15:noise gen   : swd (64=+0)
-      "POL",  // 16:impulse     : pol
+      "POL",  // 16:impulse     : pol (0 or 1)
       "-",    // 17:ch metallic : -
       "-",    // 18:oh metallic : -
       "-",    // 19:cy metallic : -
@@ -454,7 +706,7 @@ const char *const ar_sound_machine_param_short_names[8][AR_NUM_SOUND_MACHINES] =
       "C3",   // 25:cy ride     : c3
       "TIC",  // 26:bd sharp    : tic
       "-",    // 27:DISABLE     : -
-      "CFG",  // 28:dual vco    : cfg
+      "CFG",  // 28:dual vco    : cfg (0..79)
    },
 };
 
@@ -549,7 +801,6 @@ ar_error_t ar_sound_raw_to_syx(sU8                   *_syxBuf,
    return ret;
 }
 
-
 /* ---------------------------------------------------------------------------- ar_sound_get_machine_name */
 const char *ar_sound_get_machine_name(const ar_sound_t *_sound) {
    const char *ret = NULL;
@@ -563,6 +814,57 @@ const char *ar_sound_get_machine_name(const ar_sound_t *_sound) {
    return ret;
 }
 
+/* ---------------------------------------------------------------------------- ar_sound_get_machine_name_by_id */
+const char *ar_sound_get_machine_name_by_id(sUI _machineId) {
+   const char *ret;
+   if(_machineId < AR_NUM_SOUND_MACHINES)
+      ret = ar_sound_machine_names[_machineId];
+   else
+      ret = NULL;
+   return ret;
+}
+
+/* ---------------------------------------------------------------------------- ar_sound_get_machine_id_by_track_and_list_idx */
+sSI ar_sound_get_machine_id_by_track_and_list_idx(sUI _trackIdx, sUI _listIdx) {
+   sSI ret = -1;
+   if(_trackIdx < 12u)
+   {
+      sUI listIdx = 0u;
+      const sSI *id = ar_sound_compatible_machines[_trackIdx];
+      while(-1 != *id)
+      {
+         if(listIdx == _listIdx)
+         {
+            ret = *id;
+            break;
+         }
+         id++;
+         listIdx++;
+      }
+   }
+   return ret;
+}
+
+/* ---------------------------------------------------------------------------- ar_sound_get_list_index_by_track_idx_and_machine_id */
+sSI ar_sound_get_list_index_by_track_idx_and_machine_id(sUI _trackIdx, sUI _machineId) {
+   sSI ret = -1;
+   if(_trackIdx < 12u)
+   {
+      sUI listIdx = 0u;
+      const sSI *id = ar_sound_compatible_machines[_trackIdx];
+      while(-1 != *id)
+      {
+         if(*id == (sSI)_machineId)
+         {
+            ret = listIdx;
+            break;
+         }
+         listIdx++;
+         id++;
+      }
+   }
+   return ret;
+}
 
 /* ---------------------------------------------------------------------------- ar_sound_get_machine_param_short_name */
 const char *ar_sound_get_machine_param_short_name(const ar_sound_t *_sound, sUI _synthParamIdx) {
@@ -580,7 +882,6 @@ const char *ar_sound_get_machine_param_short_name(const ar_sound_t *_sound, sUI 
    return ret;
 }
 
-
 /* ---------------------------------------------------------------------------- ar_sound_get_lfo_dest_name */
 sBool ar_sound_get_lfo_dest_name(const ar_sound_t *_sound, char *_retBuf, sUI _retBufSz) {
    sBool ret = S_FALSE;
@@ -589,12 +890,12 @@ sBool ar_sound_get_lfo_dest_name(const ar_sound_t *_sound, char *_retBuf, sUI _r
       if(_sound->machine_type < AR_NUM_SOUND_MACHINES)
       {
          if(_retBufSz >= AR_SOUND_MAX_LFO_DEST_NAME)
-         {            
+         {
             if(_sound->lfo_dest < 8u)
             {
                // e.g. "Synth Param 5 [DEC2]"
-               Dsnprintf(_retBuf, 
-                         _retBufSz, 
+               Dsnprintf(_retBuf,
+                         _retBufSz,
                          "%s [%s]",
                          ar_sound_lfo_dest_names_ui[ar_sound_lfo_dest_ids_int[_sound->lfo_dest]],
                          ar_sound_machine_param_short_names[_sound->lfo_dest][_sound->machine_type]
@@ -626,7 +927,6 @@ sBool ar_sound_get_lfo_dest_name(const ar_sound_t *_sound, char *_retBuf, sUI _r
    return ret;
 }
 
-
 /* ---------------------------------------------------------------------------- ar_sound_get_lfo_dest_by_list_idx */
 sSI ar_sound_get_lfo_dest_by_list_idx(sUI _listIdx) {
    sSI ret;
@@ -640,7 +940,6 @@ sSI ar_sound_get_lfo_dest_by_list_idx(sUI _listIdx) {
    }
    return ret;
 }
-
 
 /* ---------------------------------------------------------------------------- ar_sound_get_list_idx_by_lfo_dest */
 sSI ar_sound_get_list_idx_by_lfo_dest(sUI _lfoDest) {
@@ -665,12 +964,12 @@ sBool ar_sound_get_lfo_dest_name_by_list_idx(const ar_sound_t *_sound, sUI _list
       if(_sound->machine_type < AR_NUM_SOUND_MACHINES)
       {
          if(_retBufSz >= AR_SOUND_MAX_LFO_DEST_NAME)
-         {            
+         {
             if( (_listIdx >= 1u) && (_listIdx <= 8u) )
             {
                // e.g. "Synth Param 5 [DEC2]"
-               Dsnprintf(_retBuf, 
-                         _retBufSz, 
+               Dsnprintf(_retBuf,
+                         _retBufSz,
                          "%s [%s]",
                          ar_sound_lfo_dest_names_ui[_listIdx],
                          ar_sound_machine_param_short_names[_listIdx - 1u][_sound->machine_type]

@@ -24,7 +24,7 @@
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
  * ---- created: 21Aug2017
- * ---- changed: 21Oct2019, 24Oct2019, 25Oct2019
+ * ---- changed: 21Oct2019, 24Oct2019, 25Oct2019, 26Oct2019
  * ----
  * ----
  */
@@ -74,6 +74,9 @@
 #define AR_NUM_SOUND_MACHINES         (29)
 
 extern const char *const ar_sound_machine_names [AR_NUM_SOUND_MACHINES];
+
+// each list is terminated by id=-1
+extern const sSI *ar_sound_compatible_machines [12/*num_tracks*/];
 
 // (note) in UI list order
 #define AR_SOUND_LFO_DEST_NONE     (41)  // 0x29
@@ -184,7 +187,7 @@ typedef struct { /* 0xA8 (168) bytes */
                                           3:sd classic  : tun (64=+0)
                                           4:rs hard     : tun (64=+0)
                                           5:rs classic  : t1  (64=+0)
-                                          6:cp classic  : ton
+                                          6:cp classic  : ton (0..127)
                                           7:bt classic  : tun (64=+0)
                                           8:xt classic  : tun (64=+0)
                                           9:ch classic  : tun (64=+0)
@@ -206,7 +209,7 @@ typedef struct { /* 0xA8 (168) bytes */
                                          25:cy ride     : tun (64=+0)
                                          26:bd sharp    : tun (64=+0)
                                          27:DISABLE     : -
-                                         28:dual vco    : tun
+                                         28:dual vco    : tun (64=+0)
                               */
    sU8 __unused_pad2;  /* synth_param_2_lsb. unused, always 0 */
 
@@ -284,7 +287,7 @@ typedef struct { /* 0xA8 (168) bytes */
                                           4:rs hard     : tic
                                           5:rs classic  : t2  (64=+0)
                                           6:cp classic  : rat
-                                          7:bt classic  : -
+                                          7:bt classic  : nol
                                           8:xt classic  : swt
                                           9:ch classic  : -
                                          10:oh classic  : -
@@ -300,7 +303,7 @@ typedef struct { /* 0xA8 (168) bytes */
                                          20:cb metallic : -
                                          21:bd plastic  : mod
                                          22:bd silky    : swt
-                                         23:sd natural  : bal
+                                         23:sd natural  : bal (0..127)
                                          24:hh basic    : trd
                                          25:cy ride     : hit
                                          26:bd sharp    : swt
@@ -379,7 +382,7 @@ typedef struct { /* 0xA8 (168) bytes */
                                           0:bd hard     : tic
                                           1:bd classic  : tra
                                           2:sd hard     : swt
-                                          3:sd classic  : bal
+                                          3:sd classic  : bal (64=+0)
                                           4:rs hard     : swt
                                           5:rs classic  : tic
                                           6:cp classic  : cpd
@@ -392,7 +395,7 @@ typedef struct { /* 0xA8 (168) bytes */
                                          13:bd fm       : fmt (64=+0)
                                          14:sd fm       : fma
                                          15:noise gen   : swd (64=+0)
-                                         16:impulse     : pol
+                                         16:impulse     : pol (0 or 1)
                                          17:ch metallic : -
                                          18:oh metallic : -
                                          19:cy metallic : -
@@ -404,7 +407,7 @@ typedef struct { /* 0xA8 (168) bytes */
                                          25:cy ride     : c3
                                          26:bd sharp    : tic
                                          27:DISABLE     : -
-                                         28:dual vco    : cfg
+                                         28:dual vco    : cfg (0..79)
                               */
    sU8 __unused_pad8;  /* synth_param_8_lsb. unused, always 0 */
 
@@ -642,6 +645,49 @@ S_EXTERN ar_error_t ar_sound_raw_to_syx(sU8                   *_syxBuf,
  *
  */
 const char *ar_sound_get_machine_name (const ar_sound_t *_sound);
+
+
+/*
+ * Query machine name by idx
+ *
+ *  Arguments:
+ *   _machineIdx - Machine id (0..AR_NUM_SOUND_MACHINES)
+ *
+ *  Returns:
+ *   Machine name or NULL if machine index is invalid.
+ *
+ */
+const char *ar_sound_get_machine_name_by_id (sUI _machineId);
+
+
+/*
+ * Query machine id by track and UI list idx
+ *
+ *  (note) to query all compatible machines, call this fxn until it returns -1.
+ *
+ *  Arguments:
+ *     _trackIdx - Track index (0..11)
+ *      _listIdx - Machine UI list index (0..n)
+ *
+ *  Returns:
+ *   Machine id or -1 if the track or machine index is invalid.
+ *
+ */
+sSI ar_sound_get_machine_id_by_track_and_list_idx (sUI _trackIdx, sUI _listIdx);
+
+
+/*
+ * Query UI list index by track index and machine id.
+ *
+ *  Arguments:
+ *     _trackIdx - Track index (0..11)
+ *    _machineId - Machine id (0..AR_NUM_SOUND_MACHINES)
+ *
+ *  Returns:
+ *   Machine id or -1 if the track or machine index is invalid.
+ *
+ */
+sSI ar_sound_get_list_index_by_track_idx_and_machine_id(sUI _trackIdx, sUI _machineId);
 
 
 /*
