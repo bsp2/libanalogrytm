@@ -21,9 +21,10 @@
  * ---- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * ---- THE SOFTWARE.
  * ----
- * ---- info   : This is part of the "libanalogrytm" package.
+ * ---- info   : This is part of the "libanalogrytm" package.  **UNDER CONSTRUCTION (FW1.70 update)**
  * ----
- * ---- changed: 30Jul2014, 01Aug2014, 04Aug2014, 07Jul2017, 21Oct2019, 24Oct2019
+ * ---- created: 30Jul2014
+ * ---- changed: 01Aug2014, 04Aug2014, 07Jul2017, 21Oct2019, 24Oct2019, 26Nov2023
  * ----
  * ----
  */
@@ -56,21 +57,25 @@
 #endif
 
 #define AR_PATTERN_SYX_V1_SZ        (0x3AF2u)  /* total size of pattern sysex dump (starting with 0xF0, ending with 0xF7) */
-#define AR_PATTERN_SYX_V4_SZ        (0x3B03u)  /* v1.50 (starting with 0xF0, ending with 0xF7) */
-#define AR_PATTERN_SYX_MIN_SZ       (0x3AF2u)
-#define AR_PATTERN_SYX_MAX_SZ       (0x3B03u)
+#define AR_PATTERN_SYX_V4_SZ        (0x3B03u)  /* FW1.50 (starting with 0xF0, ending with 0xF7) */
+#define AR_PATTERN_SYX_V5_SZ        (0x3A8Cu)  /* FW1.70 */
+#define AR_PATTERN_SYX_MIN_SZ       AR_PATTERN_SYX_V5_SZ
+#define AR_PATTERN_SYX_MAX_SZ       AR_PATTERN_SYX_V4_SZ
 
 #define AR_PATTERN_V1_SZ  (0x3386u)  /* total size of pattern 'raw' 8bit data                */
-#define AR_PATTERN_V4_SZ  (0x3395u)  /* total size of pattern 'raw' 8bit data                */
-#define AR_PATTERN_MIN_SZ (0x3386u)  /*                 */
+#define AR_PATTERN_V4_SZ  (0x3395u)  /* FW1.50..1.61b                                        */
+#define AR_PATTERN_V5_SZ  (0x332Du)  /* FW1.70                                               */
+#define AR_PATTERN_MIN_SZ (0x332Du)  /*                 */
 #define AR_PATTERN_MAX_SZ (0x3395u)  /*                 */
 
 #if 0
 // v1 (original FW)
 #define AR_TRACK_SZ      (0x0288u)   /* total size of track 'raw' 8bit data                  */
+#elif 0
+// v4 (FW v1.50/1.61)
+#define AR_TRACK_SZ      (0x0289u)   /* V4/FW1.50/1.61 total size of track 'raw' 8bit data   */
 #else
-// v4 (FW v1.50)
-#define AR_TRACK_SZ      (0x0289u)   /* total size of track 'raw' 8bit data                  */
+#define AR_TRACK_SZ      (0x0281u)   /* V5/FW1.70      total size of track 'raw' 8bit data   */
 #endif
 
 #define AR_PLOCK_SEQ_SZ  (0x0042u)   /* total size of pattern plock sequence 'raw' 8bit data */
@@ -255,71 +260,66 @@
  *
  */
 
-/* (note) big endian */
-#define AR_TRIG_SWING     (0x0010u)  /* <void> swing                       */
-#define AR_TRIG_NOTE_ON   (0x0001u)  /* note trig ("enable")               */
-#define AR_TRIG_SLIDE     (0x0020u)  /* <void> slide                       */
-#define AR_TRIG_UNKNOWN1  (0x0002u)  /* ?                                  */
-#define AR_TRIG_UNKNOWN6  (0x0040u)  /* ?                                  */
-#define AR_TRIG_MUTE      (0x0004u)  /* <void> mute                        */
-#define AR_TRIG_ACCENT    (0x0008u)  /* <void> accent                      */
-#define AR_TRIG_SYN_EN    (0x0800u)  /* enable synswitch p-lock            */
-#define AR_TRIG_SYN_SW    (0x0080u)  /* synswitch bit (set=on, unset=off)  */
-#define AR_TRIG_SMP_EN    (0x1000u)  /* enable smpswitch p-lock            */
-#define AR_TRIG_SMP_SW    (0x0100u)  /* smpswitch bit (set=on, unset=off)  */
-#define AR_TRIG_ENVF_EN   (0x2000u)  /* enable filter env p-lock           */
-#define AR_TRIG_ENVF_SW   (0x0200u)  /* filter env bit (set=on, unset=off) */
-#define AR_TRIG_LFO_EN    (0x4000u)  /* enable LFO p-lock                  */
-#define AR_TRIG_LFO_SW    (0x0400u)  /* LFO bit (set=on, unset=off)        */
-#define AR_TRIG_RETRIG    (0x8000u)  /* <void> retrig                      */
-#define AR_TRIG_TRIGLESS  (0x7801u)  /* trigless trig (mask=0x7801)        */
-
+#define AR_TRIG_NOTE_ON    (1u <<  0)  /* (0x0001u)        note trig [TRIG]         */
+#define AR_TRIG_RETRIG     (1u <<  1)  /* (0x0002u) <ali>  retrig    [FUNC+Retrig+] */
+#define AR_TRIG_MUTE       (1u <<  2)  /* (0x0004u) <void> mute      [FUNC+A/E]     */
+#define AR_TRIG_ACCENT     (1u <<  3)  /* (0x0008u) <void> accent    [FUNC+B/F]     */
+#define AR_TRIG_SWING      (1u <<  4)  /* (0x0010u) <void> swing     [FUNC+C/G]     */
+#define AR_TRIG_SLIDE      (1u <<  5)  /* (0x0020u) <void> slide     [FUNC+D/H]     */
+#define AR_TRIG_LFO_PL_SW  (1u <<  6)  /* (0x0040u)        p-locked LFO state       */
+#define AR_TRIG_SYN_PL_SW  (1u <<  7)  /* (0x0080u)        p-locked SYN state       */
+#define AR_TRIG_SMP_PL_SW  (1u <<  8)  /* (0x0100u)        p-locked SMP state       */
+#define AR_TRIG_ENV_PL_SW  (1u <<  9)  /* (0x0200u)        p-locked ENV state       */
+#define AR_TRIG_LFO_PL_EN  (1u << 10)  /* (0x0400u)        enable LFO p-lock        */
+#define AR_TRIG_SYN_PL_EN  (1u << 11)  /* (0x0800u)        enable SYN p-lock        */
+#define AR_TRIG_SMP_PL_EN  (1u << 12)  /* (0x1000u)        enable SMP p-lock        */
+#define AR_TRIG_ENV_PL_EN  (1u << 13)  /* (0x2000u)        enable ENV p-lock        */
 
 
 /*
  *
- ** Track structure
+ ** Track structure   **!! UNDER CONSTRUCTION (FW1.70 update) !!**
  *
  */
-typedef struct { /* 0x288 bytes (v1), 0x289 bytes (v4 / v1.50) */
-   s_u16_t trigs[64];                   /* @0x0004..0x0083.  See AR_TRIG_xxx flags. (BIG ENDIAN!)     */
-   sU8     notes[64];                   /* @0x0084..0x00C3.  0xFF=unset, MIDI note otherwise (lower 7 bits)
+typedef struct { /* 0x281(641) bytes (v5/FW1.70), 0x289 bytes (v4/FW1.50..1.61b), 0x288 bytes (v1)  */
+   sU8     trig_bits[((14*64)/8)];      /* @0x0004..0x0073   See AR_TRIG_xxx flags. 14 bits per step ((14*64)/8)==112 bytes */
+   sU8     notes[64];                   /* ?@0x0074..0x00B3  0xFF=unset, MIDI note otherwise (lower 7 bits)
                                          *                    (default is C-4 == 0x3C, 0x3B="-1", 0x3D="+1")
                                          *                   bit7: 1=no trig condition, 0=have trig condition
                                          *                          ==> 0x7F = default note with trig cond
                                          *                          ==> 0xFF = default note without trig cond
                                          */
-   sU8     velocities[64];              /* @0x00C4..0x0103.  0xFF=unset, 0x00=0, 0x7F=127             */
-   sU8     note_lengths[64];            /* @0x0104..0x0143.  0=0.125 (1/128), 1=0.1875, 
-                                                             2=1/64 (0.25), 3=0.3125, 4=0.375, 5=0.4375, 
-                                                             6=1/32, 7=0.5625, 8=0.625, 9=0.6875, .., 13=0.9375,
-                                                             14=1/16, 15=1.0625, 16=1.25, .., 29=1.9375,
-                                                             30=1/8, 31=2.125, 32=2.25, .., 38=3, 39=3.125, .., 45=3.875
-                                                             46=1/4 47=4.25, .., 61=7.75
-                                                             62=1/2, 63=8.5, .., 77=15.5,
-                                                             78=16 (1/1), 79=17, .., 93=31,
-                                                             94=32 (2/1), 95=34, .., 109=62, 
-                                                             110=64 (4/1), 111=68, .., 121=108, 122=112, 123=116, 124=120, 125=124,
-                                                             126=128 (8/1),
-                                                             127=inf 
+   sU8     velocities[64];              /* ?@0x00B4..0x00F3   0xFF=unset, 0x00=0, 0x7F=127             */
+   sU8     note_lengths[64];            /* ?@0x00F4..0x0133   0=0.125 (1/128), 1=0.1875, 
+                                                              2=1/64 (0.25), 3=0.3125, 4=0.375, 5=0.4375, 
+                                                              6=1/32, 7=0.5625, 8=0.625, 9=0.6875, .., 13=0.9375,
+                                                              14=1/16, 15=1.0625, 16=1.25, .., 29=1.9375,
+                                                              30=1/8, 31=2.125, 32=2.25, .., 38=3, 39=3.125, .., 45=3.875
+                                                              46=1/4 47=4.25, .., 61=7.75
+                                                              62=1/2, 63=8.5, .., 77=15.5,
+                                                              78=16 (1/1), 79=17, .., 93=31,
+                                                              94=32 (2/1), 95=34, .., 109=62, 
+                                                              110=64 (4/1), 111=68, .., 121=108, 122=112, 123=116, 124=120, 125=124,
+                                                              126=128 (8/1),
+                                                              127=inf 
                                         */
-   sS8     micro_timings[64];           /* @0x0144..0x0183.  Micro timing (0xE9..0xFF => -23..-1, 0xC0..0xD7 => +0..+23) */
-   sU8     retrig_lengths[64];          /* @0x0184..0x01C3.  Retrig lengths (0..126(=128), 127=inf)   */
-   sU8     retrig_rates[64];            /* @0x01C4..0x0203.  Retrig rates (0(=1/1)..16(=1/80))
+   sS8     micro_timings[64];           /* ?@0x0134..0x0173   Micro timing (0xE9..0xFF => -23..-1, 0xC0..0xD7 => +0..+23) */
+   sU8     retrig_lengths[64];          /* ?@0x0174..0x01B3   Retrig lengths (0..126(=128), 127=inf)   */
+   sU8     retrig_rates[64];            /* ?@0x01B4..0x01F3   Retrig rates (0(=1/1)..16(=1/80))
                                          *                    Changing the trig condition of step 1 updates 0x1c4
                                          */
-   sS8     retrig_velocity_offsets[64]; /* @0x0204..0x0243.  Retrig velocity offsets (-128..+127)     */
-   sU8     trig_note;                   /* @0x0244           <void> trigNote                          */
-   sU8     trig_velocity;               /* @0x0245           <void> trigVelocity                      */
-   sU8     trig_note_length;            /* @0x0246           <void> trigLength                        */
-   s_u16_t trig_flags;                  /* @0x0247           <void> trigFlags (BIG ENDIAN!)           */
-   sU8     __unknown1;                  /* @0x0249           <void> unknown                           */
-   sU8     num_steps;                   /* @0x024A           Number of steps (1..64)                  */
-   sU8     quantize_amount;             /* @0x024B           <void> quantizeAmount                    */
-   sU8     sound_locks[64];             /* @0x024C..0x028B   <void> soundLocks                        */
-   sU8     flags_and_speed;             /* @0x028C. bit7=send MIDI. 
+   sS8     retrig_velocity_offsets[64]; /* ?@0x01F4..0x0233   Retrig velocity offsets (-128..+127)     */
+   sU8     trig_note;                   /* @0x0234            <void> trigNote                          */
+   sU8     trig_velocity;               /* @0x0235            <void> trigVelocity                      */
+   sU8     trig_note_length;            /* @0x0236            <void> trigLength                        */
+   s_u16_t trig_flags;                  /* @0x0237            ENV/LFO(hi) + SYN/SMP(lo) trigFlags      */
+   sU8     num_steps;                   /* @0x0239            number of steps (1..64)                  */
+   sU8     quantize_amount;             /* @0x023A            quantize amount                          */
+   sU8     sound_locks[64];             /* ?@0x023B..0x027A   soundLocks                               */
+   sU8     flags_and_speed;             /* @0x027B. bit7=send MIDI. 
                                                     bit2..0: speed, 0=2x, 1=3/2x, 2=1x, 3=3/4x, 4=1/2x, 5=1/4x, 6=1/8x
                                         */
+   sU8     __unknown_027C[9];
 } ar_pattern_track_t;
 
 
@@ -337,25 +337,29 @@ typedef struct { /* 0x42 bytes */
 
 /*
  *
- ** Pattern structure
+ ** Pattern structure   **!! UNDER CONSTRUCTION (FW1.70 update) !!**
  *
  */
-typedef struct { /* 0x3386 bytes (v1),  0x3395 bytes (v4 / v1.50) */
-   sU8                magic_header[4];  /* ??? a version number ??? reads '00 00 00 01' (v1) and '00 00 00 03' (v4 / v1.50) */
-   ar_pattern_track_t tracks[13];       /* @0x0004..0x20F8 (0x289 bytes per track in v4, 0x288 in v1) */
-   ar_plock_seq_t     plock_seqs[72];   /* @0x20F9..0x3388 */
-   sU8                __unknown2;       /* @0x3389           Reads 0x00  */
-   sU8                pattern_len;      /* @0x338A           Master length (in adv mode). 1=inf */
-   sU8                master_chg_msb;   /* @0x338B           <void> masterChange MSB */
-   sU8                master_chg_lsb;   /* @0x338C           <void> masterChange LSB (1=OFF, 2=2, 3=3, ..,  ) */
-   sU8                __unknown5;       /* @0x338D           Reads 0x00 <void> kitnr */
-   sU8                swing_amount;     /* @0x338E           <void> swingAmount (0..) */
-   sU8                __unknown6;       /* @0x338F           Reads 0x00 <void> timeMode (normal or advanced) */
-   sU8                pattern_speed;    /* @0x3390           See AR_SPD_xxx. */
-   sU8                global_quantize;  /* @0x3391 */
-   sU8                bpm_msb;          /* @0x3392 multiplied by 120 */
-   sU8                bpm_lsb;          /* @0x3393                   */
-   sU8                __unknown10;      /* @0x3394 */
+typedef struct { /* 0x332D(13101) bytes (v5/FW1.70), 0x3395 bytes (v4 / FW1.50..1.61b), 0x3386 bytes (v1) */
+   sU8                magic_header[4];  /* ??? a version number ???
+                                              reads '00 00 00 01' (v1) 
+                                                and '00 00 00 03' (v4 / FW1.50)
+                                                and '00 00 00 05' (v5 / FW1.70)
+                                        */
+   ar_pattern_track_t tracks[13];       /* @0x0004..0x2090? (0x281(641) bytes per track in v5/FW1.70, 0x289 bytes per track in v4/FW1.50/1.61b, 0x288 in v1) */
+   ar_plock_seq_t     plock_seqs[72];   /* ?@0x2091..0x3321 */
+   sU8                pattern_len;      /* @0x3322            Master length (in adv mode). 1=inf */
+   sU8                master_chg_msb;   /* @0x3323            masterChange MSB */
+   sU8                master_chg_lsb;   /* @0x3324            masterChange LSB (1=OFF, 2=2, 3=3, ..,  ) */
+   sU8                __unknown3325;    /* @0x3325            Reads 0x00 <void> kitnr */
+   sU8                swing_amount;     /* @0x3226            swingAmount (0..) */
+   sU8                __unknown3327;    /* @0x3327            Reads 0x00 <void> timeMode (normal or advanced) */
+   sU8                pattern_speed;    /* @0x3228            See AR_SPD_xxx. */
+   sU8                global_quantize;  /* @0x3229 */
+   /* sU8                bpm_msb;          /\* x@0x3392 multiplied by 120 *\/ */
+   /* sU8                bpm_lsb;          /\* x@0x3393                   *\/ */
+   /* sU8                __unknown10;      /\* x@0x3394 *\/ */
+   sU8                __unknown332A[4];
 } ar_pattern_t;
 
 
