@@ -1,6 +1,6 @@
 /* ----
  * ---- file   : pattern.h
- * ---- author : bsp, void (joint rev.eng efforts)
+ * ---- author : bsp, void, alisomay (joint rev.eng efforts)
  * ---- legal  : Distributed under terms of the MIT LICENSE (MIT).
  * ----
  * ---- Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -277,6 +277,48 @@
 
 
 /*
+ * <ali> ar_pattern_track_t.pad_scale enumeration
+ *
+ */
+#define AR_PADSCALE_IONIAN_MAJOR            0u
+#define AR_PADSCALE_DORIAN                  1u
+#define AR_PADSCALE_PHRYGIAN                2u
+#define AR_PADSCALE_LYDIAN                  3u
+#define AR_PADSCALE_MIXOLYDIAN              4u
+#define AR_PADSCALE_AEOLIAN_MINOR           5u
+#define AR_PADSCALE_LOCRIAN                 6u
+#define AR_PADSCALE_PENTATONIC_MINOR        7u
+#define AR_PADSCALE_PENTATONIC_MAJOR        8u
+#define AR_PADSCALE_MELODIC_MINOR           9u
+#define AR_PADSCALE_HARMONIC_MINOR         10u
+#define AR_PADSCALE_WHOLE_TONE             11u
+#define AR_PADSCALE_BLUES                  12u
+#define AR_PADSCALE_COMBO_MINOR            13u
+#define AR_PADSCALE_PERSIAN                14u
+#define AR_PADSCALE_IWATO                  15u
+#define AR_PADSCALE_IN_SEN                 16u
+#define AR_PADSCALE_HIRAJOSHI              17u
+#define AR_PADSCALE_PELOG                  18u
+#define AR_PADSCALE_PHRYGIAN_DOMINANT      19u
+#define AR_PADSCALE_WHOLE_HALF_DIMINISHED  20u
+#define AR_PADSCALE_HALF_WHOLE_DIMINISHED  21u
+#define AR_PADSCALE_SPANISH                22u
+#define AR_PADSCALE_MAJOR_LOCRIAN          23u
+#define AR_PADSCALE_SUPER_LOCRIAN          24u
+#define AR_PADSCALE_DORIAN_B2              25u
+#define AR_PADSCALE_LYDIAN_AUGMENTED       26u
+#define AR_PADSCALE_LYDIAN_DOMINANT        27u
+#define AR_PADSCALE_DOUBLE_HARMONIC_MAJOR  28u
+#define AR_PADSCALE_LYDIAN_2_6             29u
+#define AR_PADSCALE_ULTRAPHRYGIAN          30u
+#define AR_PADSCALE_HUNGARIAN_MINOR        31u
+#define AR_PADSCALE_ORIENTAL               32u
+#define AR_PADSCALE_IONIAN_2_5             33u
+#define AR_PADSCALE_LOCRIAN_BB3_BB7        34u
+
+
+
+/*
  *
  ** Track structure   **!! UNDER CONSTRUCTION (FW1.70 update) !!**
  *
@@ -319,7 +361,16 @@ typedef struct { /* 0x281(641) bytes (v5/FW1.70), 0x289 bytes (v4/FW1.50..1.61b)
    sU8     flags_and_speed;             /* @0x027B. bit7=send MIDI. 
                                                     bit2..0: speed, 0=2x, 1=3/2x, 2=1x, 3=3/4x, 4=1/2x, 5=1/4x, 6=1/8x
                                         */
-   sU8     __unknown_027C[9];
+   sU8     trig_prob;                   /* @0x027C            <ali> Trig probability 0..100 */
+   sU8     euc_mode;                    /* @0x027D            <ali> Euclidean mode on = 128 off = 0 */
+   sU8     euc_pl1;                     /* @0x027E            <ali> Euclidean PL1 0..=64 (max depends on length, total max is 64 because total length max is 64) */
+   sU8     euc_pl2;                     /* @0x027F            <ali> Euclidean PL2 0..=64 (max depends on length, total max is 64 because total length max is 64) */
+   sU8     ro1;                         /* @0x0280            <ali> RO1  0..=126 (middle point 63) */
+   sU8     ro2;                         /* @0x0281            <ali> RO2  0..=126 (middle point 63) */
+   sU8     tro;                         /* @0x0282            <ali> TRO 0..=126 (middle point 63) */
+   sU8     pad_scale;                   /* @0x0283            <ali> PAD SCALE 255 chromatic 0..34 All modes. See AR_PADSCALE_xxx */
+   sU8     root_note;                   /* @0x0284            <ali> Root Note 96..=107 From C to B */
+
 } ar_pattern_track_t;
 
 
