@@ -380,9 +380,9 @@ typedef struct { /* 0x281(641) bytes (v5/FW1.70), 0x289 bytes (v4/FW1.50..1.61b)
  *
  */
 typedef struct { /* 0x42 bytes */
-   sU8 plock_type;  /* @0x20ec           0xFF=unused seq. See AR_PLOCK_TYPE_xxx               */
-   sU8 track_nr;    /* @0x20ed           0xFF=unused seq. Tracknr (0..12)                     */
-   sU8 data[64];    /* @0x20ee..0x212d.  Plock data (64 steps, value range is type dependent) */
+   sU8 plock_type;  /* @0x20ec          0xFF=unused seq. See AR_PLOCK_TYPE_xxx               */
+   sU8 track_nr;    /* @0x20ed          0xFF=unused seq. Tracknr (0..12)                     */
+   sU8 data[64];    /* @0x20ee..0x212d  Plock data (64 steps, value range is type dependent) */
 } ar_plock_seq_t;
                     
 
@@ -396,21 +396,21 @@ typedef struct { /* 0x332D(13101) bytes (v5/FW1.70), 0x3395 bytes (v4 / FW1.50..
                                               reads '00 00 00 01' (v1) 
                                                 and '00 00 00 03' (v4 / FW1.50)
                                                 and '00 00 00 05' (v5 / FW1.70)
-                                        */
+                                         */
    ar_pattern_track_t tracks[13];       /* @0x0004..0x2090? (0x281(641) bytes per track in v5/FW1.70, 0x289 bytes per track in v4/FW1.50/1.61b, 0x288 in v1) */
-   ar_plock_seq_t     plock_seqs[72];   /* ?@0x2091..0x3321 */
-   sU8                pattern_len;      /* @0x3322            Master length (in adv mode). 1=inf */
-   sU8                master_chg_msb;   /* @0x3323            masterChange MSB */
+   ar_plock_seq_t     plock_seqs[72];   /* ?@0x2091..0x3320  16#42*72=4752 bytes                        */
+   sU8                __unknown3321;    /* @0x3321                                                      */
+   sU8                pattern_len;      /* @0x3322            Master length (in adv mode). 1=inf        */
+   sU8                master_chg_msb;   /* @0x3323            masterChange MSB                          */
    sU8                master_chg_lsb;   /* @0x3324            masterChange LSB (1=OFF, 2=2, 3=3, ..,  ) */
-   sU8                __unknown3325;    /* @0x3325            Reads 0x00 <void> kitnr */
-   sU8                swing_amount;     /* @0x3226            swingAmount (0..) */
-   sU8                __unknown3327;    /* @0x3327            Reads 0x00 <void> timeMode (normal or advanced) */
-   sU8                pattern_speed;    /* @0x3228            See AR_SPD_xxx. */
-   sU8                global_quantize;  /* @0x3229 */
-   /* sU8                bpm_msb;          /\* x@0x3392 multiplied by 120 *\/ */
-   /* sU8                bpm_lsb;          /\* x@0x3393                   *\/ */
-   /* sU8                __unknown10;      /\* x@0x3394 *\/ */
-   sU8                __unknown332A[4];
+   sU8                __unknown3325;    /* @0x3325            Reads 0x00 <void> kitnr                   */
+   sU8                swing_amount;     /* @0x3226            swingAmount (0..30 => 50%..80%)           */
+   sU8                time_mode;        /* @0x3327            <void> timeMode (0=normal, 1=advanced)    */
+   sU8                pattern_speed;    /* @0x3228            See AR_SPD_xxx.                           */
+   sU8                global_quantize;  /* @0x3229                                                      */
+   sU8                bpm_msb;          /* @0x332A multiplied by 120. (used when BPM mode=PTN)          */
+   sU8                bpm_lsb;          /* @0x332B                                                      */
+   sU8                __unknown332C;
 } ar_pattern_t;
 
 
