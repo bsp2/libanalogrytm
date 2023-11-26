@@ -24,7 +24,7 @@
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
  * ---- created: 21Aug2017
- * ---- changed: 21Oct2019, 24Oct2019, 25Oct2019, 26Oct2019
+ * ---- changed: 21Oct2019, 24Oct2019, 25Oct2019, 26Oct2019, 15Jul2021, 25Nov2023
  * ----
  * ----
  */
@@ -38,9 +38,13 @@
 #pragma pack(1)
 
 
-#define AR_SOUND_SYX_SZ  (207)   /* SysEx size, including F0 / F7 */
+#define AR_SOUND_SYX_V4_SZ  (207)   /* SysEx size, including F0 / F7 (FW1.50..1.61B) */
+#define AR_SOUND_SYX_V5_SZ  (201)   /* SysEx size, including F0 / F7 (FW1.70) */
+#define AR_SOUND_SYX_SZ  AR_SOUND_SYX_V5_SZ
 
-#define AR_SOUND_SZ      (168)   /* Raw, decoded size */
+#define AR_SOUND_V4_SZ   (168)   /* Raw, decoded size (FW1.50/1.61b) */
+#define AR_SOUND_V5_SZ   (162)   /* Raw, decoded size (FW1.70) */
+#define AR_SOUND_SZ AR_SOUND_V5_SZ  // == sizeof(ar_sound_t)
 
 #define AR_SOUND_MACHINE_BD_HARD      ( 0)
 #define AR_SOUND_MACHINE_BD_CLASSIC   ( 1)
@@ -57,8 +61,8 @@
 #define AR_SOUND_MACHINE_CB_CLASSIC   (12)
 #define AR_SOUND_MACHINE_BD_FM        (13)
 #define AR_SOUND_MACHINE_SD_FM        (14)
-#define AR_SOUND_MACHINE_NOISE_GEN    (15)
-#define AR_SOUND_MACHINE_IMPULSE      (16)
+#define AR_SOUND_MACHINE_UT_NOISE     (15)
+#define AR_SOUND_MACHINE_UT_IMPULSE   (16)
 #define AR_SOUND_MACHINE_CH_METALLIC  (17)
 #define AR_SOUND_MACHINE_OH_METALLIC  (18)
 #define AR_SOUND_MACHINE_CY_METALLIC  (19)
@@ -70,8 +74,13 @@
 #define AR_SOUND_MACHINE_CY_RIDE      (25)
 #define AR_SOUND_MACHINE_BD_SHARP     (26)
 #define AR_SOUND_MACHINE_DISABLE      (27)
-#define AR_SOUND_MACHINE_DUAL_VCO     (28)
-#define AR_NUM_SOUND_MACHINES         (29)
+#define AR_SOUND_MACHINE_SY_DUAL_VCO  (28)
+#define AR_SOUND_MACHINE_SY_CHIP      (29)
+#define AR_SOUND_MACHINE_BD_ACOUSTIC  (30)
+#define AR_SOUND_MACHINE_SD_ACOUSTIC  (31)
+#define AR_SOUND_MACHINE_SY_RAW       (32)
+#define AR_SOUND_MACHINE_HH_LAB       (33)
+#define AR_NUM_SOUND_MACHINES         (34)
 
 extern const char *const ar_sound_machine_names [AR_NUM_SOUND_MACHINES];
 
@@ -113,22 +122,70 @@ extern const sSI *ar_sound_compatible_machines [12/*num_tracks*/];
 #define AR_SOUND_LFO_DEST_AMP_DLY  (28)  // 0x1C
 #define AR_SOUND_LFO_DEST_AMP_REV  (29)  // 0x1D
 
-#define AR_NUM_SOUND_LFO_DEST_UI   (33)
-#define AR_NUM_SOUND_LFO_DEST_INT  (42)
-
+#define AR_NUM_SOUND_LFO_DEST_UI    (33)
+#define AR_NUM_SOUND_LFO_DEST_INT   (42)
 #define AR_SOUND_MAX_LFO_DEST_NAME  (24)
 
 extern const char *const ar_sound_lfo_dest_names_ui [AR_NUM_SOUND_LFO_DEST_UI];
 extern const sUI         ar_sound_lfo_dest_ids_ui   [AR_NUM_SOUND_LFO_DEST_UI];  // maps UI list index to dest index
 extern const sUI         ar_sound_lfo_dest_ids_int  [AR_NUM_SOUND_LFO_DEST_INT]; // maps dest index to UI list index
 
+// (note) same ids as AR_SOUND_LFO_DEST_xxx but different selection
+#define AR_SOUND_MOD_DEST_NONE            (41)
+#define AR_SOUND_MOD_DEST_LFO_MULTIPLIER  (34)
+#define AR_SOUND_MOD_DEST_LFO_WAVEFORM    (37)
+#define AR_SOUND_MOD_DEST_LFO_TRIGMODE    (39)
+#define AR_SOUND_MOD_DEST_LFO_SPEED       (33)
+#define AR_SOUND_MOD_DEST_LFO_FADE        (35)
+#define AR_SOUND_MOD_DEST_LFO_PHASE       (38)
+#define AR_SOUND_MOD_DEST_LFO_DEPTH       (40)
+#define AR_SOUND_MOD_DEST_SYN_1           ( 0)
+#define AR_SOUND_MOD_DEST_SYN_2           ( 1)
+#define AR_SOUND_MOD_DEST_SYN_3           ( 2)
+#define AR_SOUND_MOD_DEST_SYN_4           ( 3)
+#define AR_SOUND_MOD_DEST_SYN_5           ( 4)
+#define AR_SOUND_MOD_DEST_SYN_6           ( 5)
+#define AR_SOUND_MOD_DEST_SYN_7           ( 6)
+#define AR_SOUND_MOD_DEST_SYN_8           ( 7)
+#define AR_SOUND_MOD_DEST_SMP_TUN         ( 8)  // 0x08
+#define AR_SOUND_MOD_DEST_SMP_FIN         ( 9)  // 0x09
+#define AR_SOUND_MOD_DEST_SMP_SMP         (10)  // 0x0A
+#define AR_SOUND_MOD_DEST_SMP_BR          (11)  // 0x0B
+#define AR_SOUND_MOD_DEST_SMP_STA         (12)  // 0x0C
+#define AR_SOUND_MOD_DEST_SMP_END         (13)  // 0x0D
+#define AR_SOUND_MOD_DEST_SMP_LOP         (14)  // 0x0E
+#define AR_SOUND_MOD_DEST_SMP_LEV         (15)  // 0x0F
+#define AR_SOUND_MOD_DEST_FLT_ENV         (23)  // 0x17
+#define AR_SOUND_MOD_DEST_FLT_ATK         (16)  // 0x10
+#define AR_SOUND_MOD_DEST_FLT_DEC         (18)  // 0x12
+#define AR_SOUND_MOD_DEST_FLT_SUS         (17)  // 0x11
+#define AR_SOUND_MOD_DEST_FLT_REL         (19)  // 0x13
+#define AR_SOUND_MOD_DEST_FLT_FRQ         (20)  // 0x14
+#define AR_SOUND_MOD_DEST_FLT_RES         (21)  // 0x15
+#define AR_SOUND_MOD_DEST_AMP_ATK         (24)  // 0x18
+#define AR_SOUND_MOD_DEST_AMP_HLD         (25)  // 0x19
+#define AR_SOUND_MOD_DEST_AMP_DEC         (26)  // 0x1A
+#define AR_SOUND_MOD_DEST_AMP_OVR         (27)  // 0x1B
+#define AR_SOUND_MOD_DEST_AMP_VOL         (31)  // 0x1F
+#define AR_SOUND_MOD_DEST_AMP_PAN         (30)  // 0x1E
+#define AR_SOUND_MOD_DEST_AMP_ACC         (32)  // 0x20  ("AMP:Accent Level", [FUNC]+[BANK B/F])
+#define AR_SOUND_MOD_DEST_AMP_DLY         (28)  // 0x1C
+#define AR_SOUND_MOD_DEST_AMP_REV         (29)  // 0x1D
+#define AR_NUM_SOUND_MOD_DEST_UI    (40)
+#define AR_NUM_SOUND_MOD_DEST_INT   (42)
+#define AR_SOUND_MAX_MOD_DEST_NAME  (24)
+extern const char *const ar_sound_mod_dest_names_ui [AR_NUM_SOUND_MOD_DEST_UI];
+extern const sUI         ar_sound_mod_dest_ids_ui   [AR_NUM_SOUND_MOD_DEST_UI];  // maps UI list index to dest index
+extern const sUI         ar_sound_mod_dest_ids_int  [AR_NUM_SOUND_MOD_DEST_INT]; // maps dest index to UI list index
+
 
 
 /* (note) request sound workbuffers 0..11 ("SOUNDX") to retrieve track sounds 1..12 */
 
-typedef struct { /* 0xA8 (168) bytes */
+typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
 
-   /* track01 kit offset:   46 (0x002E)
+   /* v4/FW1.50:
+      track01 kit offset:   46 (0x002E)
       track02 kit offset:  214 (0x00D6)
       track03 kit offset:  382 (0x017E)
       track04 kit offset:  550 (0x0226)
@@ -142,9 +199,15 @@ typedef struct { /* 0xA8 (168) bytes */
       track12 kit offset: 1894 (0x0766)
    */
 
-   sU8 __unknown_arr1[0xc];   /* @0x0000 */
+   /* v5/FW1.70:
+      track01 kit offset:   46 (0x002E)
+      track02 kit offset:  208 (0x00D0)
+      ..
+    */
 
-   sU8 name[0xf];
+   sU8 __unknown_arr1[0xc];   /* @0x0000 reads BE EF BA CE 00 00 00 04 00 00 00 00 */
+
+   sU8 name[15];              /* @0x000C */
    sU8 __pad_name;            /* @0x001B  (ASCIIZ?) */
 
    sU8 synth_param_1;         /* @0x001C
@@ -163,8 +226,8 @@ typedef struct { /* 0xA8 (168) bytes */
                                          12:cb classic  : lev
                                          13:bd fm       : lev
                                          14:sd fm       : lev
-                                         15:noise gen   : lev
-                                         16:impulse     : lev
+                                         15:ut noise    : lev
+                                         16:ut impulse  : lev
                                          17:ch metallic : lev
                                          18:oh metallic : lev
                                          19:cy metallic : lev
@@ -176,7 +239,12 @@ typedef struct { /* 0xA8 (168) bytes */
                                          25:cy ride     : lev
                                          26:bd sharp    : lev
                                          27:DISABLE     : -
-                                         28:dual vco    : lev
+                                         28:sy dual vco : lev
+                                         29:sy chip     : lev
+                                         30:bd acoustic : lev
+                                         31:sd acoustic : lev
+                                         32:sy raw      : lev
+                                         33:hh lab      : lev
                                */
    sU8 __unused_pad1;  /* synth_param_1_lsb. unused, always 0 */
 
@@ -196,8 +264,8 @@ typedef struct { /* 0xA8 (168) bytes */
                                          12:cb classic  : tun (64=+0)
                                          13:bd fm       : tun (64=+0)
                                          14:sd fm       : tun (64=+0)
-                                         15:noise gen   : lpf
-                                         16:impulse     : atk
+                                         15:ut noise    : lpf
+                                         16:ut impulse  : atk
                                          17:ch metallic : tun (64=+0)
                                          18:oh metallic : tun (64=+0)
                                          19:cy metallic : tun (64=+0)
@@ -209,9 +277,14 @@ typedef struct { /* 0xA8 (168) bytes */
                                          25:cy ride     : tun (64=+0)
                                          26:bd sharp    : tun (64=+0)
                                          27:DISABLE     : -
-                                         28:dual vco    : tun (64=+0)
+                                         28:sy dual vco : tun (64=+0)
+                                         29:sy chip     : tun (64=+0) (uses LSB)
+                                         30:bd acoustic : tun (64=+0) (uses LSB)
+                                         31:sd acoustic : tun (64=+0) (uses LSB)
+                                         32:sy raw      : tun (64=+0) (uses LSB)
+                                         33:hh lab      : osc1 (uses 8bit? LSB)
                               */
-   sU8 __unused_pad2;  /* synth_param_2_lsb. unused, always 0 */
+   sU8 synth_param_2_lsb;     /* @0x001F synth_param_2_lsb. used since FW1.70 */
 
    sU8 synth_param_3;         /* @0x0020
                                           0:bd hard     : dec
@@ -229,8 +302,8 @@ typedef struct { /* 0xA8 (168) bytes */
                                          12:cb classic  : dec
                                          13:bd fm       : dec
                                          14:sd fm       : dec
-                                         15:noise gen   : dec
-                                         16:impulse     : dec
+                                         15:ut noise    : dec
+                                         16:ut impulse  : dec
                                          17:ch metallic : dec
                                          18:oh metallic : dec
                                          19:cy metallic : dec
@@ -242,7 +315,12 @@ typedef struct { /* 0xA8 (168) bytes */
                                          25:cy ride     : dec
                                          26:bd sharp    : dec
                                          27:DISABLE     : -
-                                         28:dual vco    : dec#1
+                                         28:sy dual vco : dec#1
+                                         29:sy chip     : dcy
+                                         30:bd acoustic : dec
+                                         31:sd acoustic : bdy
+                                         32:sy raw      : dcy (0..126,127=inf)
+                                         33:hh lab      : dec
                               */
    sU8 __unused_pad3;  /* synth_param_3_lsb. unused, always 0 */
 
@@ -262,8 +340,8 @@ typedef struct { /* 0xA8 (168) bytes */
                                          12:cb classic  : det
                                          13:bd fm       : fma
                                          14:sd fm       : fmt (64=+0)
-                                         15:noise gen   : hpf
-                                         16:impulse     : -
+                                         15:ut noise    : hpf
+                                         16:ut impulse  : -
                                          17:ch metallic : -
                                          18:oh metallic : -
                                          19:cy metallic : ton (64=+0)
@@ -275,9 +353,14 @@ typedef struct { /* 0xA8 (168) bytes */
                                          25:cy ride     : typ (0..3=A..D)
                                          26:bd sharp    : hld
                                          27:DISABLE     : -
-                                         28:dual vco    : det
+                                         28:sy dual vco : det
+                                         29:sy chip     : of2 (40=-24..64=+0..88=+24)
+                                         30:bd acoustic : hld
+                                         31:sd acoustic : nod
+                                         32:sy raw      : det (64=+0) (uses LSB)
+                                         33:hh lab      : osc2 (uses 8bit? LSB)
                               */
-   sU8 __unused_pad4;  /* synth_param_4_lsb. unused, always 0 */
+   sU8 synth_param_4_lsb;     /* @0x0023 used since FW1.70 */
 
    sU8 synth_param_5;         /* @0x0024
                                           0:bd hard     : swt
@@ -292,15 +375,15 @@ typedef struct { /* 0xA8 (168) bytes */
                                           9:ch classic  : -
                                          10:oh classic  : -
                                          11:cy classic  : ton (64=+0)
-                                         12:cb classic  :
+                                         12:cb classic  : pw1 (64=+0)
                                          13:bd fm       : swt
                                          14:sd fm       : fmd
-                                         15:noise gen   : lpq
-                                         16:impulse     : -
+                                         15:ut noise    : lpq
+                                         16:ut impulse  : -
                                          17:ch metallic : -
                                          18:oh metallic : -
                                          19:cy metallic : trd
-                                         20:cb metallic : -
+                                         20:cb metallic : pw1 (64=+0)
                                          21:bd plastic  : mod
                                          22:bd silky    : swt
                                          23:sd natural  : bal (0..127)
@@ -308,9 +391,14 @@ typedef struct { /* 0xA8 (168) bytes */
                                          25:cy ride     : hit
                                          26:bd sharp    : swt
                                          27:DISABLE     : -
-                                         28:dual vco    : dec#2
+                                         28:sy dual vco : dec#2
+                                         29:sy chip     : of3 (40=-24..64=+0..88=+24)
+                                         30:bd acoustic : swt
+                                         31:sd acoustic : nol
+                                         32:sy raw      : nol
+                                         33:hh lab      : osc3 (uses 8bit? LSB)
                               */
-   sU8 __unused_pad5;  /* synth_param_5_lsb. unused, always 0 */
+   sU8 synth_param_5_lsb;     /* @0x0025 used since FW1.70 */
 
    sU8 synth_param_6;         /* @0x0026
                                           0:bd hard     : snp
@@ -320,20 +408,20 @@ typedef struct { /* 0xA8 (168) bytes */
                                           4:rs hard     : nol
                                           5:rs classic  : sym (64=+0)
                                           6:cp classic  : nol
-                                          7:bt classic  : snp
+                                          7:bt classic  : snp (0..3)
                                           8:xt classic  : nod
                                           9:ch classic  : -
                                          10:oh classic  : -
                                          11:cy classic  : -
-                                         12:cb classic  : -
+                                         12:cb classic  : pw2 (64=+0)
                                          13:bd fm       : fms
                                          14:sd fm       : nod
-                                         15:noise gen   : atk
-                                         16:impulse     : -
+                                         15:ut noise    : atk
+                                         16:ut impulse  : -
                                          17:ch metallic : -
                                          18:oh metallic : -
                                          19:cy metallic : -
-                                         20:cb metallic : -
+                                         20:cb metallic : pw2 (64=+0)
                                          21:bd plastic  : swt
                                          22:bd silky    : swd
                                          23:sd natural  : lpf
@@ -341,9 +429,14 @@ typedef struct { /* 0xA8 (168) bytes */
                                          25:cy ride     : c1
                                          26:bd sharp    : swd
                                          27:DISABLE     : -
-                                         28:dual vco    : bal (64=+0)
+                                         28:sy dual vco : bal (64=+0)
+                                         29:sy chip     : of4 (40=-24..64=+0..88=+24)
+                                         30:bd acoustic : swd
+                                         31:sd acoustic : hld
+                                         32:sy raw      : wav1 (0=sin,1=asin,2=tri,3=ssaw,4=asaw,5=saw,6=ring)
+                                         33:hh lab      : osc4 (uses 8bit? LSB)
                               */
-   sU8 __unused_pad6;  /* synth_param_6_lsb. unused, always 0 */
+   sU8 synth_param_6_lsb;     /* @0x0027 used since FW1.70 */
 
    sU8 synth_param_7;         /* @0x0028
                                           0:bd hard     : wav
@@ -353,7 +446,7 @@ typedef struct { /* 0xA8 (168) bytes */
                                           4:rs hard     : syn
                                           5:rs classic  : nol
                                           6:cp classic  : rnd
-                                          7:bt classic  : -
+                                          7:bt classic  : swd (FW1.70)
                                           8:xt classic  : nol
                                           9:ch classic  : -
                                          10:oh classic  : -
@@ -361,8 +454,8 @@ typedef struct { /* 0xA8 (168) bytes */
                                          12:cb classic  : -
                                          13:bd fm       : fmd
                                          14:sd fm       : nol
-                                         15:noise gen   : swt
-                                         16:impulse     : -
+                                         15:ut noise    : swt
+                                         16:ut impulse  : -
                                          17:ch metallic : -
                                          18:oh metallic : -
                                          19:cy metallic : -
@@ -372,11 +465,23 @@ typedef struct { /* 0xA8 (168) bytes */
                                          23:sd natural  : hpf
                                          24:hh basic    : -
                                          25:cy ride     : c2
-                                         26:bd sharp    : wav
+                                         26:bd sharp    : wav (0=sinA,1=sinB,2=asinA,3=asinB,4=triA,5=triB,6=ssawA,7=ssawB,8=sawA,9=sawB,10=sqrA,11=sqrB)
                                          27:DISABLE     : -
-                                         28:dual vco    : bnd (64=+0)
+                                         28:sy dual vco : bnd (64=+0)
+                                         29:sy chip     : wav (0=sin,1=asin,2=tri,3=ssaw,4=saw,5=sqr,6=noise,
+                                                               7=anm1,8=anm2,9=anm3,10=anm4,11=anm5,
+                                                               12=pwm+,13=pwm-,
+                                                               14=triB,15=+tri,16=tri+,17=triX,
+                                                               18=sawB,19=+saw,20=saw+,21=sawX,
+                                                               22=sqrB,23=+sqr,24=sqr+,25=sqrX
+                                                               26=tbl1,27=tbl2,28=tbl3,
+                                                               29=p1%..127=p99%)
+                                         30:bd acoustic : wav (0=sinA,1=sinB,2=asinA,3=asinB,4=triA,5=triB,6=ssawA,7=ssawB,8=sawA,9=sawB,10=sqrA,11=sqrB)
+                                         31:sd acoustic : swd
+                                         32:sy raw      : wav2 (0=sineA,1=ssawA,2=sineB,3=ssawB)
+                                         33:hh lab      : osc5 (uses 8bit? LSB)
                               */
-   sU8 __unused_pad7;  /* synth_param_7_lsb. unused, always 0 */
+   sU8 synth_param_7_lsb;     /* @0x0029 used since FW1.70 */
 
    sU8 synth_param_8;         /* @0x002A
                                           0:bd hard     : tic
@@ -394,8 +499,8 @@ typedef struct { /* 0xA8 (168) bytes */
                                          12:cb classic  : -
                                          13:bd fm       : fmt (64=+0)
                                          14:sd fm       : fma
-                                         15:noise gen   : swd (64=+0)
-                                         16:impulse     : pol (0 or 1)
+                                         15:ut noise    : swd (64=+0)
+                                         16:ut impulse  : pol (0 or 1)
                                          17:ch metallic : -
                                          18:oh metallic : -
                                          19:cy metallic : -
@@ -407,9 +512,21 @@ typedef struct { /* 0xA8 (168) bytes */
                                          25:cy ride     : c3
                                          26:bd sharp    : tic
                                          27:DISABLE     : -
-                                         28:dual vco    : cfg (0..79)
+                                         28:sy dual vco : cfg (0..79)
+                                         29:sy chip     : spd (0=128T,1=128,2=64T,3=128d,4=64,5=32T,6=64d,7=32,8=16T,9=32d,10=16,11=8T,
+                                                               12=16d,13=8,14=4T,15=8d,16=4,17=2T,18=4d,19=2,20=1T,21=2d,22=1,23=1d,24=1.0Hz,
+                                                               25=1.56Hz,26=1.88Hz,27=2Hz,28=3.13Hz,29=3.75Hz,30=4Hz,31=5Hz,32=6.25Hz,33=7.5Hz,34=10Hz,
+                                                               35=12.5Hz,36=15Hz,37=20Hz,38=25Hz,39=30Hz,40=40Hz,41=50Hz,42=60Hz,43=75Hz,
+                                                               44=100Hz,45=120Hz,46=150Hz,47=180Hz,48=200Hz,49=240Hz,50=250Hz,
+                                                               51=300Hz,52=350Hz,53=360Hz,54=400Hz,55=420Hz,56=480Hz,57=240 5Hz,
+                                                               58=200 5Hz,59=150 5Hz,60=120 5Hz,61=100 5Hz,62=60 5Hz,63=50 5Hz,64=30 5Hz,65=25 5Hz
+                                                               )
+                                         30:bd acoustic : imp
+                                         31:sd acoustic : imp
+                                         32:sy raw      : bal (64=+0)
+                                         33:hh lab      : osc6 (uses 8bit? LSB)
                               */
-   sU8 __unused_pad8;  /* synth_param_8_lsb. unused, always 0 */
+   sU8 synth_param_8_lsb;     /* @0x002B used since FW1.70 */
 
    sU8 sample_tune;           /* @0x002c  0x40=0, 0x41=+1, .. */
    sU8 __unused_pad9;         /* @0x002d (lsb, always 0) */
@@ -440,10 +557,10 @@ typedef struct { /* 0xA8 (168) bytes */
    sU8 __unused_pad12;        /* @0x0033 (lsb, always 0) */
 
    sU8 sample_start_offset;   /* @0x0034 */
-   sU8 __unused_pad13;        /* @0x0035 (lsb, always 0) */
+   sU8 sample_start_offset_lsb; /* @0x0035 (lsb, may be non-zero since v5/FW1.70) */
 
    sU8 sample_end_offset;     /* @0x0036 */
-   sU8 __unused_pad14;        /* @0x0037 (lsb, always 0) */
+   sU8 sample_end_offset_lsb; /* @0x0037 (lsb, may be non-zero since v5/FW1.70) */
 
    sU8 sample_loop_flag;      /* @0x0038  0x00=off, 0x01=on */
    sU8 __unused_pad15;        /* @0x0039 */
@@ -514,13 +631,13 @@ typedef struct { /* 0xA8 (168) bytes */
    sU8 lfo_dest;              /* @0x0064  see LFO_DEST_xxx */
    sU8 __unused_pad36;        /* @0x0065 (lsb, always 0) */
 
-   sU8 lfo_wav;               /* @0x0066  0x0=tri, 0x1=sin, .. */
+   sU8 lfo_wav;               /* @0x0066 (0=tri,1=sin,2=sqr,3=saw,4=exp,5=rmp,6=rnd) */
    sU8 __unused_pad37;        /* @0x0067 (lsb, always 0) */
 
-   sU8 lfo_start_phase;       /* @0x0068 */
+   sU8 lfo_start_phase;       /* @0x0068 (note) FW1.70: used as slew when wav is set to 6=rnd */
    sU8 __unused_pad38;        /* @0x0069 (lsb, always 0) */
 
-   sU8 lfo_mode;              /* @0x006a  0x0=free, 0x1=trg, .. */
+   sU8 lfo_mode;              /* @0x006a (0=free,1=trg,2=hld,3=one,4=hlf) */
    sU8 __unused_pad39;        /* @0x006b (lsb, always 0) */
 
    sU8 lfo_depth_msb;         /* @0x006c  */
@@ -534,11 +651,12 @@ typedef struct { /* 0xA8 (168) bytes */
    sU8 machine_type;          /* @0x007C   0:bd hard       1:bd classic    2:sd hard       3:sd classic
                                            4:rs hard       5:rs classic    6:cp classic    7:bt classic
                                            8:xt classic    9:ch classic   10:oh classic   11:cy classic
-                                          12:cb classic   13:bd fm        14:sd fm        15:noise gen
-                                          16:impulse      17:ch metallic  18:oh metallic  19:cy metallic
+                                          12:cb classic   13:bd fm        14:sd fm        15:ut noise
+                                          16:ut impulse   17:ch metallic  18:oh metallic  19:cy metallic
                                           20:cb metallic  21:bd plastic   22:bd silky     23:sd natural
                                           24:hh basic     25:cy ride      26:bd sharp     27:DISABLE
-                                          28:dual vco     29:             30:             31:
+                                          28:sy dual vco  29:sy chip      30:bd acoustic  31:sd acoustic
+                                          32:sy raw       33:hh lab
 
                                           track01: kit off=170
                                           track02: kit off=338
@@ -553,8 +671,43 @@ typedef struct { /* 0xA8 (168) bytes */
                                           track11: kit off=1850
                                           track12: kit off=2018
                               */
+   sU8 mode_flags;            /* @0x007D bit 0  : ?
+                                         bit 1  : env reset filter switch
+                                         bit 2  : legacy fx send switch
+                                         bit 3  : ?
+                                         bit 4+5: chromatic mode  0=OFF, 1=SYNTH, 2=SAMPLE, 3=SYN+SMP
+                                         bit 6  : velocity to vol switch
+                                         bit 7  : ?
+                                         (note) FW1.70: moved extra veltovol,legacyfx,envreset bytes to bit fields
+                               */
+#define AR_SOUND_MODE_SHIFT_ENVRESET_FILTER (1)
+#define AR_SOUND_MODE_MASK_ENVRESET_FILTER  (1u << AR_SOUND_MODE_SHIFT_ENVRESET_FILTER)
+#define AR_SOUND_MODE_SHIFT_LEGACY_FX       (2)
+#define AR_SOUND_MODE_MASK_LEGACY_FX        (1u << AR_SOUND_MODE_SHIFT_LEGACY_FX)
+#define AR_SOUND_MODE_SHIFT_CHROMATIC       (4)
+#define AR_SOUND_MODE_MASK_CHROMATIC        ( (1u << AR_SOUND_MODE_SHIFT_CHROMATIC) | (1u << (AR_SOUND_MODE_SHIFT_CHROMATIC+1)) )
+#define AR_SOUND_MODE_SHIFT_VELTOVOL        (6)
+#define AR_SOUND_MODE_MASK_VELTOVOL         (1u << AR_SOUND_MODE_SHIFT_VELTOVOL)
 
-   sU8 __unknown_arr3[43 /*0xA8-0x7d*/];
+   sU8 __unknown_arr3[16];    /* @0x007E..0x008D */
+   sU8 vel_amt_1;             /* @0x008E VELOCITY MOD */
+   sU8 vel_target_1;          /* @0x008F */
+   sU8 vel_amt_2;             /* @0x0090 */
+   sU8 vel_target_2;          /* @0x0091 */
+   sU8 vel_amt_3;             /* @0x0092 */
+   sU8 vel_target_3;          /* @0x0093 */
+   sU8 vel_amt_4;             /* @0x0094 */
+   sU8 vel_target_4;          /* @0x0095 */
+   sU8 at_amt_1;              /* @0x0096 AFTERTOUCH */
+   sU8 at_target_1;           /* @0x0097 */
+   sU8 at_amt_2;              /* @0x0098 */
+   sU8 at_target_2;           /* @0x0099 */
+   sU8 at_amt_3;              /* @0x009A */
+   sU8 at_target_3;           /* @0x009B */
+   sU8 at_amt_4;              /* @0x009C */
+   sU8 at_target_4;           /* @0x009D */
+
+   sU8 __unknown_arr4[4];     /* @0x009E..0x00A1 */
 
 } ar_sound_t;
 
@@ -759,6 +912,64 @@ sSI ar_sound_get_list_idx_by_lfo_dest (sUI _lfoDest);
  *
  */
 sBool ar_sound_get_lfo_dest_name_by_list_idx (const ar_sound_t *_sound, sUI _listIdx, char *_retBuf, sUI _retBufSz);
+
+
+/*
+ * Query velocity/aftertouch modulation destination name
+ *
+ *  Arguments:
+ *      _sound - Pointer to ar_sound_t (e.g. &kit.tracks[4])
+ *  _modDestId - Modulation destination synth-internal index (velocity or aftertouch mod target[1..4])
+ *     _retBuf - Returns the null-terminated LFO destination name
+ *   _retBufSz - Size of the char buffer (at least AR_SOUND_MAX_MOD_DEST_NAME (24) chars)
+ *
+ *  Returns:
+ *   S_TRUE when the query succeeded or S_FALSE if the machine type is invalid or _sound is NULL.
+ *
+ */
+sBool ar_sound_get_mod_dest_name (const ar_sound_t *_sound, sUI _modDestId, char *_retBuf, sUI _retBufSz);
+
+
+/*
+ * Map mod destination UI list idx to synth-internal index.
+ *
+ *  Arguments:
+ *    _listIdx - UI list index  (0..AR_NUM_SOUND_MOD_DEST_UI)
+ *
+ *  Returns:
+ *   Synth internal mod destination index. -1 if an error occured (invalid listIdx).
+ *
+ */
+sSI ar_sound_get_mod_dest_by_list_idx (sUI _listIdx);
+
+
+/*
+ * Map mod destination synth-internal index to list idx.
+ *
+ *  Arguments:
+ *    _modDest - Synth-internal mod destination index  (0..AR_NUM_SOUND_MOD_DEST_INT)
+ *
+ *  Returns:
+ *   UI list index. -1 if an error occured (invalid internal index).
+ *
+ */
+sSI ar_sound_get_list_idx_by_mod_dest (sUI _modDest);
+
+
+/*
+ * Query mod destination name by UI list index
+ *
+ *  Arguments:
+ *      _sound - Pointer to ar_sound_t (e.g. &kit.tracks[4])
+ *    _listIdx - UI list index  (0..AR_NUM_SOUND_MOD_DEST_UI)
+ *     _retBuf - Returns the null-terminated LFO destination name
+ *   _retBufSz - Size of the char buffer (at least AR_SOUND_MAX_MOD_DEST_NAME (24) chars)
+ *
+ *  Returns:
+ *   S_TRUE when the query succeeded or S_FALSE if the machine type is invalid or _sound is NULL.
+ *
+ */
+sBool ar_sound_get_mod_dest_name_by_list_idx (const ar_sound_t *_sound, sUI _listIdx, char *_retBuf, sUI _retBufSz);
 
 
 #pragma pack(pop)

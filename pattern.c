@@ -23,10 +23,12 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 01Aug2014, 04Aug2014
+ * ---- changed: 01Aug2014, 04Aug2014, 24Oct2019
  * ----
  * ----
  */
+
+// #define AR_DEBUG defined
 
 #include "types.h"
 #include "debug.h"
@@ -69,8 +71,10 @@ ar_error_t ar_pattern_syx_to_raw(sU8               *_rawBuf,
    ar_error_t ret;
    sU32 datSz;
    ar_sysex_meta_t meta;
-   
+  
    ret = ar_sysex_to_raw(_rawBuf, &_syxBuf, &_syxBufSize, &datSz, &meta);
+
+   Dprintf("xxx ar_pattern_syx_to_raw: syxSz=%u rawSz=%u  sizeof(pat)=%lu  sizeof(pat_track)=%lu\n", _syxBufSize, datSz, sizeof(ar_pattern_t), sizeof(ar_pattern_track_t));
 
    if(AR_ERR_OK == ret)
    {

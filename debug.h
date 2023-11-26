@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 04Aug2014
+ * ---- changed: 04Aug2014, 18Jul2023
  * ----
  * ----
  */
@@ -34,11 +34,11 @@
 #include "cplusplus_begin.h"
 
 
-#ifdef AR_DEBUG
 #include <stdio.h>
-#define Dprintf printf
+#ifdef AR_DEBUG
+#define Dprintf if(0);else printf
 #else
-#define Dprintf (void)
+#define Dprintf if(1);else printf
 #endif /* AR_DEBUG */
 
 

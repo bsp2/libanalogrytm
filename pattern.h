@@ -253,7 +253,7 @@
  * trigless: 0x7801 (on) (retrig etc is off)
  *
  *
- *
+ */
 
 /* (note) big endian */
 #define AR_TRIG_SWING     (0x0010u)  /* <void> swing                       */
