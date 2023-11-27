@@ -23,7 +23,8 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 01Aug2014, 04Aug2014, 24Oct2019
+ * ---- created: 01Aug2014
+ * ---- changed: 04Aug2014, 24Oct2019, 27Nov2023
  * ----
  * ----
  */
@@ -71,7 +72,7 @@ ar_error_t ar_pattern_syx_to_raw(sU8               *_rawBuf,
    ar_error_t ret;
    sU32 datSz;
    ar_sysex_meta_t meta;
-  
+
    ret = ar_sysex_to_raw(_rawBuf, &_syxBuf, &_syxBufSize, &datSz, &meta);
 
    Dprintf("xxx ar_pattern_syx_to_raw: syxSz=%u rawSz=%u  sizeof(pat)=%lu  sizeof(pat_track)=%lu\n", _syxBufSize, datSz, sizeof(ar_pattern_t), sizeof(ar_pattern_track_t));
@@ -127,4 +128,81 @@ ar_error_t ar_pattern_raw_to_syx(sU8                   *_syxBuf,
    }
 
    return ret;
+}
+
+/* ---------------------------------------------------------------------------- ar_pattern_track_get_trig_flags */
+sU16 ar_pattern_track_get_trig_flags(const ar_pattern_track_t *_patternTrack,
+                                     const sUI                 _stepIdx
+                                     ) {
+   const sU8 *buffer   = _patternTrack->trig_bits;
+   const sUI _startBit = 14u * _stepIdx;
+   const sUI _numBits  = 14u;
+   const sUI endBit    = _startBit + _numBits;
+   const sUI size      = 14u * 64u;
+   sU32 r = 0u;
+   if( ((endBit + 7u) >> 3) <= size )
+   {
+      const sUI startByte = _startBit >> 3;
+            sUI bitOff    = (_startBit - (startByte << 3));
+            sUI outShift  = _numBits;
+            sUI bitsLeft  = _numBits;
+            sUI byteOff   = startByte;
+      while(bitsLeft > 0u)
+      {
+         sUI bitsAvail = (8u - bitOff);
+         if(bitsLeft < bitsAvail)
+         {
+            outShift -= bitsLeft;
+            r |= ( (buffer[byteOff] >> (bitsAvail - bitsLeft)) & ((1u << bitsLeft) - 1u) ) << outShift;
+            bitsLeft = 0u;
+         }
+         else
+         {
+            outShift -= bitsAvail;
+            r |= (buffer[byteOff] & ((1u << bitsAvail) - 1u)) << outShift;
+            bitsLeft -= bitsAvail;
+            bitOff = 0u;
+            byteOff++;
+         }
+      }
+   }
+   return (sU16)r;
+}
+
+/* ---------------------------------------------------------------------------- ar_pattern_track_set_trig_flags */
+void ar_pattern_track_set_trig_flags(      ar_pattern_track_t *_patternTrack,
+                                     const sUI                 _stepIdx,
+                                     const sU16                _val
+                                     ) {
+   const sUI _startBit = 14u * _stepIdx;
+   const sUI _numBits  = 14u;
+   const sUI endBit    = _startBit + _numBits;
+   sU8 *buffer = _patternTrack->trig_bits;
+   const sUI size      = 14u * 64u;
+   if( ((endBit + 7u) >> 3) <= size )
+   {
+      const sUI startByte = _startBit >> 3;
+            sUI bitOff    = (_startBit - (startByte << 3));  // 0..7
+            sUI outShift  = _numBits;
+            sUI byteOff   = startByte;
+            sUI bitsLeft  = _numBits;
+      while(bitsLeft > 0u)
+      {
+         const sUI bitsAvail = (8u - bitOff);
+         if(bitsLeft < bitsAvail)
+         {
+            outShift -= bitsLeft;
+            buffer[byteOff] = (buffer[byteOff] & ((1u << (8u - bitsLeft)) - 1u)) | ((_val & ((1u << bitsLeft) - 1u)) << (8u - bitsLeft));
+            bitsLeft = 0u;
+         }
+         else
+         {
+            outShift -= bitsAvail;
+            buffer[byteOff] = (buffer[byteOff] & ~((1u << bitsAvail) - 1u)) | (_val >> outShift);
+            bitsLeft -= bitsAvail;
+            bitOff = 0u;
+            byteOff++;
+         }
+      }
+   }
 }
