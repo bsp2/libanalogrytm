@@ -119,7 +119,7 @@ ar_error_t ar_sysex_read_next_byte(const sU8 **_bufPtr, sU32 *_bufSize, sU8 *_re
                {
                   /* Premature start of next regular MIDI message. Abort sysex. */
                   ret = AR_ERR_ABORT;
-                  
+
                   /* Rewind */
                   b--;
                   sz++;
@@ -142,7 +142,7 @@ ar_error_t ar_sysex_read_next_byte(const sU8 **_bufPtr, sU32 *_bufSize, sU8 *_re
 
    *_bufPtr  = b;
    *_bufSize = sz;
-   
+
    return ret;
 }
 
@@ -186,7 +186,7 @@ ar_error_t ar_sysex_parse_dump_header(const sU8**_srcBuf, sU32 *_srcBufSize, ar_
                                  ret = ar_sysex_read_next_byte(_srcBuf, _srcBufSize, &c);
                                  if(AR_ERR_OK == ret)
                                  {
-                                    if( 
+                                    if(
                                        ((c >= AR_SYSEX_DUMP_ID_KIT) && (c <= AR_SYSEX_DUMP_ID_GLOBAL)) ||
                                        ((c >= AR_SYSEX_DUMPX_ID_KIT) && (c <= AR_SYSEX_DUMPX_ID_GLOBAL))
                                         )
@@ -284,7 +284,7 @@ ar_error_t ar_sysex_get_size(const sU8 *_srcBuf, sU32 _srcBufSize, sU32 *_retMsg
    sbsz--;
 
    *_retMsgSize = 1;
-   
+
    for(;;)
    {
       sU8 c;
@@ -315,7 +315,7 @@ ar_error_t ar_sysex_get_size(const sU8 *_srcBuf, sU32 _srcBufSize, sU32 *_retMsg
 
 /* ---------------------------------------------------------------------------- ar_sysex_decode */
 void ar_sysex_decode(sU8 *_dst, const sU8**_src, sU32 *_srcSize, sU32 _numSrcBytes, s_u16_t *_retChksum) {
-   
+
    sU16 chksum = 0u;
 
    sUI pkbNr = 0u;  /* 0..7 */
@@ -340,7 +340,7 @@ void ar_sysex_decode(sU8 *_dst, const sU8**_src, sU32 *_srcSize, sU32 _numSrcByt
 
          *_dst++ = c | (msbs & 0x80u);
       }
-      
+
       msbs <<= 1;
       pkbNr = (pkbNr + 1) & 7u;
       _numSrcBytes--;
@@ -602,7 +602,7 @@ ar_error_t ar_raw_to_sysex(sU8                   *_dstBuf,
       sU32 partialPkgSz;
 
       syxMsgSz = 10u/*header*/ + 2u/*chksum*/ + 2u/*data_size*/ + 1u/*0xF7*/;
-      
+
       syxDatSz = ( (_srcBufSize/* + 6u*/) / 7u ) << 3;  /* total size of data packets (including padding) */
 
       partialPkgSz = (_srcBufSize % 7);
@@ -611,7 +611,7 @@ ar_error_t ar_raw_to_sysex(sU8                   *_dstBuf,
       {
          syxDatSz += 1u + partialPkgSz;
       }
-      
+
       if(NULL != _dstBuf)
       {
          _dstBuf[0] = 0xF0u;
@@ -629,7 +629,7 @@ ar_error_t ar_raw_to_sysex(sU8                   *_dstBuf,
 
          /* Write encoded raw data bytes */
          ar_sysex_encode(_dstBuf, _srcBuf, _srcBufSize, &chksum);
-         
+
          Dprintf("[dbg] ar_raw_to_sysex: chksum= 0x%08x 0x%08x\n", chksum.b.hi, chksum.b.lo);
 
          _dstBuf += syxDatSz;
@@ -646,12 +646,12 @@ ar_error_t ar_raw_to_sysex(sU8                   *_dstBuf,
          /* End of sysex message */
          _dstBuf[0] = 0xF7u;
       }
-      
+
       if(NULL != _retSyxBufSize)
       {
          *_retSyxBufSize = (syxMsgSz + syxDatSz);
       }
-      
+
       ret = AR_ERR_OK;
    }
 

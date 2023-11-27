@@ -24,7 +24,7 @@
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
  * ---- created: 21Aug2017
- * ---- changed: 25Oct2019, 26Oct2019, 15Jul2021, 25Nov2023
+ * ---- changed: 25Oct2019, 26Oct2019, 15Jul2021, 25Nov2023, 27Nov2023
  * ----
  * ----
  */
@@ -515,12 +515,12 @@ const char *const ar_sound_mod_dest_names_ui[AR_NUM_SOUND_MOD_DEST_UI] = {
 const sUI ar_sound_mod_dest_ids_ui[AR_NUM_SOUND_MOD_DEST_UI] = {
    AR_SOUND_MOD_DEST_NONE,
    AR_SOUND_MOD_DEST_LFO_MULTIPLIER,
-   AR_SOUND_MOD_DEST_LFO_WAVEFORM,  
-   AR_SOUND_MOD_DEST_LFO_TRIGMODE,  
-   AR_SOUND_MOD_DEST_LFO_SPEED,     
-   AR_SOUND_MOD_DEST_LFO_FADE,      
-   AR_SOUND_MOD_DEST_LFO_PHASE,     
-   AR_SOUND_MOD_DEST_LFO_DEPTH,     
+   AR_SOUND_MOD_DEST_LFO_WAVEFORM,
+   AR_SOUND_MOD_DEST_LFO_TRIGMODE,
+   AR_SOUND_MOD_DEST_LFO_SPEED,
+   AR_SOUND_MOD_DEST_LFO_FADE,
+   AR_SOUND_MOD_DEST_LFO_PHASE,
+   AR_SOUND_MOD_DEST_LFO_DEPTH,
    AR_SOUND_MOD_DEST_SYN_1,
    AR_SOUND_MOD_DEST_SYN_2,
    AR_SOUND_MOD_DEST_SYN_3,

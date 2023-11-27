@@ -234,17 +234,17 @@
  ** Track trigger types  (see ar_pattern_track_t.trigs)
  *
  */
-#define AR_TRIG_NOTE_ON    0x0001u  /* bit  0:        note trig [TRIG]         */
+#define AR_TRIG_ENABLE     0x0001u  /* bit  0:        enable trig [TRIG]       */
 #define AR_TRIG_RETRIG     0x0002u  /* bit  1: <ali>  retrig    [FUNC+Retrig+] */
 #define AR_TRIG_MUTE       0x0004u  /* bit  2: <void> mute      [FUNC+A/E]     */
 #define AR_TRIG_ACCENT     0x0008u  /* bit  3: <void> accent    [FUNC+B/F]     */
 #define AR_TRIG_SWING      0x0010u  /* bit  4: <void> swing     [FUNC+C/G]     */
 #define AR_TRIG_SLIDE      0x0020u  /* bit  5: <void> slide     [FUNC+D/H]     */
-#define AR_TRIG_LFO_PL_SW  0x0040u  /* bit  6:        p-locked LFO state       */
+#define AR_TRIG_LFO_PL_EN  0x0040u  /* bit  6:        enable LFO p-lock        */
 #define AR_TRIG_SYN_PL_SW  0x0080u  /* bit  7:        p-locked SYN state       */
 #define AR_TRIG_SMP_PL_SW  0x0100u  /* bit  8:        p-locked SMP state       */
 #define AR_TRIG_ENV_PL_SW  0x0200u  /* bit  9:        p-locked ENV state       */
-#define AR_TRIG_LFO_PL_EN  0x0400u  /* bit 10:        enable LFO p-lock        */
+#define AR_TRIG_LFO_PL_SW  0x0400u  /* bit 10:        p-locked LFO state       */
 #define AR_TRIG_SYN_PL_EN  0x0800u  /* bit 11:        enable SYN p-lock        */
 #define AR_TRIG_SMP_PL_EN  0x1000u  /* bit 12:        enable SMP p-lock        */
 #define AR_TRIG_ENV_PL_EN  0x2000u  /* bit 13:        enable ENV p-lock        */
@@ -262,14 +262,14 @@
  */
 typedef struct {
    sU8     trig_bits[((14*64)/8)];      /* @0x0004..0x0073   See AR_TRIG_xxx flags. 14 bits per step ((14*64)/8)==112 bytes */
-   sU8     notes[64];                   /* ?@0x0074..0x00B3  0xFF=unset, MIDI note otherwise (lower 7 bits)
+   sU8     notes[64];                   /* @0x0074..0x00B3   0xFF=unset, MIDI note otherwise (lower 7 bits)
                                          *                    (default is C-4 == 0x3C, 0x3B="-1", 0x3D="+1")
                                          *                   bit7: 1=no trig condition, 0=have trig condition
                                          *                          ==> 0x7F = default note with trig cond
                                          *                          ==> 0xFF = default note without trig cond
                                          */
-   sU8     velocities[64];              /* ?@0x00B4..0x00F3   0xFF=unset, 0x00=0, 0x7F=127             */
-   sU8     note_lengths[64];            /* ?@0x00F4..0x0133   0=0.125 (1/128), 1=0.1875,
+   sU8     velocities[64];              /* @0x00B4..0x00F3    0xFF=unset, 0x00=0, 0x7F=127             */
+   sU8     note_lengths[64];            /* @0x00F4..0x0133    0=0.125 (1/128), 1=0.1875,
                                                               2=1/64 (0.25), 3=0.3125, 4=0.375, 5=0.4375,
                                                               6=1/32, 7=0.5625, 8=0.625, 9=0.6875, .., 13=0.9375,
                                                               14=1/16, 15=1.0625, 16=1.25, .., 29=1.9375,
@@ -282,7 +282,7 @@ typedef struct {
                                                               126=128 (8/1),
                                                               127=inf
                                         */
-   sS8     micro_timings[64];           /* ?@0x0134..0x0173   Micro timing (0xE9..0xFF => -23..-1, 0xC0..0xD7 => +0..+23) */
+   sS8     micro_timings[64];           /* @0x0134..0x0173    Micro timing (0xE9..0xFF => -23..-1, 0xC0..0xD7 => +0..+23) */
    sU8     retrig_lengths[64];          /* ?@0x0174..0x01B3   Retrig lengths (0..126(=128), 127=inf)   */
    sU8     retrig_rates[64];            /* ?@0x01B4..0x01F3   Retrig rates (0(=1/1)..16(=1/80))
                                          *                    Changing the trig condition of step 1 updates 0x1c4
@@ -343,7 +343,7 @@ typedef struct {
    sU8                kit_number;       /* @0x3325            0..127. 0xFF when kit is not saved.       */
    sU8                swing_amount;     /* @0x3226            swingAmount (0..30 => 50%..80%)           */
    sU8                time_mode;        /* @0x3327            timeMode (0=normal, 1=advanced)           */
-   sU8                speed;            /* @0x3228            See AR_SPEED_xxx.                         */
+   sU8                master_speed;     /* @0x3228            See AR_SPEED_xxx.                         */
    sU8                global_quantize;  /* @0x3229                                                      */
    sU8                bpm_msb;          /* @0x332A multiplied by 120. (used when BPM mode=PTN)          */
    sU8                bpm_lsb;          /* @0x332B                                                      */

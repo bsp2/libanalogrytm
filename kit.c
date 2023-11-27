@@ -23,7 +23,8 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 28Feb2016, 21Aug2017
+ * ---- created: 28Feb2016
+ * ---- changed: 21Aug2017
  * ----
  * ----
  */
@@ -70,7 +71,7 @@ ar_error_t ar_kit_syx_to_raw(sU8               *_rawBuf,
    ar_error_t ret;
    sU32 datSz;
    ar_sysex_meta_t meta;
-   
+
    ret = ar_sysex_to_raw(_rawBuf, &_syxBuf, &_syxBufSize, &datSz, &meta);
 
    if(AR_ERR_OK == ret)

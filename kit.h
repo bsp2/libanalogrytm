@@ -23,8 +23,9 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 28Feb2016, 29Mar2016, 04Apr2016, 21Nov2016, 07Jul2017, 09Jul2017, 21Aug2017
- * ----          19Nov2018, 21Oct2019, 25Nov2023
+ * ---- created: 28Feb2016
+ * ---- changed: 29Mar2016, 04Apr2016, 21Nov2016, 07Jul2017, 09Jul2017, 21Aug2017, 19Nov2018
+ * ----          21Oct2019, 25Nov2023
  * ----
  * ----
  * ----
@@ -217,30 +218,30 @@ typedef struct { /* 0x0A87 bytes in v1,
                                    off=2234 (0x8ba) a=0x01 b=0x00   (note: pre OS1.31 debug output, perf_ctl are now at 0x88a)
                                    off=2235 (0x8bb) a=0x00 b=0xff
                                    off=2236 (0x8bc) a=0x08 b=0x00
-                  
+
                                  perf1: (assign sample tune +1)
                                    off=2234 (0x8ba) a=0x00 b=0x01  <-- signed delta value
                                    off=2235 (0x8bb) a=0xff b=0x00  <-- target id msb ?
                                    off=2236 (0x8bc) a=0x00 b=0x08  <-- target id (8=sample tune, 9=sample fine tune, ..)
-                  
+
                                  perf1: (assign sample tune -1)
                                    off=2234 (0x8ba) a=0x01 b=0xff
-                  
+
                                  perf1: (assign sample fine tune +1)
                                    off=2234 (0x8ba) a=0x00 b=0x01
                                    off=2235 (0x8bb) a=0xff b=0x00
                                    off=2236 (0x8bc) a=0x00 b=0x09 <--
-                  
+
                                  perf1: (assign 2nd target sample tune +1)
                                    off=2238 (0x8be) a=0x00 b=0x01
                                    off=2239 (0x8bf) a=0xff b=0x00
                                    off=2240 (0x8c0) a=0x00 b=0x08
-                  
+
                                  perf1: (assign 3rd target sample br +1)
                                    off=2242 (0x8c2) a=0x00 b=0x01
                                    off=2243 (0x8c3) a=0xff b=0x00
                                    off=2244 (0x8c4) a=0x00 b=0x0b
-                  
+
                                  perf2: (assign sample tune +1)
                                    off=2246 (0x8c6) a=0x00 b=0x01
                                    off=2247 (0x8c7) a=0xff b=0x00
@@ -258,12 +259,12 @@ typedef struct { /* 0x0A87 bytes in v1,
                                    off=2448 (0x990) a=0xff b=0x00
                                    off=2449 (0x991) a=0x00 b=0x08
                                    off=2640 (0xa50) a=0x02 b=0x00  <-- current scene id ???
-                  
+
                                  scene1: (assign 2nd target sample fine tune +1)
                                    off=2451 (0x993) a=0x00 b=0x41
                                    off=2452 (0x994) a=0xff b=0x00
                                    off=2453 (0x995) a=0x00 b=0x09
-                  
+
                                  scene2: (assign sample tune +1)
                                    off=2455 (0x997) a=0x00 b=0x41
                                    off=2456 (0x998) a=0xff b=0x00
