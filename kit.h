@@ -206,7 +206,7 @@ typedef struct { /* 0x0A87 bytes in v1,
    sU8 fx_lfo_depth_msb;       /* @0x0812   */
    sU8 fx_lfo_depth_lsb;       /* @0x0813   */
 
-   sU8 __unknown_arr3[0x2E];   /* @0x0814..0x0841 */
+   sU8 __unknown_arr3[0x2E];   /* @0x0814..0x0841 (all 0 in test kit) */
 
    sU8 perf_ctl[48 * 4];       /* @0x0842..0x0901 */
 

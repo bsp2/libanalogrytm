@@ -182,7 +182,17 @@ extern const sUI         ar_sound_mod_dest_ids_int  [AR_NUM_SOUND_MOD_DEST_INT];
 
 /* (note) request sound workbuffers 0..11 ("SOUNDX") to retrieve track sounds 1..12 */
 
-typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
+/*
+ *
+ *
+ ** track sound
+ *
+ *    0xA2 (162) bytes (v5/FW1.70)
+ *    0xA8 (168) bytes (v4/FW1.50/1.61)
+ *
+ *    FW1.70: starts @offset 0x002E in ar_kit_t
+ */
+typedef struct {
 
    /* v4/FW1.50:
       track01 kit offset:   46 (0x002E)
@@ -605,8 +615,8 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
    sU8 amp_volume;            /* @0x005a */
    sU8 __unused_pad32;        /* @0x005b (lsb, always 0) */
 
-   sU8 __unknown2;            /* @0x005c */
-   sU8 __unknown3;            /* @0x005d */
+   sU8 accent_level;          /* @0x005c accent level [FUNC+B/F] */
+   sU8 __unused005D;          /* @0x005d (lsb, always 0)         */
 
    sU8 lfo_speed;             /* @0x005e */
    sU8 __unused_pad33;        /* @0x005f (lsb, always 0) */
@@ -634,7 +644,7 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
    sU8 def_note;              /* @0x006e  0x3c=0, 0x3d=+1, 0x3b=-1 (initially 0x00 == +0 ?!)
                                    (note) not used in sound dump ? (only in kit?!!)
                                */
-   sU8 __unknown_arr2[0xd];   /* @0x006f..0x007B  (correct location of trig/vel/def_len/.. ?) */
+   sU8 __unknown_006F[0xd];   /* @0x006f..0x007B   */
 
    sU8 machine_type;          /* @0x007C   0:bd hard       1:bd classic    2:sd hard       3:sd classic
                                            4:rs hard       5:rs classic    6:cp classic    7:bt classic
@@ -677,7 +687,8 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
 #define AR_SOUND_MODE_SHIFT_VELTOVOL        (6)
 #define AR_SOUND_MODE_MASK_VELTOVOL         (1u << AR_SOUND_MODE_SHIFT_VELTOVOL)
 
-   sU8 __unknown_arr3[16];    /* @0x007E..0x008D */
+   sU8 __unknown_007E[16];    /* @0x007E..0x008D */
+
    sU8 vel_amt_1;             /* @0x008E VELOCITY MOD */
    sU8 vel_target_1;          /* @0x008F */
    sU8 vel_amt_2;             /* @0x0090 */
@@ -695,7 +706,7 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
    sU8 at_amt_4;              /* @0x009C */
    sU8 at_target_4;           /* @0x009D */
 
-   sU8 __unknown_arr4[4];     /* @0x009E..0x00A1 */
+   sU8 __unknown_009E[4];     /* @0x009E..0x00A1 */
 
 } ar_sound_t;
 
