@@ -86,10 +86,7 @@ typedef struct { /* 0x0A87 bytes in v1,
    sU8 name[15];               /* @0x0004 */
    sU8 __pad_name;             /* @0x0013  (ASCIIZ?) */
 
-   struct {                    /* @0x0014..0x002b */
-      sU8 level;               /*  actually BIG ENDIAN shorts but LSB is unused (always 0x00) */
-      sU8 __unused_pad1;
-   } track_levels[12];
+   s_u16_t track_levels[12];   /* @0x0014..0x002b   (note) LSB (track_levels[i].b.hi) is unused (always 0x00) */
 
    sU8 __unknown_arr1b[0x2];   /* @0x002c..0x002d */
 

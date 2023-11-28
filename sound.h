@@ -24,7 +24,7 @@
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
  * ---- created: 21Aug2017
- * ---- changed: 21Oct2019, 24Oct2019, 25Oct2019, 26Oct2019, 15Jul2021, 25Nov2023
+ * ---- changed: 21Oct2019, 24Oct2019, 25Oct2019, 26Oct2019, 15Jul2021, 25Nov2023, 28Nov2023
  * ----
  * ----
  */
@@ -210,7 +210,7 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
    sU8 name[15];              /* @0x000C */
    sU8 __pad_name;            /* @0x001B  (ASCIIZ?) */
 
-   sU8 synth_param_1;         /* @0x001C
+   s_u16_t synth_param_1;     /* @0x001C  (LSB is always 0)
                                           0:bd hard     : lev
                                           1:bd classic  : lev
                                           2:sd hard     : lev
@@ -246,9 +246,8 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
                                          32:sy raw      : lev
                                          33:hh lab      : lev
                                */
-   sU8 __unused_pad1;  /* synth_param_1_lsb. unused, always 0 */
 
-   sU8 synth_param_2;         /* @0x001E
+   s_u16_t synth_param_2;     /* @0x001E  (some machines use LSB since FW1.70
                                           0:bd hard     : tun (64=+0)
                                           1:bd classic  : tun (64=+0)
                                           2:sd hard     : tun (64=+0)
@@ -284,9 +283,8 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
                                          32:sy raw      : tun (64=+0) (uses LSB)
                                          33:hh lab      : osc1 (uses 8bit? LSB)
                               */
-   sU8 synth_param_2_lsb;     /* @0x001F synth_param_2_lsb. used since FW1.70 */
 
-   sU8 synth_param_3;         /* @0x0020
+   s_u16_t synth_param_3;     /* @0x0020  (LSB is always 0)
                                           0:bd hard     : dec
                                           1:bd classic  : dec
                                           2:sd hard     : dec
@@ -322,9 +320,8 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
                                          32:sy raw      : dcy (0..126,127=inf)
                                          33:hh lab      : dec
                               */
-   sU8 __unused_pad3;  /* synth_param_3_lsb. unused, always 0 */
 
-   sU8 synth_param_4;         /* @0x0022
+   s_u16_t synth_param_4;     /* @0x0022  (some machines use LSB since FW1.70)
                                           0:bd hard     : hld
                                           1:bd classic  : hld
                                           2:sd hard     : swd
@@ -360,9 +357,8 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
                                          32:sy raw      : det (64=+0) (uses LSB)
                                          33:hh lab      : osc2 (uses 8bit? LSB)
                               */
-   sU8 synth_param_4_lsb;     /* @0x0023 used since FW1.70 */
 
-   sU8 synth_param_5;         /* @0x0024
+   s_u16_t synth_param_5;     /* @0x0024  ("hh lab" uses LSB since FW1.70)
                                           0:bd hard     : swt
                                           1:bd classic  : swt
                                           2:sd hard     : tic
@@ -398,9 +394,8 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
                                          32:sy raw      : nol
                                          33:hh lab      : osc3 (uses 8bit? LSB)
                               */
-   sU8 synth_param_5_lsb;     /* @0x0025 used since FW1.70 */
 
-   sU8 synth_param_6;         /* @0x0026
+   s_u16_t synth_param_6;     /* @0x0026  ("hh lab" uses LSB since FW1.70)
                                           0:bd hard     : snp
                                           1:bd classic  : swd
                                           2:sd hard     : nod
@@ -436,9 +431,8 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
                                          32:sy raw      : wav1 (0=sin,1=asin,2=tri,3=ssaw,4=asaw,5=saw,6=ring)
                                          33:hh lab      : osc4 (uses 8bit? LSB)
                               */
-   sU8 synth_param_6_lsb;     /* @0x0027 used since FW1.70 */
 
-   sU8 synth_param_7;         /* @0x0028
+   s_u16_t synth_param_7;     /* @0x0028  ("hh lab" uses LSB since FW1.70)
                                           0:bd hard     : wav
                                           1:bd classic  : wav
                                           2:sd hard     : nol
@@ -481,9 +475,8 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
                                          32:sy raw      : wav2 (0=sineA,1=ssawA,2=sineB,3=ssawB)
                                          33:hh lab      : osc5 (uses 8bit? LSB)
                               */
-   sU8 synth_param_7_lsb;     /* @0x0029 used since FW1.70 */
 
-   sU8 synth_param_8;         /* @0x002A
+   s_u16_t synth_param_8;     /* @0x002A  ("hh lab" uses LSB since FW1.70)
                                           0:bd hard     : tic
                                           1:bd classic  : tra
                                           2:sd hard     : swt
@@ -526,7 +519,6 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
                                          32:sy raw      : bal (64=+0)
                                          33:hh lab      : osc6 (uses 8bit? LSB)
                               */
-   sU8 synth_param_8_lsb;     /* @0x002B used since FW1.70 */
 
    sU8 sample_tune;           /* @0x002c  0x40=0, 0x41=+1, .. */
    sU8 __unused_pad9;         /* @0x002d (lsb, always 0) */
@@ -553,16 +545,13 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
                               */
    sU8 __unused_pad11;        /* @0x0031 (lsb, always 0) */
 
-   sU8 sample_br;             /* @0x0032  */
+   sU8 sample_br;             /* @0x0032  sample bit reduction */
    sU8 __unused_pad12;        /* @0x0033 (lsb, always 0) */
 
-   sU8 sample_start_offset;   /* @0x0034 */
-   sU8 sample_start_offset_lsb; /* @0x0035 (lsb, may be non-zero since v5/FW1.70) */
+   s_u16_t sample_start;      /* @0x0034  STA (LSB used since v5/FW1.70) */
+   s_u16_t sample_end;        /* @0x0036  END (LSB used since v5/FW1.70) */
 
-   sU8 sample_end_offset;     /* @0x0036 */
-   sU8 sample_end_offset_lsb; /* @0x0037 (lsb, may be non-zero since v5/FW1.70) */
-
-   sU8 sample_loop_flag;      /* @0x0038  0x00=off, 0x01=on */
+   sU8 sample_loop_flag;      /* @0x0038  0=off, 1=on */
    sU8 __unused_pad15;        /* @0x0039 */
 
    sU8 sample_volume;         /* @0x003a */
@@ -640,8 +629,7 @@ typedef struct { /* 0xA8 (168) bytes (v4/1.5.0), 0xA2 (162) bytes (v5/1.7.0)*/
    sU8 lfo_mode;              /* @0x006a (0=free,1=trg,2=hld,3=one,4=hlf) */
    sU8 __unused_pad39;        /* @0x006b (lsb, always 0) */
 
-   sU8 lfo_depth_msb;         /* @0x006c  */
-   sU8 lfo_depth_lsb;         /* @0x006d  */
+   s_u16_t lfo_depth;         /* @0x006c  */
 
    sU8 def_note;              /* @0x006e  0x3c=0, 0x3d=+1, 0x3b=-1 (initially 0x00 == +0 ?!)
                                    (note) not used in sound dump ? (only in kit?!!)
