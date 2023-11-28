@@ -336,8 +336,7 @@ typedef struct {
    sU8                magic[4];         /* version? (00 00 00 01=FW1.0, 00 00 00 03=FW1.50, 00 00 00 05=FW1.70)  */
    ar_pattern_track_t tracks[13];       /* @0x0004..0x2090  13*641=8333 bytes                           */
    ar_plock_seq_t     plock_seqs[72];   /* @0x2091..0x3320  16#42*72=4752 bytes                         */
-   sU8                __unknown3321;    /* @0x3321            (always 0? could be master_length MSB)    */
-   sU8                master_length;    /* @0x3322            Master length (in adv mode). 1=inf        */
+   s_u16_t            master_length;    /* @0x3321            Master length (in adv mode). 1=inf        */
    sU8                master_chg_msb;   /* @0x3323            masterChange MSB                          */
    sU8                master_chg_lsb;   /* @0x3324            masterChange LSB (1=OFF, 2=2, 3=3, ..,  ) */
    sU8                kit_number;       /* @0x3325            0..127. 0xFF when kit is not saved.       */
