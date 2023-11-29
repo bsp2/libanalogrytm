@@ -723,7 +723,7 @@ typedef struct {
  *   AR_ERR_OK if the request was created successfully.
  *
  */
-S_EXTERN ar_error_t ar_sound_request(sU8 *_dstBuf, sU8 _devId, sU8 _patternNr);
+S_EXTERN ar_error_t ar_sound_request (sU8 *_dstBuf, sU8 _devId, sU8 _patternNr);
 
 
 /*
@@ -737,7 +737,7 @@ S_EXTERN ar_error_t ar_sound_request(sU8 *_dstBuf, sU8 _devId, sU8 _patternNr);
  *   AR_ERR_OK if the request was created successfully.
  *
  */
-S_EXTERN ar_error_t ar_sound_request_x(sU8 *_dstBuf, sU8 _devId, sU8 _patternNr);
+S_EXTERN ar_error_t ar_sound_request_x (sU8 *_dstBuf, sU8 _devId, sU8 _patternNr);
 
 
 /*
@@ -755,12 +755,12 @@ S_EXTERN ar_error_t ar_sound_request_x(sU8 *_dstBuf, sU8 _devId, sU8 _patternNr)
  *   AR_ERR_OK if the request was created successfully.
  *
  */
-S_EXTERN ar_error_t ar_sound_syx_to_raw(sU8             *_rawBuf,
-                                        const sU8       *_syxBuf,
-                                        sU32             _syxBufSize,
-                                        sU32            *_retRawBufSize,
-                                        ar_sysex_meta_t *_meta
-                                        );
+S_EXTERN ar_error_t ar_sound_syx_to_raw (sU8             *_rawBuf,
+                                         const sU8       *_syxBuf,
+                                         sU32             _syxBufSize,
+                                         sU32            *_retRawBufSize,
+                                         ar_sysex_meta_t *_meta
+                                         );
 
 
 /*
@@ -778,12 +778,12 @@ S_EXTERN ar_error_t ar_sound_syx_to_raw(sU8             *_rawBuf,
  *   AR_ERR_OK if the request was created successfully.
  *
  */
-S_EXTERN ar_error_t ar_sound_raw_to_syx(sU8                   *_syxBuf,
-                                        const sU8             *_rawBuf,
-                                        sU32                   _rawBufSize,
-                                        sU32                  *_retSyxBufSize,
-                                        const ar_sysex_meta_t *_meta
-                                        );
+S_EXTERN ar_error_t ar_sound_raw_to_syx (sU8                   *_syxBuf,
+                                         const sU8             *_rawBuf,
+                                         sU32                   _rawBufSize,
+                                         sU32                  *_retSyxBufSize,
+                                         const ar_sysex_meta_t *_meta
+                                         );
 
 
 /*
@@ -839,7 +839,7 @@ sSI ar_sound_get_machine_id_by_track_and_list_idx (sUI _trackIdx, sUI _listIdx);
  *   Machine id or -1 if the track or machine index is invalid.
  *
  */
-sSI ar_sound_get_list_index_by_track_idx_and_machine_id(sUI _trackIdx, sUI _machineId);
+sSI ar_sound_get_list_index_by_track_idx_and_machine_id (sUI _trackIdx, sUI _machineId);
 
 
 /*
@@ -853,7 +853,9 @@ sSI ar_sound_get_list_index_by_track_idx_and_machine_id(sUI _trackIdx, sUI _mach
  *   Parameter name (TUN, LEV, ..) or NULL if the machine type or _synthParamIdx is invalid, or _sound is NULL.
  *
  */
-const char *ar_sound_get_machine_param_short_name (const ar_sound_t *_sound, sUI _synthParamIdx);
+const char *ar_sound_get_machine_param_short_name (const ar_sound_t *_sound,
+                                                   sUI               _synthParamIdx
+                                                   );
 
 
 /*
@@ -868,7 +870,10 @@ const char *ar_sound_get_machine_param_short_name (const ar_sound_t *_sound, sUI
  *   S_TRUE when the query succeeded or S_FALSE if the machine type is invalid or _sound is NULL.
  *
  */
-sBool ar_sound_get_lfo_dest_name (const ar_sound_t *_sound, char *_retBuf, sUI _retBufSz);
+sBool ar_sound_get_lfo_dest_name (const ar_sound_t *_sound,
+                                  char             *_retBuf,
+                                  sUI               _retBufSz
+                                  );
 
 
 /*
@@ -910,7 +915,11 @@ sSI ar_sound_get_list_idx_by_lfo_dest (sUI _lfoDest);
  *   S_TRUE when the query succeeded or S_FALSE if the machine type is invalid or _sound is NULL.
  *
  */
-sBool ar_sound_get_lfo_dest_name_by_list_idx (const ar_sound_t *_sound, sUI _listIdx, char *_retBuf, sUI _retBufSz);
+sBool ar_sound_get_lfo_dest_name_by_list_idx (const ar_sound_t *_sound,
+                                              sUI               _listIdx,
+                                              char             *_retBuf,
+                                              sUI               _retBufSz
+                                              );
 
 
 /*
@@ -926,7 +935,11 @@ sBool ar_sound_get_lfo_dest_name_by_list_idx (const ar_sound_t *_sound, sUI _lis
  *   S_TRUE when the query succeeded or S_FALSE if the machine type is invalid or _sound is NULL.
  *
  */
-sBool ar_sound_get_mod_dest_name (const ar_sound_t *_sound, sUI _modDestId, char *_retBuf, sUI _retBufSz);
+sBool ar_sound_get_mod_dest_name (const ar_sound_t *_sound,
+                                  sUI               _modDestId,
+                                  char             *_retBuf,
+                                  sUI               _retBufSz
+                                  );
 
 
 /*
@@ -968,7 +981,11 @@ sSI ar_sound_get_list_idx_by_mod_dest (sUI _modDest);
  *   S_TRUE when the query succeeded or S_FALSE if the machine type is invalid or _sound is NULL.
  *
  */
-sBool ar_sound_get_mod_dest_name_by_list_idx (const ar_sound_t *_sound, sUI _listIdx, char *_retBuf, sUI _retBufSz);
+sBool ar_sound_get_mod_dest_name_by_list_idx (const ar_sound_t *_sound,
+                                              sUI               _listIdx,
+                                              char             *_retBuf,
+                                              sUI               _retBufSz
+                                              );
 
 
 #pragma pack(pop)

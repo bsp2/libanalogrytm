@@ -11,12 +11,12 @@ EXE_OBJ= \
 	testcases/main.o
 
 LIB_OBJ= \
-	pattern.o \
-	kit.o \
-	sound.o \
+	pattern.o  \
+	kit.o      \
+	sound.o    \
 	settings.o \
-	global.o \
-	sysex.o 
+	global.o   \
+	sysex.o
 
 OBJ= \
 	$(LIB_OBJ) \
