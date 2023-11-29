@@ -31,9 +31,7 @@
 #ifndef __AR_INC_H__
 #define __AR_INC_H__
 
-
 /* include helper */
-
 
 #include "types.h"
 #include "error.h"
@@ -41,6 +39,7 @@
 #include "pattern.h"
 #include "sound.h"
 #include "kit.h"
-
+#include "settings.h"
+#include "global.h"
 
 #endif /* __AR_INC_H__ */
