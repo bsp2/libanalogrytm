@@ -14,6 +14,7 @@ LIB_OBJ= \
 	pattern.o \
 	kit.o \
 	sound.o \
+	global.o \
 	sysex.o
 
 OBJ= \
