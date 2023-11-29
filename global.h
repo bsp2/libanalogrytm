@@ -48,8 +48,15 @@ typedef struct
 {
     sU8 version[4]; /* @0x00..0x04  32 bit version number (0x00, 0x00, 0x00, 0x02) */
 
-    /* Currently reads 0x00, 0x03, 0x02, 0x00, 0x40, 0x00, 0x40  */
-    sU8 __unknown0x04_0x0A[7]; /* @?0x04..0x0A */
+    /* Click Menu */
+    sU8 click_active;       /* @0x05 0=OFF, 1=ON */
+    sU8 click_time_sig_num; /* @0x06 range=0..15 maps to 1..16 on device */
+    sU8 click_time_sig_den; /* @0x07 0=1, 1=2, 2=4, 3=8, 4=16 */
+    sU8 pre_roll;           /* @0x08 0=OFF, range=0..15 maps to 1..16 on device */
+    sU8 volume;             /* @0x09 range=0..127 */
+
+    /* Currently reads  0x40, 0x00 */
+    sU8 __unknown0x09_0x0A[2]; /* @?0x09..0x0A */
 
     /* Midi Channels Menu */
     sU8 auto_channel;        /* @0x0B 255=OFF range=0..15   */
