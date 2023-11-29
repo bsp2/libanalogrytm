@@ -45,14 +45,14 @@
  *
  */
 typedef struct {
-   sU8 version[4]; /* @0x00..0x04  32 bit version number (0x00, 0x00, 0x00, 0x02) */
+   sU8 version[4]; /* @0x00..0x03  32 bit version number (0x00, 0x00, 0x00, 0x02) */
 
    /* Click Menu */
-   sU8 click_active;       /* @0x05 0=OFF, 1=ON */
-   sU8 click_time_sig_num; /* @0x06 range=0..15 maps to 1..16 on device */
-   sU8 click_time_sig_den; /* @0x07 0=1, 1=2, 2=4, 3=8, 4=16 */
-   sU8 pre_roll;           /* @0x08 0=OFF, range=0..15 maps to 1..16 on device */
-   sU8 volume;             /* @0x09 range=0..127 */
+   sU8 click_active;       /* @0x04 0=OFF, 1=ON */
+   sU8 click_time_sig_num; /* @0x05 range=0..15 maps to 1..16 on device */
+   sU8 click_time_sig_den; /* @0x06 0=1, 1=2, 2=4, 3=8, 4=16 */
+   sU8 pre_roll;           /* @0x07 0=OFF, range=0..15 maps to 1..16 on device */
+   sU8 volume;             /* @0x08 range=0..127 */
 
    /* Currently reads  0x40, 0x00 */
    sU8 __unknown0x09_0x0A[2]; /* @?0x09..0x0A */
@@ -107,7 +107,7 @@ typedef struct {
    sU8 send_to_fx_lsb;    /* @?0x35 */
 
    /* All zeros. It is suspicious since it is exactly 16 bytes long, maybe related to midi channels? */
-   sU8 __unknown0x36_0x45[16]; /* @?0x04..0x45 */
+   sU8 __unknown0x36_0x45[16]; /* @?0x36..0x45 */
 
    /* Sequencer Config Menu Part 2 */
    sU8 auto_trk_switch; /* @0x46 0=OFF, 1=ON */
