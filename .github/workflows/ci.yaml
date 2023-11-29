@@ -1,0 +1,17 @@
+# This is a basic worflow which is meant to be a boilerplate for another one if it is ever needed.
+# It at least checks if the code compiles so the repository is not broken on pushes.
+
+name: CI
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repo
+      - uses: actions/checkout@v4
+
+        # Build the repo
+      - name: Build
+        run: |
+          make

@@ -14,8 +14,9 @@ LIB_OBJ= \
 	pattern.o \
 	kit.o \
 	sound.o \
+	settings.o \
 	global.o \
-	sysex.o
+	sysex.o 
 
 OBJ= \
 	$(LIB_OBJ) \

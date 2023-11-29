@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 01Aug2014, 04Aug2014, 28Feb2016, 21Aug2017
+ * ---- changed: 01Aug2014, 04Aug2014, 28Feb2016, 21Aug2017, 29Nov2023
  * ----
  * ----
  */
@@ -31,9 +31,7 @@
 #ifndef __AR_INC_H__
 #define __AR_INC_H__
 
-
 /* include helper */
-
 
 #include "types.h"
 #include "error.h"
@@ -41,6 +39,7 @@
 #include "pattern.h"
 #include "sound.h"
 #include "kit.h"
-
+#include "settings.h"
+#include "global.h"
 
 #endif /* __AR_INC_H__ */
