@@ -38,95 +38,91 @@
 #include "global.h"
 
 /* ---------------------------------------------------------------------------- ar_global_request */
-ar_error_t ar_global_request(sU8 *_dstBuf, sU8 _devId, sU8 _globalSlot)
-{
-    ar_sysex_meta_t meta;
-    ar_error_t ret;
+ar_error_t ar_global_request(sU8 *_dstBuf, sU8 _devId, sU8 _globalSlot) {
+   ar_sysex_meta_t meta;
+   ar_error_t ret;
 
-    AR_SYSEX_META_INIT(meta, _devId, AR_TYPE_GLOBAL, _globalSlot);
+   AR_SYSEX_META_INIT(meta, _devId, AR_TYPE_GLOBAL, _globalSlot);
 
-    ret = ar_sysex_request(_dstBuf, &meta);
+   ret = ar_sysex_request(_dstBuf, &meta);
 
-    return ret;
+   return ret;
 }
 
 /* ---------------------------------------------------------------------------- ar_global_request_x */
-ar_error_t ar_global_request_x(sU8 *_dstBuf, sU8 _devId, sU8 _globalSlot)
-{
-    ar_sysex_meta_t meta;
-    ar_error_t ret;
+ar_error_t ar_global_request_x(sU8 *_dstBuf, sU8 _devId, sU8 _globalSlot) {
+   ar_sysex_meta_t meta;
+   ar_error_t ret;
 
-    AR_SYSEX_META_INIT(meta, _devId, AR_TYPE_GLOBAL, (128u + (_globalSlot & 127u)));
+   AR_SYSEX_META_INIT(meta, _devId, AR_TYPE_GLOBAL, (128u + (_globalSlot & 127u)));
 
-    ret = ar_sysex_request(_dstBuf, &meta);
+   ret = ar_sysex_request(_dstBuf, &meta);
 
-    return ret;
+   return ret;
 }
 
 /* ---------------------------------------------------------------------------- ar_global_syx_to_raw */
-ar_error_t ar_global_syx_to_raw(sU8 *_rawBuf,
-                                const sU8 *_syxBuf,
-                                sU32 _syxBufSize,
-                                sU32 *_retRawBufSize,
-                                ar_sysex_meta_t *_meta)
-{
-    ar_error_t ret;
-    sU32 datSz;
-    ar_sysex_meta_t meta;
+ar_error_t ar_global_syx_to_raw(sU8             *_rawBuf,
+                                const sU8       *_syxBuf,
+                                sU32             _syxBufSize,
+                                sU32            *_retRawBufSize,
+                                ar_sysex_meta_t *_meta) {
+   ar_error_t ret;
+   sU32 datSz;
+   ar_sysex_meta_t meta;
 
-    ret = ar_sysex_to_raw(_rawBuf, &_syxBuf, &_syxBufSize, &datSz, &meta);
+   ret = ar_sysex_to_raw(_rawBuf, &_syxBuf, &_syxBufSize, &datSz, &meta);
 
-    Dprintf("xxx ar_global_syx_to_raw: syxSz=%u rawSz=%u  sizeof(global)=%lu\n", _syxBufSize, datSz, sizeof(ar_global_t));
+   Dprintf("xxx ar_global_syx_to_raw: syxSz=%u rawSz=%u  sizeof(global)=%lu\n", _syxBufSize, datSz, sizeof(ar_global_t));
 
-    if (AR_ERR_OK == ret)
-    {
-        if (NULL != _retRawBufSize)
-        {
-            *_retRawBufSize = datSz;
-        }
+   if(AR_ERR_OK == ret)
+   {
+      if(NULL != _retRawBufSize)
+      {
+         *_retRawBufSize = datSz;
+      }
 
-        if (NULL != _meta)
-        {
-            *_meta = meta;
-        }
+      if(NULL != _meta)
+      {
+         *_meta = meta;
+      }
 
-        if (AR_TYPE_GLOBAL == meta.obj_type)
-        {
-            /* Succeeded */
-        }
-        else
-        {
-            ret = AR_ERR_NOT_A_GLOBAL;
-        }
-    }
+      if(AR_TYPE_GLOBAL == meta.obj_type)
+      {
+         /* Succeeded */
+      }
+      else
+      {
+         ret = AR_ERR_NOT_A_GLOBAL;
+      }
+   }
 
-    return ret;
+   return ret;
 }
 
 /* ---------------------------------------------------------------------------- ar_global_raw_to_syx */
-ar_error_t ar_global_raw_to_syx(sU8 *_syxBuf,
-                                const sU8 *_rawBuf,
-                                sU32 _rawBufSize,
-                                sU32 *_retSyxBufSize,
-                                const ar_sysex_meta_t *_meta)
-{
-    ar_error_t ret;
+ar_error_t ar_global_raw_to_syx(sU8                   *_syxBuf,
+                                const sU8             *_rawBuf,
+                                sU32                   _rawBufSize,
+                                sU32                  *_retSyxBufSize,
+                                const ar_sysex_meta_t *_meta) {
+   ar_error_t ret;
 
-    if (NULL != _meta)
-    {
-        sU32 syxSz;
+   if(NULL != _meta)
+   {
+      sU32 syxSz;
 
-        ret = ar_raw_to_sysex(_syxBuf, _rawBuf, _rawBufSize, &syxSz, _meta);
+      ret = ar_raw_to_sysex(_syxBuf, _rawBuf, _rawBufSize, &syxSz, _meta);
 
-        if (NULL != _retSyxBufSize)
-        {
-            *_retSyxBufSize = syxSz;
-        }
-    }
-    else
-    {
-        ret = AR_ERR_NULLPTR;
-    }
+      if(NULL != _retSyxBufSize)
+      {
+         *_retSyxBufSize = syxSz;
+      }
+   }
+   else
+   {
+      ret = AR_ERR_NULLPTR;
+   }
 
-    return ret;
+   return ret;
 }
