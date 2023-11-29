@@ -1,8 +1,8 @@
-libanalogrytm
-=============
+# libanalogrytm
+
+[![Build Status](https://github.com/bsp2/libanalogrytm/workflows/CI/badge.svg)](https://github.com/bsp2/libanalogrytm/actions?query=workflow%3ACI)
 
 Portable Sysex Library for the Elektron Analog Rytm Drum Computer
-
 
 ## Introduction
 
@@ -11,7 +11,6 @@ decode, modify, and encode system exclusive messages sent/received by the Analog
 
 By design, the library itself does _NOT_ contain any actual MIDI I/O or user interface code.
 
-
 ## Legal
 
 This is not an official Elektron development.
@@ -19,7 +18,6 @@ This is not an official Elektron development.
 All file format information has been found out by analyzing/comparing hundreds of sysex messages sent by the AR.
 
 This library may be used in both open and closed source software (see [LICENSE](../master/LICENSE)).
-
 
 ## Status
 
@@ -30,6 +28,10 @@ This library may be used in both open and closed source software (see [LICENSE](
 - Most of the pattern format has been analyzed. See [pattern.h](../master/pattern.h).
 
 - Most of the kit format has been analyzed. See [kit.h](../master/kit.h).
+
+- Most of the global format has been analyzed. See [global.h](../master/global.h).
+
+- Most of the settings format has been analyzed. See [settings.h](../master/settings.h).
 
 - The library can convert a "whole project" .syx file (sent by the AR) to raw data, and back to .syx again.
   See [testcases/main.c](../master/testcases/main.c). Example output: [log.txt](../master/vs2013/libanalogrytm_test/Debug/log.txt).

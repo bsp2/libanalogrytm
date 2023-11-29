@@ -55,7 +55,7 @@ typedef struct
     sU8 selected_fx_menu;                /* @0x0009 range=0..5, 0=TODO, 1=Delay, 2=Reverb, 3=Dist, 4=Comp, 5=LFO */
     sU8 selected_page;                   /* @0x000A range=0..3, 0=Page 1, 1=Page 2, 2=Page 3, 3=Page 4, only when manually selected. */
 
-    sU8 __unknown_0x0B; /* @?0x000B Reads 0x00 */
+    sU8 __unknown_0x000B; /* @?0x000B Reads 0x00 */
 
     sU8 track_mute_msb; /* @?0x000C (semantics not decoded yet) */
     sU8 track_mute_lsb; /* @?0x000D (semantics not decoded yet) */
@@ -80,7 +80,7 @@ typedef struct
     /* The repeating pattern repeats 128 times. Total length of 2048 bytes. */
     sU8 __repeating_pattern0x001F_0x081E[16 * 128]; /* @?0x001F..0x081E */
 
-    sU8 __unknown0x081F[2]; /* @?0x081F Always 0x01 */
+    sU8 __unknown0x081F; /* @?0x081F Always 0x01 */
 
     sU8 sample_recorder_rlen; /* @0x0820 range=0..8  Recording length */
 

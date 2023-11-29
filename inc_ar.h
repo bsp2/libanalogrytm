@@ -23,7 +23,7 @@
  * ----
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
- * ---- changed: 01Aug2014, 04Aug2014, 28Feb2016, 21Aug2017
+ * ---- changed: 01Aug2014, 04Aug2014, 28Feb2016, 21Aug2017, 29Nov2023
  * ----
  * ----
  */
