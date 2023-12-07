@@ -231,6 +231,80 @@
 
 
 /*
+ * <ali> trig condition enumeration
+ *
+ *        see ar_pattern_track_get/set_step_trig_condition()
+ *
+ */
+#define AR_TRIG_CONDITION_1_PERCENT     0u
+#define AR_TRIG_CONDITION_3_PERCENT     1u
+#define AR_TRIG_CONDITION_4_PERCENT     2u
+#define AR_TRIG_CONDITION_6_PERCENT     3u
+#define AR_TRIG_CONDITION_9_PERCENT     4u
+#define AR_TRIG_CONDITION_13_PERCENT    5u
+#define AR_TRIG_CONDITION_19_PERCENT    6u
+#define AR_TRIG_CONDITION_25_PERCENT    7u
+#define AR_TRIG_CONDITION_33_PERCENT    8u
+#define AR_TRIG_CONDITION_41_PERCENT    9u
+#define AR_TRIG_CONDITION_50_PERCENT   10u
+#define AR_TRIG_CONDITION_59_PERCENT   11u
+#define AR_TRIG_CONDITION_67_PERCENT   12u
+#define AR_TRIG_CONDITION_75_PERCENT   13u
+#define AR_TRIG_CONDITION_81_PERCENT   14u
+#define AR_TRIG_CONDITION_87_PERCENT   15u
+#define AR_TRIG_CONDITION_91_PERCENT   16u
+#define AR_TRIG_CONDITION_94_PERCENT   17u
+#define AR_TRIG_CONDITION_96_PERCENT   18u
+#define AR_TRIG_CONDITION_98_PERCENT   19u
+#define AR_TRIG_CONDITION_99_PERCENT   20u
+#define AR_TRIG_CONDITION_100_PERCENT  21u
+#define AR_TRIG_CONDITION_FILL         22u
+#define AR_TRIG_CONDITION_FILL_NOT     23u
+#define AR_TRIG_CONDITION_PRE          24u
+#define AR_TRIG_CONDITION_PRE_NOT      25u
+#define AR_TRIG_CONDITION_NEI          26u
+#define AR_TRIG_CONDITION_NEI_NOT      27u
+#define AR_TRIG_CONDITION_1ST          28u
+#define AR_TRIG_CONDITION_1ST_NOT      29u
+#define AR_TRIG_CONDITION_1B2          30u
+#define AR_TRIG_CONDITION_2B2          31u
+#define AR_TRIG_CONDITION_1B3          32u
+#define AR_TRIG_CONDITION_2B3          33u
+#define AR_TRIG_CONDITION_3B3          34u
+#define AR_TRIG_CONDITION_1B4          35u
+#define AR_TRIG_CONDITION_2B4          36u
+#define AR_TRIG_CONDITION_3B4          37u
+#define AR_TRIG_CONDITION_4B4          38u
+#define AR_TRIG_CONDITION_1B5          39u
+#define AR_TRIG_CONDITION_2B5          40u
+#define AR_TRIG_CONDITION_3B5          41u
+#define AR_TRIG_CONDITION_4B5          42u
+#define AR_TRIG_CONDITION_5B5          43u
+#define AR_TRIG_CONDITION_1B6          44u
+#define AR_TRIG_CONDITION_2B6          45u
+#define AR_TRIG_CONDITION_3B6          46u
+#define AR_TRIG_CONDITION_4B6          47u
+#define AR_TRIG_CONDITION_5B6          48u
+#define AR_TRIG_CONDITION_6B6          49u
+#define AR_TRIG_CONDITION_1B7          50u
+#define AR_TRIG_CONDITION_2B7          51u
+#define AR_TRIG_CONDITION_3B7          52u
+#define AR_TRIG_CONDITION_4B7          53u
+#define AR_TRIG_CONDITION_5B7          54u
+#define AR_TRIG_CONDITION_6B7          55u
+#define AR_TRIG_CONDITION_7B7          56u
+#define AR_TRIG_CONDITION_1B8          57u
+#define AR_TRIG_CONDITION_2B8          58u
+#define AR_TRIG_CONDITION_3B8          59u
+#define AR_TRIG_CONDITION_4B8          60u
+#define AR_TRIG_CONDITION_5B8          61u
+#define AR_TRIG_CONDITION_6B8          62u
+#define AR_TRIG_CONDITION_7B8          63u
+#define AR_TRIG_CONDITION_8B8          64u
+#define AR_TRIG_CONDITION_NONE        127u
+
+
+/*
  *
  ** Track trigger types  (see ar_pattern_track_t.trigs)
  *
@@ -665,7 +739,7 @@ void ar_pattern_track_set_step_retrig_velocity_offset (ar_pattern_track_t *_patt
  *         _stepIdx - step index (0..63)
  *
  *  Returns:
- *    Trig condition (0..64. 127=no trig condition)
+ *    Trig condition (0..64. 127=no trig condition). See AR_TRIG_CONDITION_xxx.
  *    
  */
 sU8 ar_pattern_track_get_step_trig_condition (const ar_pattern_track_t *_patternTrack,
@@ -679,7 +753,7 @@ sU8 ar_pattern_track_get_step_trig_condition (const ar_pattern_track_t *_pattern
  *  Arguments:
  *    _patternTrack - reference to ar_pattern_t.track[] element
  *         _stepIdx - step index (0..63)
- *             _val - condition (0..64, 127=no trig condition)
+ *             _val - condition (0..64, 127=no trig condition). See AR_TRIG_CONDITION_xxx.
  */
 void ar_pattern_track_set_step_trig_condition (ar_pattern_track_t *_patternTrack,
                                                const sUI           _stepIdx,
