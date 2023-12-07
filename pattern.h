@@ -263,8 +263,7 @@
  */
 typedef struct {
    sU8     trig_bits[((14*64)/8)];      /* @0x0004..0x0073   See AR_TRIG_xxx flags. 14 bits per step ((14*64)/8)==112 bytes */
-   sU8     notes[64];                   /* @0x0074..0x00B3   0xFF=unset, MIDI note otherwise (lower 7 bits)
-                                         *                    (default is C-4 == 0x3C, 0x3B="-1", 0x3D="+1")
+   sU8     notes[64];                   /* @0x0074..0x00B3   127=unset (default note), MIDI note (0..126) otherwise (lower 7 bits)
                                          *                   bit7: 1=no trig condition, 0=have trig condition
                                          *                          ==> 0x7F = default note with trig cond
                                          *                          ==> 0xFF = default note without trig cond
@@ -465,9 +464,9 @@ void ar_pattern_track_set_trig_flags (ar_pattern_track_t *_patternTrack,
  *  Returns:
  *   Note number (0..127), or 0xFF (use default note)
  */
-sU8 ar_pattern_track_get_note (const ar_pattern_track_t *_patternTrack,
-                               const sUI                 _stepIdx
-                               );
+sU8 ar_pattern_track_get_step_note (const ar_pattern_track_t *_patternTrack,
+                                    const sUI                 _stepIdx
+                                    );
 
 
 /*
@@ -478,10 +477,10 @@ sU8 ar_pattern_track_get_note (const ar_pattern_track_t *_patternTrack,
  *         _stepIdx - step index (0..63)
  *             _val - note number (0..127) or 0xFF (use default note)
  */
-void ar_pattern_track_set_note (ar_pattern_track_t *_patternTrack,
-                                const sUI           _stepIdx,
-                                const sU8           _val
-                                );
+void ar_pattern_track_set_step_note (ar_pattern_track_t *_patternTrack,
+                                     const sUI           _stepIdx,
+                                     const sU8           _val
+                                     );
 
 
 /*
@@ -494,9 +493,9 @@ void ar_pattern_track_set_note (ar_pattern_track_t *_patternTrack,
  *  Returns:
  *   Velocity (0..127), or 0xFF (use default velocity)
  */
-sU8 ar_pattern_track_get_velocity (const ar_pattern_track_t *_patternTrack,
-                                   const sUI                 _stepIdx
-                                   );
+sU8 ar_pattern_track_get_step_velocity (const ar_pattern_track_t *_patternTrack,
+                                        const sUI                 _stepIdx
+                                        );
 
 
 /*
@@ -507,10 +506,10 @@ sU8 ar_pattern_track_get_velocity (const ar_pattern_track_t *_patternTrack,
  *         _stepIdx - step index (0..63)
  *             _val - velocity (0..127) or 0xFF (use default velocity)
  */
-void ar_pattern_track_set_velocity (ar_pattern_track_t *_patternTrack,
-                                    const sUI           _stepIdx,
-                                    const sU8           _val
-                                    );
+void ar_pattern_track_set_step_velocity (ar_pattern_track_t *_patternTrack,
+                                         const sUI           _stepIdx,
+                                         const sU8           _val
+                                         );
 
 
 /*
@@ -523,9 +522,9 @@ void ar_pattern_track_set_velocity (ar_pattern_track_t *_patternTrack,
  *  Returns:
  *   Note length (0..127), or 0xFF (use default note length)
  */
-sU8 ar_pattern_track_get_note_length (const ar_pattern_track_t *_patternTrack,
-                                      const sUI                 _stepIdx
-                                      );
+sU8 ar_pattern_track_get_step_note_length (const ar_pattern_track_t *_patternTrack,
+                                           const sUI                 _stepIdx
+                                           );
 
 
 /*
@@ -536,10 +535,10 @@ sU8 ar_pattern_track_get_note_length (const ar_pattern_track_t *_patternTrack,
  *         _stepIdx - step index (0..63)
  *             _val - note length (0..127) or 0xFF (use default note length)
  */
-void ar_pattern_track_set_note_length (ar_pattern_track_t *_patternTrack,
-                                       const sUI           _stepIdx,
-                                       const sU8           _val
-                                       );
+void ar_pattern_track_set_step_note_length (ar_pattern_track_t *_patternTrack,
+                                            const sUI           _stepIdx,
+                                            const sU8           _val
+                                            );
 
 
 /*
@@ -552,9 +551,9 @@ void ar_pattern_track_set_note_length (ar_pattern_track_t *_patternTrack,
  *  Returns:
  *   Micro timing (-23..23)
  */
-sS8 ar_pattern_track_get_micro_timing (const ar_pattern_track_t *_patternTrack,
-                                       const sUI                 _stepIdx
-                                       );
+sS8 ar_pattern_track_get_step_micro_timing (const ar_pattern_track_t *_patternTrack,
+                                            const sUI                 _stepIdx
+                                            );
 
 
 /*
@@ -565,10 +564,10 @@ sS8 ar_pattern_track_get_micro_timing (const ar_pattern_track_t *_patternTrack,
  *         _stepIdx - step index (0..63)
  *             _val - micro timing (-23..23)
  */
-void ar_pattern_track_set_micro_timing (ar_pattern_track_t *_patternTrack,
-                                       const sUI           _stepIdx,
-                                       const sS8           _val
-                                       );
+void ar_pattern_track_set_step_micro_timing (ar_pattern_track_t *_patternTrack,
+                                             const sUI           _stepIdx,
+                                             const sS8           _val
+                                             );
 
 
 /*
@@ -581,9 +580,9 @@ void ar_pattern_track_set_micro_timing (ar_pattern_track_t *_patternTrack,
  *  Returns:
  *   Retrig length (0..127)
  */
-sU8 ar_pattern_track_get_retrig_length (const ar_pattern_track_t *_patternTrack,
-                                        const sUI                 _stepIdx
-                                        );
+sU8 ar_pattern_track_get_step_retrig_length (const ar_pattern_track_t *_patternTrack,
+                                             const sUI                 _stepIdx
+                                             );
 
 
 /*
@@ -594,10 +593,10 @@ sU8 ar_pattern_track_get_retrig_length (const ar_pattern_track_t *_patternTrack,
  *         _stepIdx - step index (0..63)
  *             _val - retrig length (0..127)
  */
-void ar_pattern_track_set_retrig_length (ar_pattern_track_t *_patternTrack,
-                                         const sUI           _stepIdx,
-                                         const sU8           _val
-                                         );
+void ar_pattern_track_set_step_retrig_length (ar_pattern_track_t *_patternTrack,
+                                              const sUI           _stepIdx,
+                                              const sU8           _val
+                                              );
 
 
 /*
@@ -610,9 +609,9 @@ void ar_pattern_track_set_retrig_length (ar_pattern_track_t *_patternTrack,
  *  Returns:
  *   Retrig rate (0..16)
  */
-sU8 ar_pattern_track_get_retrig_rate (const ar_pattern_track_t *_patternTrack,
-                                        const sUI                 _stepIdx
-                                        );
+sU8 ar_pattern_track_get_step_retrig_rate (const ar_pattern_track_t *_patternTrack,
+                                           const sUI                 _stepIdx
+                                           );
 
 
 /*
@@ -623,10 +622,10 @@ sU8 ar_pattern_track_get_retrig_rate (const ar_pattern_track_t *_patternTrack,
  *         _stepIdx - step index (0..63)
  *             _val - retrig rate (0..16)
  */
-void ar_pattern_track_set_retrig_rate (ar_pattern_track_t *_patternTrack,
-                                         const sUI           _stepIdx,
-                                         const sU8           _val
-                                         );
+void ar_pattern_track_set_step_retrig_rate (ar_pattern_track_t *_patternTrack,
+                                            const sUI           _stepIdx,
+                                            const sU8           _val
+                                            );
 
 
 /*
@@ -639,9 +638,9 @@ void ar_pattern_track_set_retrig_rate (ar_pattern_track_t *_patternTrack,
  *  Returns:
  *   Retrig velocity offset (-128..127)
  */
-sS8 ar_pattern_track_get_retrig_velocity_offset (const ar_pattern_track_t *_patternTrack,
-                                                 const sUI                 _stepIdx
-                                                 );
+sS8 ar_pattern_track_get_step_retrig_velocity_offset (const ar_pattern_track_t *_patternTrack,
+                                                      const sUI                 _stepIdx
+                                                      );
 
 
 /*
@@ -652,10 +651,10 @@ sS8 ar_pattern_track_get_retrig_velocity_offset (const ar_pattern_track_t *_patt
  *         _stepIdx - step index (0..63)
  *             _val - retrig velocity offset (-128..127)
  */
-void ar_pattern_track_set_retrig_velocity_offset (ar_pattern_track_t *_patternTrack,
-                                                  const sUI           _stepIdx,
-                                                  const sS8           _val
-                                                  );
+void ar_pattern_track_set_step_retrig_velocity_offset (ar_pattern_track_t *_patternTrack,
+                                                       const sUI           _stepIdx,
+                                                       const sS8           _val
+                                                       );
 
 
 /*
@@ -666,12 +665,12 @@ void ar_pattern_track_set_retrig_velocity_offset (ar_pattern_track_t *_patternTr
  *         _stepIdx - step index (0..63)
  *
  *  Returns:
- *    Trig condition (0..64)
+ *    Trig condition (0..64. 127=no trig condition)
  *    
  */
-sU8 ar_pattern_track_get_trig_condition (const ar_pattern_track_t *_patternTrack,
-                                         const sUI                 _stepIdx
-                                         );
+sU8 ar_pattern_track_get_step_trig_condition (const ar_pattern_track_t *_patternTrack,
+                                              const sUI                 _stepIdx
+                                              );
 
 
 /*
@@ -680,12 +679,12 @@ sU8 ar_pattern_track_get_trig_condition (const ar_pattern_track_t *_patternTrack
  *  Arguments:
  *    _patternTrack - reference to ar_pattern_t.track[] element
  *         _stepIdx - step index (0..63)
- *             _val - condition (0..64)
+ *             _val - condition (0..64, 127=no trig condition)
  */
-void ar_pattern_track_set_trig_condition (ar_pattern_track_t *_patternTrack,
-                                          const sUI           _stepIdx,
-                                          const sU8           _val
-                                          );
+void ar_pattern_track_set_step_trig_condition (ar_pattern_track_t *_patternTrack,
+                                               const sUI           _stepIdx,
+                                               const sU8           _val
+                                               );
 
 
 #pragma pack(pop)
