@@ -359,10 +359,10 @@ void ar_pattern_track_set_step_trig_condition(ar_pattern_track_t *_patternTrack,
    _patternTrack->notes         [_stepIdx] = v | ((_val & 0x40u/*2#01000000*/) << 1);
 
    v = _patternTrack->micro_timings [_stepIdx] & ~0xC0u;
-   _patternTrack->micro_timings [_stepIdx] = v | ((_val & 0x30u/*2#00110000*/) << 6);
+   _patternTrack->micro_timings [_stepIdx] = v | ((_val & 0x30u/*2#00110000*/) << 2);
 
    v = _patternTrack->retrig_lengths[_stepIdx] & ~0x80u;
-   _patternTrack->retrig_lengths[_stepIdx] = v | ((_val & 0x08u/*2#00001000*/) << 7);
+   _patternTrack->retrig_lengths[_stepIdx] = v | ((_val & 0x08u/*2#00001000*/) << 4);
 
    v = _patternTrack->retrig_rates  [_stepIdx] & ~0xE0u;
    _patternTrack->retrig_rates  [_stepIdx] = v | ((_val & 0x07u/*2#00000111*/) << 5);
