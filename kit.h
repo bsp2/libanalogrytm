@@ -1,6 +1,6 @@
 /* ----
  * ---- file   : kit.h
- * ---- author : bsp
+ * ---- author : bsp, alisomay
  * ---- legal  : Distributed under terms of the MIT LICENSE (MIT).
  * ----
  * ---- Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,7 +25,7 @@
  * ----
  * ---- created: 28Feb2016
  * ---- changed: 29Mar2016, 04Apr2016, 21Nov2016, 07Jul2017, 09Jul2017, 21Aug2017, 19Nov2018
- * ----          21Oct2019, 25Nov2023
+ * ----          21Oct2019, 25Nov2023, 07Dec2023
  * ----
  * ----
  * ----
@@ -45,20 +45,20 @@
  ** Some natural constants
  *
  */
-#define AR_KIT_SYX_V1_SZ  (0x0C17u)  /* total size of pattern sysex dump (starting with 0xF0, ending with 0xF7) */
-#define AR_KIT_SYX_V2_SZ  (0x0BE1u)  /* os v1.31b */
-#define AR_KIT_SYX_V3_SZ  (0x0c07u)  /* os v1.45b */
-#define AR_KIT_SYX_V4_SZ  (0x0c09u)  /* os v1.50 */
-#define AR_KIT_SYX_V5_SZ  (0x0BB6u)  /* os v1.70 */
+#define AR_KIT_SYX_V1_SZ  0x0C17u  /* total size of pattern sysex dump (starting with 0xF0, ending with 0xF7) */
+#define AR_KIT_SYX_V2_SZ  0x0BE1u  /* os v1.31b */
+#define AR_KIT_SYX_V3_SZ  0x0c07u  /* os v1.45b */
+#define AR_KIT_SYX_V4_SZ  0x0c09u  /* os v1.50 */
+#define AR_KIT_SYX_V5_SZ  0x0BB6u  /* os v1.70 */
 
 #define AR_KIT_SYX_MIN_SZ  AR_KIT_SYX_V5_SZ
 #define AR_KIT_SYX_MAX_SZ  AR_KIT_SYX_V1_SZ
 
-#define AR_KIT_V1_SZ      (0x0A87u)  /* total size of pattern 'raw' 8bit data  */
-#define AR_KIT_V2_SZ      (0x0A57u)  /* os v1.31b                              */
-#define AR_KIT_V3_SZ      (0x0A79u)  /* os v1.45b                              */
-#define AR_KIT_V4_SZ      (0x0A7Au)  /* os v1.50                               */
-#define AR_KIT_V5_SZ      (0x0A32u)  /* os v1.70                               */
+#define AR_KIT_V1_SZ      0x0A87u  /* total size of pattern 'raw' 8bit data  */
+#define AR_KIT_V2_SZ      0x0A57u  /* os v1.31b                              */
+#define AR_KIT_V3_SZ      0x0A79u  /* os v1.45b                              */
+#define AR_KIT_V4_SZ      0x0A7Au  /* os v1.50                               */
+#define AR_KIT_V5_SZ      0x0A32u  /* os v1.70                               */
 #define AR_KIT_MAX_SZ     AR_KIT_V1_SZ
 
 #define AR_KIT_TRACK_SZ  (162u)   /* total size of per track 'raw' kit data (v5/FW1.70) (v1=172/$AC bytes, v2..v4=168/$A8 bytes) */
@@ -71,16 +71,54 @@
 
 
 /*
+ * <ali> FX LFO destinations
+ *
+ */
+#define AR_FX_LFO_DEST_NONE                 37u
+
+#define AR_FX_LFO_DEST_DELAY_TIME            0u
+#define AR_FX_LFO_DEST_DELAY_PINGPONG        1u
+#define AR_FX_LFO_DEST_DELAY_STEREOWIDTH     2u
+#define AR_FX_LFO_DEST_DELAY_FEEDBACK        3u
+#define AR_FX_LFO_DEST_DELAY_HPFILTER        4u
+#define AR_FX_LFO_DEST_DELAY_LPFILTER        5u
+#define AR_FX_LFO_DEST_DELAY_REVERBSEND      6u
+#define AR_FX_LFO_DEST_DELAY_MIXVOLUME       7u
+#define AR_FX_LFO_DEST_DELAY_OVERDRIVE       8u
+
+#define AR_FX_LFO_DEST_REV_PREDELAY         10u
+#define AR_FX_LFO_DEST_REV_DECAY            11u
+#define AR_FX_LFO_DEST_REV_SHELVINGFREQ     12u
+#define AR_FX_LFO_DEST_REV_SHELVINGGAIN     13u
+#define AR_FX_LFO_DEST_REV_HPFILTER         14u
+#define AR_FX_LFO_DEST_REV_LPFILTER         15u
+#define AR_FX_LFO_DEST_REV_MIXVOLUME        16u
+
+#define AR_FX_LFO_DEST_DIST_AMOUNT          18u
+#define AR_FX_LFO_DEST_DIST_SYMMETRY        19u
+
+#define AR_FX_LFO_DEST_COMP_THRESHOLD       21u
+#define AR_FX_LFO_DEST_COMP_ATTACK_MS       22u
+#define AR_FX_LFO_DEST_COMP_RELEASE_S       23u
+#define AR_FX_LFO_DEST_COMP_RATIO           24u
+#define AR_FX_LFO_DEST_COMP_SIDECHAINEQ     25u
+#define AR_FX_LFO_DEST_COMP_MAKEUPGAIN      26u
+#define AR_FX_LFO_DEST_COMP_DRYWETMIX       27u
+#define AR_FX_LFO_DEST_COMP_VOLUME          28u
+
+
+/*
  *
  ** Kit v5 (FW1.70) structure
  *
+ *    0x0A32(2610) bytes in v5(FW1.70)
+ *    0x0A7A(2682) bytes in v4(FW1.50..1.61B)
+ *    0x0A79(2681) bytes in v3
+ *    0x0A57(2647) bytes in v2
+ *    0x0A87(2695) bytes in v1
+ *
  */
-typedef struct { /* 0x0A87 bytes in v1,
-                    0x0A57 bytes in v2,
-                    0x0A79 bytes in v3,
-                    0x0A7A bytes in v4(FW1.50..1.61B),
-                    0x0A32 bytes in v5(FW1.70)
-                 */
+typedef struct {
    sU8 __unknown_arr1[0x4];    /* @0x0000 (reads 00 00 00 06 in FW1.70 -- version nr?) */
 
    sU8 name[15];               /* @0x0004 */
@@ -292,7 +330,7 @@ typedef struct { /* 0x0A87 bytes in v1,
  *   AR_ERR_OK if the request was created successfully.
  *
  */
-S_EXTERN ar_error_t ar_kit_request(sU8 *_dstBuf, sU8 _devId, sU8 _kitNr);
+S_EXTERN ar_error_t ar_kit_request (sU8 *_dstBuf, sU8  _devId, sU8  _kitNr);
 
 
 /*
@@ -306,7 +344,7 @@ S_EXTERN ar_error_t ar_kit_request(sU8 *_dstBuf, sU8 _devId, sU8 _kitNr);
  *   AR_ERR_OK if the request was created successfully.
  *
  */
-S_EXTERN ar_error_t ar_kit_request_x(sU8 *_dstBuf, sU8 _devId, sU8 _kitNr);
+S_EXTERN ar_error_t ar_kit_request_x (sU8 *_dstBuf, sU8  _devId, sU8  _kitNr);
 
 
 /*
@@ -324,12 +362,12 @@ S_EXTERN ar_error_t ar_kit_request_x(sU8 *_dstBuf, sU8 _devId, sU8 _kitNr);
  *   AR_ERR_OK if the request was created successfully.
  *
  */
-S_EXTERN ar_error_t ar_kit_syx_to_raw(sU8             *_rawBuf,
-                                      const sU8       *_syxBuf,
-                                      sU32             _syxBufSize,
-                                      sU32            *_retRawBufSize,
-                                      ar_sysex_meta_t *_meta
-                                      );
+S_EXTERN ar_error_t ar_kit_syx_to_raw (sU8             *_rawBuf,
+                                       const sU8       *_syxBuf,
+                                       sU32             _syxBufSize,
+                                       sU32            *_retRawBufSize,
+                                       ar_sysex_meta_t *_meta
+                                       );
 
 
 /*
@@ -347,12 +385,12 @@ S_EXTERN ar_error_t ar_kit_syx_to_raw(sU8             *_rawBuf,
  *   AR_ERR_OK if the request was created successfully.
  *
  */
-S_EXTERN ar_error_t ar_kit_raw_to_syx(sU8                   *_syxBuf,
-                                      const sU8             *_rawBuf,
-                                      sU32                   _rawBufSize,
-                                      sU32                  *_retSyxBufSize,
-                                      const ar_sysex_meta_t *_meta
-                                      );
+S_EXTERN ar_error_t ar_kit_raw_to_syx (sU8                   *_syxBuf,
+                                       const sU8             *_rawBuf,
+                                       sU32                   _rawBufSize,
+                                       sU32                  *_retSyxBufSize,
+                                       const ar_sysex_meta_t *_meta
+                                       );
 
 
 #pragma pack(pop)
