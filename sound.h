@@ -25,6 +25,7 @@
  * ----
  * ---- created: 21Aug2017
  * ---- changed: 21Oct2019, 24Oct2019, 25Oct2019, 26Oct2019, 15Jul2021, 25Nov2023, 28Nov2023
+ * ----          07Dec2023
  * ----
  * ----
  */
@@ -38,49 +39,49 @@
 #pragma pack(1)
 
 
-#define AR_SOUND_SYX_V4_SZ  (207)   /* SysEx size, including F0 / F7 (FW1.50..1.61B) */
-#define AR_SOUND_SYX_V5_SZ  (201)   /* SysEx size, including F0 / F7 (FW1.70) */
+#define AR_SOUND_SYX_V4_SZ  207u   /* SysEx size, including F0 / F7 (FW1.50..1.61B) */
+#define AR_SOUND_SYX_V5_SZ  201u   /* SysEx size, including F0 / F7 (FW1.70) */
 #define AR_SOUND_SYX_SZ  AR_SOUND_SYX_V5_SZ
 
-#define AR_SOUND_V4_SZ   (168)   /* Raw, decoded size (FW1.50/1.61b) */
-#define AR_SOUND_V5_SZ   (162)   /* Raw, decoded size (FW1.70) */
+#define AR_SOUND_V4_SZ      168u   /* Raw, decoded size (FW1.50/1.61b) */
+#define AR_SOUND_V5_SZ      162u   /* Raw, decoded size (FW1.70) */
 #define AR_SOUND_SZ AR_SOUND_V5_SZ  // == sizeof(ar_sound_t)
 
-#define AR_SOUND_MACHINE_BD_HARD      ( 0)
-#define AR_SOUND_MACHINE_BD_CLASSIC   ( 1)
-#define AR_SOUND_MACHINE_SD_HARD      ( 2)
-#define AR_SOUND_MACHINE_SD_CLASSIC   ( 3)
-#define AR_SOUND_MACHINE_RS_HARD      ( 4)
-#define AR_SOUND_MACHINE_RS_CLASSIC   ( 5)
-#define AR_SOUND_MACHINE_CP_CLASSIC   ( 6)
-#define AR_SOUND_MACHINE_BT_CLASSIC   ( 7)
-#define AR_SOUND_MACHINE_XT_CLASSIC   ( 8)
-#define AR_SOUND_MACHINE_CH_CLASSIC   ( 9)
-#define AR_SOUND_MACHINE_OH_CLASSIC   (10)
-#define AR_SOUND_MACHINE_CY_CLASSIC   (11)
-#define AR_SOUND_MACHINE_CB_CLASSIC   (12)
-#define AR_SOUND_MACHINE_BD_FM        (13)
-#define AR_SOUND_MACHINE_SD_FM        (14)
-#define AR_SOUND_MACHINE_UT_NOISE     (15)
-#define AR_SOUND_MACHINE_UT_IMPULSE   (16)
-#define AR_SOUND_MACHINE_CH_METALLIC  (17)
-#define AR_SOUND_MACHINE_OH_METALLIC  (18)
-#define AR_SOUND_MACHINE_CY_METALLIC  (19)
-#define AR_SOUND_MACHINE_CB_METALLIC  (20)
-#define AR_SOUND_MACHINE_BD_PLASTIC   (21)
-#define AR_SOUND_MACHINE_BD_SILKY     (22)
-#define AR_SOUND_MACHINE_SD_NATURAL   (23)
-#define AR_SOUND_MACHINE_HH_BASIC     (24)
-#define AR_SOUND_MACHINE_CY_RIDE      (25)
-#define AR_SOUND_MACHINE_BD_SHARP     (26)
-#define AR_SOUND_MACHINE_DISABLE      (27)
-#define AR_SOUND_MACHINE_SY_DUAL_VCO  (28)
-#define AR_SOUND_MACHINE_SY_CHIP      (29)
-#define AR_SOUND_MACHINE_BD_ACOUSTIC  (30)
-#define AR_SOUND_MACHINE_SD_ACOUSTIC  (31)
-#define AR_SOUND_MACHINE_SY_RAW       (32)
-#define AR_SOUND_MACHINE_HH_LAB       (33)
-#define AR_NUM_SOUND_MACHINES         (34)
+#define AR_SOUND_MACHINE_BD_HARD       0u
+#define AR_SOUND_MACHINE_BD_CLASSIC    1u
+#define AR_SOUND_MACHINE_SD_HARD       2u
+#define AR_SOUND_MACHINE_SD_CLASSIC    3u
+#define AR_SOUND_MACHINE_RS_HARD       4u
+#define AR_SOUND_MACHINE_RS_CLASSIC    5u
+#define AR_SOUND_MACHINE_CP_CLASSIC    6u
+#define AR_SOUND_MACHINE_BT_CLASSIC    7u
+#define AR_SOUND_MACHINE_XT_CLASSIC    8u
+#define AR_SOUND_MACHINE_CH_CLASSIC    9u
+#define AR_SOUND_MACHINE_OH_CLASSIC   10u
+#define AR_SOUND_MACHINE_CY_CLASSIC   11u
+#define AR_SOUND_MACHINE_CB_CLASSIC   12u
+#define AR_SOUND_MACHINE_BD_FM        13u
+#define AR_SOUND_MACHINE_SD_FM        14u
+#define AR_SOUND_MACHINE_UT_NOISE     15u
+#define AR_SOUND_MACHINE_UT_IMPULSE   16u
+#define AR_SOUND_MACHINE_CH_METALLIC  17u
+#define AR_SOUND_MACHINE_OH_METALLIC  18u
+#define AR_SOUND_MACHINE_CY_METALLIC  19u
+#define AR_SOUND_MACHINE_CB_METALLIC  20u
+#define AR_SOUND_MACHINE_BD_PLASTIC   21u
+#define AR_SOUND_MACHINE_BD_SILKY     22u
+#define AR_SOUND_MACHINE_SD_NATURAL   23u
+#define AR_SOUND_MACHINE_HH_BASIC     24u
+#define AR_SOUND_MACHINE_CY_RIDE      25u
+#define AR_SOUND_MACHINE_BD_SHARP     26u
+#define AR_SOUND_MACHINE_DISABLE      27u
+#define AR_SOUND_MACHINE_SY_DUAL_VCO  28u
+#define AR_SOUND_MACHINE_SY_CHIP      29u
+#define AR_SOUND_MACHINE_BD_ACOUSTIC  30u
+#define AR_SOUND_MACHINE_SD_ACOUSTIC  31u
+#define AR_SOUND_MACHINE_SY_RAW       32u
+#define AR_SOUND_MACHINE_HH_LAB       33u
+#define AR_NUM_SOUND_MACHINES         34u
 
 extern const char *const ar_sound_machine_names [AR_NUM_SOUND_MACHINES];
 
@@ -88,92 +89,92 @@ extern const char *const ar_sound_machine_names [AR_NUM_SOUND_MACHINES];
 extern const sSI *ar_sound_compatible_machines [12/*num_tracks*/];
 
 // (note) in UI list order
-#define AR_SOUND_LFO_DEST_NONE     (41)  // 0x29
-#define AR_SOUND_LFO_DEST_SYN_1    ( 0)  // 0x00 (e.g. LEV) (machine-dependent)
-#define AR_SOUND_LFO_DEST_SYN_2    ( 1)  // 0x01 (e.g. TUN)
-#define AR_SOUND_LFO_DEST_SYN_3    ( 2)  // 0x02 (e.g. DEC)
-#define AR_SOUND_LFO_DEST_SYN_4    ( 3)  // 0x03 (e.g. TYP)
-#define AR_SOUND_LFO_DEST_SYN_5    ( 4)  // 0x04 (e.g. MOD)
-#define AR_SOUND_LFO_DEST_SYN_6    ( 5)  // 0x05 (e.g. SWT)
-#define AR_SOUND_LFO_DEST_SYN_7    ( 6)  // 0x06 (e.g. SWD)
-#define AR_SOUND_LFO_DEST_SYN_8    ( 7)  // 0x07 (e.g. TIC)
-#define AR_SOUND_LFO_DEST_SMP_TUN  ( 8)  // 0x08
-#define AR_SOUND_LFO_DEST_SMP_FIN  ( 9)  // 0x09
-#define AR_SOUND_LFO_DEST_SMP_SMP  (10)  // 0x0A
-#define AR_SOUND_LFO_DEST_SMP_BR   (11)  // 0x0B
-#define AR_SOUND_LFO_DEST_SMP_STA  (12)  // 0x0C
-#define AR_SOUND_LFO_DEST_SMP_END  (13)  // 0x0D
-#define AR_SOUND_LFO_DEST_SMP_LOP  (14)  // 0x0E
-#define AR_SOUND_LFO_DEST_SMP_LEV  (15)  // 0x0F
-#define AR_SOUND_LFO_DEST_FLT_ENV  (23)  // 0x17
-#define AR_SOUND_LFO_DEST_FLT_ATK  (16)  // 0x10
-#define AR_SOUND_LFO_DEST_FLT_DEC  (18)  // 0x12
-#define AR_SOUND_LFO_DEST_FLT_SUS  (17)  // 0x11
-#define AR_SOUND_LFO_DEST_FLT_REL  (19)  // 0x13
-#define AR_SOUND_LFO_DEST_FLT_FRQ  (20)  // 0x14
-#define AR_SOUND_LFO_DEST_FLT_RES  (21)  // 0x15
-#define AR_SOUND_LFO_DEST_AMP_ATK  (24)  // 0x18
-#define AR_SOUND_LFO_DEST_AMP_HLD  (25)  // 0x19
-#define AR_SOUND_LFO_DEST_AMP_DEC  (26)  // 0x1A
-#define AR_SOUND_LFO_DEST_AMP_OVR  (27)  // 0x1B
-#define AR_SOUND_LFO_DEST_AMP_VOL  (31)  // 0x1F
-#define AR_SOUND_LFO_DEST_AMP_PAN  (30)  // 0x1E
-#define AR_SOUND_LFO_DEST_AMP_ACC  (32)  // 0x20  ("AMP:Accent Level", [FUNC]+[BANK B/F])
-#define AR_SOUND_LFO_DEST_AMP_DLY  (28)  // 0x1C
-#define AR_SOUND_LFO_DEST_AMP_REV  (29)  // 0x1D
+#define AR_SOUND_LFO_DEST_NONE     41u  // 0x29
+#define AR_SOUND_LFO_DEST_SYN_1     0u  // 0x00 (e.g. LEV) (machine-dependent)
+#define AR_SOUND_LFO_DEST_SYN_2     1u  // 0x01 (e.g. TUN)
+#define AR_SOUND_LFO_DEST_SYN_3     2u  // 0x02 (e.g. DEC)
+#define AR_SOUND_LFO_DEST_SYN_4     3u  // 0x03 (e.g. TYP)
+#define AR_SOUND_LFO_DEST_SYN_5     4u  // 0x04 (e.g. MOD)
+#define AR_SOUND_LFO_DEST_SYN_6     5u  // 0x05 (e.g. SWT)
+#define AR_SOUND_LFO_DEST_SYN_7     6u  // 0x06 (e.g. SWD)
+#define AR_SOUND_LFO_DEST_SYN_8     7u  // 0x07 (e.g. TIC)
+#define AR_SOUND_LFO_DEST_SMP_TUN   8u  // 0x08
+#define AR_SOUND_LFO_DEST_SMP_FIN   9u  // 0x09
+#define AR_SOUND_LFO_DEST_SMP_SMP  10u  // 0x0A
+#define AR_SOUND_LFO_DEST_SMP_BR   11u  // 0x0B
+#define AR_SOUND_LFO_DEST_SMP_STA  12u  // 0x0C
+#define AR_SOUND_LFO_DEST_SMP_END  13u  // 0x0D
+#define AR_SOUND_LFO_DEST_SMP_LOP  14u  // 0x0E
+#define AR_SOUND_LFO_DEST_SMP_LEV  15u  // 0x0F
+#define AR_SOUND_LFO_DEST_FLT_ENV  23u  // 0x17
+#define AR_SOUND_LFO_DEST_FLT_ATK  16u  // 0x10
+#define AR_SOUND_LFO_DEST_FLT_DEC  18u  // 0x12
+#define AR_SOUND_LFO_DEST_FLT_SUS  17u  // 0x11
+#define AR_SOUND_LFO_DEST_FLT_REL  19u  // 0x13
+#define AR_SOUND_LFO_DEST_FLT_FRQ  20u  // 0x14
+#define AR_SOUND_LFO_DEST_FLT_RES  21u  // 0x15
+#define AR_SOUND_LFO_DEST_AMP_ATK  24u  // 0x18
+#define AR_SOUND_LFO_DEST_AMP_HLD  25u  // 0x19
+#define AR_SOUND_LFO_DEST_AMP_DEC  26u  // 0x1A
+#define AR_SOUND_LFO_DEST_AMP_OVR  27u  // 0x1B
+#define AR_SOUND_LFO_DEST_AMP_VOL  31u  // 0x1F
+#define AR_SOUND_LFO_DEST_AMP_PAN  30u  // 0x1E
+#define AR_SOUND_LFO_DEST_AMP_ACC  32u  // 0x20  ("AMP:Accent Level", [FUNC]+[BANK B/F])
+#define AR_SOUND_LFO_DEST_AMP_DLY  28u  // 0x1C
+#define AR_SOUND_LFO_DEST_AMP_REV  29u  // 0x1D
 
-#define AR_NUM_SOUND_LFO_DEST_UI    (33)
-#define AR_NUM_SOUND_LFO_DEST_INT   (42)
-#define AR_SOUND_MAX_LFO_DEST_NAME  (24)
+#define AR_NUM_SOUND_LFO_DEST_UI    33u
+#define AR_NUM_SOUND_LFO_DEST_INT   42u
+#define AR_SOUND_MAX_LFO_DEST_NAME  24u
 
 extern const char *const ar_sound_lfo_dest_names_ui [AR_NUM_SOUND_LFO_DEST_UI];
 extern const sUI         ar_sound_lfo_dest_ids_ui   [AR_NUM_SOUND_LFO_DEST_UI];  // maps UI list index to dest index
 extern const sUI         ar_sound_lfo_dest_ids_int  [AR_NUM_SOUND_LFO_DEST_INT]; // maps dest index to UI list index
 
 // (note) same ids as AR_SOUND_LFO_DEST_xxx but different selection
-#define AR_SOUND_MOD_DEST_NONE            (41)
-#define AR_SOUND_MOD_DEST_LFO_MULTIPLIER  (34)
-#define AR_SOUND_MOD_DEST_LFO_WAVEFORM    (37)
-#define AR_SOUND_MOD_DEST_LFO_TRIGMODE    (39)
-#define AR_SOUND_MOD_DEST_LFO_SPEED       (33)
-#define AR_SOUND_MOD_DEST_LFO_FADE        (35)
-#define AR_SOUND_MOD_DEST_LFO_PHASE       (38)
-#define AR_SOUND_MOD_DEST_LFO_DEPTH       (40)
-#define AR_SOUND_MOD_DEST_SYN_1           ( 0)
-#define AR_SOUND_MOD_DEST_SYN_2           ( 1)
-#define AR_SOUND_MOD_DEST_SYN_3           ( 2)
-#define AR_SOUND_MOD_DEST_SYN_4           ( 3)
-#define AR_SOUND_MOD_DEST_SYN_5           ( 4)
-#define AR_SOUND_MOD_DEST_SYN_6           ( 5)
-#define AR_SOUND_MOD_DEST_SYN_7           ( 6)
-#define AR_SOUND_MOD_DEST_SYN_8           ( 7)
-#define AR_SOUND_MOD_DEST_SMP_TUN         ( 8)  // 0x08
-#define AR_SOUND_MOD_DEST_SMP_FIN         ( 9)  // 0x09
-#define AR_SOUND_MOD_DEST_SMP_SMP         (10)  // 0x0A
-#define AR_SOUND_MOD_DEST_SMP_BR          (11)  // 0x0B
-#define AR_SOUND_MOD_DEST_SMP_STA         (12)  // 0x0C
-#define AR_SOUND_MOD_DEST_SMP_END         (13)  // 0x0D
-#define AR_SOUND_MOD_DEST_SMP_LOP         (14)  // 0x0E
-#define AR_SOUND_MOD_DEST_SMP_LEV         (15)  // 0x0F
-#define AR_SOUND_MOD_DEST_FLT_ENV         (23)  // 0x17
-#define AR_SOUND_MOD_DEST_FLT_ATK         (16)  // 0x10
-#define AR_SOUND_MOD_DEST_FLT_DEC         (18)  // 0x12
-#define AR_SOUND_MOD_DEST_FLT_SUS         (17)  // 0x11
-#define AR_SOUND_MOD_DEST_FLT_REL         (19)  // 0x13
-#define AR_SOUND_MOD_DEST_FLT_FRQ         (20)  // 0x14
-#define AR_SOUND_MOD_DEST_FLT_RES         (21)  // 0x15
-#define AR_SOUND_MOD_DEST_AMP_ATK         (24)  // 0x18
-#define AR_SOUND_MOD_DEST_AMP_HLD         (25)  // 0x19
-#define AR_SOUND_MOD_DEST_AMP_DEC         (26)  // 0x1A
-#define AR_SOUND_MOD_DEST_AMP_OVR         (27)  // 0x1B
-#define AR_SOUND_MOD_DEST_AMP_VOL         (31)  // 0x1F
-#define AR_SOUND_MOD_DEST_AMP_PAN         (30)  // 0x1E
-#define AR_SOUND_MOD_DEST_AMP_ACC         (32)  // 0x20  ("AMP:Accent Level", [FUNC]+[BANK B/F])
-#define AR_SOUND_MOD_DEST_AMP_DLY         (28)  // 0x1C
-#define AR_SOUND_MOD_DEST_AMP_REV         (29)  // 0x1D
-#define AR_NUM_SOUND_MOD_DEST_UI    (40)
-#define AR_NUM_SOUND_MOD_DEST_INT   (42)
-#define AR_SOUND_MAX_MOD_DEST_NAME  (24)
+#define AR_SOUND_MOD_DEST_NONE            41u
+#define AR_SOUND_MOD_DEST_LFO_MULTIPLIER  34u
+#define AR_SOUND_MOD_DEST_LFO_WAVEFORM    37u
+#define AR_SOUND_MOD_DEST_LFO_TRIGMODE    39u
+#define AR_SOUND_MOD_DEST_LFO_SPEED       33u
+#define AR_SOUND_MOD_DEST_LFO_FADE        35u
+#define AR_SOUND_MOD_DEST_LFO_PHASE       38u
+#define AR_SOUND_MOD_DEST_LFO_DEPTH       40u
+#define AR_SOUND_MOD_DEST_SYN_1            0u
+#define AR_SOUND_MOD_DEST_SYN_2            1u
+#define AR_SOUND_MOD_DEST_SYN_3            2u
+#define AR_SOUND_MOD_DEST_SYN_4            3u
+#define AR_SOUND_MOD_DEST_SYN_5            4u
+#define AR_SOUND_MOD_DEST_SYN_6            5u
+#define AR_SOUND_MOD_DEST_SYN_7            6u
+#define AR_SOUND_MOD_DEST_SYN_8            7u
+#define AR_SOUND_MOD_DEST_SMP_TUN          8u  // 0x08
+#define AR_SOUND_MOD_DEST_SMP_FIN          9u  // 0x09
+#define AR_SOUND_MOD_DEST_SMP_SMP         10u  // 0x0A
+#define AR_SOUND_MOD_DEST_SMP_BR          11u  // 0x0B
+#define AR_SOUND_MOD_DEST_SMP_STA         12u  // 0x0C
+#define AR_SOUND_MOD_DEST_SMP_END         13u  // 0x0D
+#define AR_SOUND_MOD_DEST_SMP_LOP         14u  // 0x0E
+#define AR_SOUND_MOD_DEST_SMP_LEV         15u  // 0x0F
+#define AR_SOUND_MOD_DEST_FLT_ENV         23u  // 0x17
+#define AR_SOUND_MOD_DEST_FLT_ATK         16u  // 0x10
+#define AR_SOUND_MOD_DEST_FLT_DEC         18u  // 0x12
+#define AR_SOUND_MOD_DEST_FLT_SUS         17u  // 0x11
+#define AR_SOUND_MOD_DEST_FLT_REL         19u  // 0x13
+#define AR_SOUND_MOD_DEST_FLT_FRQ         20u  // 0x14
+#define AR_SOUND_MOD_DEST_FLT_RES         21u  // 0x15
+#define AR_SOUND_MOD_DEST_AMP_ATK         24u  // 0x18
+#define AR_SOUND_MOD_DEST_AMP_HLD         25u  // 0x19
+#define AR_SOUND_MOD_DEST_AMP_DEC         26u  // 0x1A
+#define AR_SOUND_MOD_DEST_AMP_OVR         27u  // 0x1B
+#define AR_SOUND_MOD_DEST_AMP_VOL         31u  // 0x1F
+#define AR_SOUND_MOD_DEST_AMP_PAN         30u  // 0x1E
+#define AR_SOUND_MOD_DEST_AMP_ACC         32u  // 0x20  ("AMP:Accent Level", [FUNC]+[BANK B/F])
+#define AR_SOUND_MOD_DEST_AMP_DLY         28u  // 0x1C
+#define AR_SOUND_MOD_DEST_AMP_REV         29u  // 0x1D
+#define AR_NUM_SOUND_MOD_DEST_UI    40u
+#define AR_NUM_SOUND_MOD_DEST_INT   42u
+#define AR_SOUND_MAX_MOD_DEST_NAME  24u
 extern const char *const ar_sound_mod_dest_names_ui [AR_NUM_SOUND_MOD_DEST_UI];
 extern const sUI         ar_sound_mod_dest_ids_ui   [AR_NUM_SOUND_MOD_DEST_UI];  // maps UI list index to dest index
 extern const sUI         ar_sound_mod_dest_ids_int  [AR_NUM_SOUND_MOD_DEST_INT]; // maps dest index to UI list index
