@@ -24,7 +24,7 @@
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
  * ---- created: 28Nov2023
- * ---- changed: 29Nov2023
+ * ---- changed: 29Nov2023, 01Dec2023
  * ----
  * ----
  */
@@ -36,6 +36,13 @@
 
 #pragma pack(push)
 #pragma pack(1)
+
+
+#define AR_GLOBAL_SYX_V5_SZ  (107)    /* SysEx size, including F0 / F7 (FW1.70) */
+#define AR_GLOBAL_SYX_SZ  AR_GLOBAL_SYX_V5_SZ
+
+#define AR_GLOBAL_V5_SZ   (80u)       /* Raw, decoded size (FW1.70) */
+#define AR_GLOBAL_SZ AR_GLOBAL_V5_SZ  /* == sizeof(ar_global_t) */
 
 
 /*

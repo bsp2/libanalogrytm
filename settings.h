@@ -23,7 +23,7 @@
  * ---- info   : This is part of the "libanalogrytm" package.
  * ----
  * ---- created: 29Nov2023
- * ---- changed: N/A
+ * ---- changed: 01Dec2023
  * ----
  * ----
  */
@@ -35,6 +35,13 @@
 
 #pragma pack(push)
 #pragma pack(1)
+
+
+#define AR_SETTINGS_SYX_V5_SZ  (2401)    /* SysEx size, including F0 / F7 (FW1.70) */
+#define AR_SETTINGS_SYX_SZ  AR_SETTINGS_SYX_V5_SZ
+
+#define AR_SETTINGS_V5_SZ   (2087u)      /* Raw, decoded size (FW1.70) */
+#define AR_SETTINGS_SZ AR_SETTINGS_V5_SZ /* == sizeof(ar_settings_t) */
 
 
 /*
@@ -71,14 +78,12 @@ typedef struct {
    sU8 fixed_velocity_enable;            /* @0x001A          0=OFF, 1=ON */
    sU8 fixed_velocity_amount;            /* @0x001B          range=0..127 */
 
-   sU8 sample_recorder_src;              /* @0x001C range=0..14, 0=AUD L+R, 1=AUD L, 2=AUD R, 3=BD, 4=SD, 5=RS/CP, 6=BT, 7=LT, */
-                                         /*               8=MT/HT, 9=CH/OH, 10=CY/CB, 11=MAIN, 12=USB L, 13=USB R, 14=USB L+R, */
-   sU8 sample_recorder_thr;              /* @0x001D          range=0..127  Threshold                                           */
-   sU8 sample_recorder_monitor;          /* @0x001E          range=0..1, 0=OFF, 1=ON                                           */
+   sU8 sample_recorder_src;              /* @0x001C          range=0..14, 0=AUD L+R, 1=AUD L, 2=AUD R, 3=BD, 4=SD, 5=RS/CP, 6=BT, 7=LT, */
+                                         /*                        8=MT/HT, 9=CH/OH, 10=CY/CB, 11=MAIN, 12=USB L, 13=USB R, 14=USB L+R, */
+   sU8 sample_recorder_thr;              /* @0x001D          range=0..127  Threshold                                                    */
+   sU8 sample_recorder_monitor;          /* @0x001E          range=0..1, 0=OFF, 1=ON                                                    */
 
-   /* The response continues with the repeating 16 byte pattern of 0xFF_FF_FF_FF 0x00_00_00_00 0x00_00_00_00 0x00_00_00_00 */
-   /* The repeating pattern repeats 128 times. Total length of 2048 bytes. */
-   sU8 __unknown0x001F[16 * 128];        /* ?@0x001F..0x081E repeating_pattern? */
+   sU8 __unknown0x001F[16 * 128];        /* ?@0x001F..0x081E sample infos / checksums ? (16 bytes per slot. first dword $FFFFffff=slot is unused) */
 
    sU8 __unknown0x081F;                  /* ?@0x081F         Always 0x01 */
 
