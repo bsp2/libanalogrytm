@@ -25,7 +25,7 @@
  * ----
  * ---- created: 28Feb2016
  * ---- changed: 29Mar2016, 04Apr2016, 21Nov2016, 07Jul2017, 09Jul2017, 21Aug2017, 19Nov2018
- * ----          21Oct2019, 25Nov2023, 07Dec2023
+ * ----          21Oct2019, 25Nov2023, 07Dec2023, 08Dec2023
  * ----
  * ----
  * ----
@@ -109,6 +109,31 @@
 
 /*
  *
+ * Per-track retrig settings
+ *
+ *    0x0004 bytes in v5(FW1.70)
+ *
+ */
+typedef struct {
+   /*
+       - @0x09DF: track 1 retrig ($00=1/1, $09=1/16, .., $10=1/80)
+       - @0x09E0: track 1 retrig length ($00=0.125, ..)
+       - @0x09E1: track 1 retrig vel curve (-128..127)
+       - @0x09E2: ?
+       - @0x09E3: track 2 retrig ($0B=1/24, ..)
+       - @0x09E4: track 2 retrig length ($2E=1/4, ..)
+       - @0x09E5: track 2 retrig vel curve
+       - @0x09E6: ?
+   */
+   sU8 retrig;          /* @0x09DF: track 1 retrig ($00=1/1, $09=1/16, .., $10=1/80) */
+   sU8 length;          /* @0x09E0: track 1 retrig length ($00=0.125, ..)            */
+   sS8 vel_curve;       /* @0x09E1: track 1 retrig vel curve (-128..127)             */
+   sU8 __unknown_09E2;  /* @0x09E2: ?                                                */
+} ar_retrig_t;
+
+
+/*
+ *
  ** Kit v5 (FW1.70) structure
  *
  *    0x0A32(2610) bytes in v5(FW1.70)
@@ -124,9 +149,7 @@ typedef struct {
    sU8 name[15];               /* @0x0004 */
    sU8 __pad_name;             /* @0x0013  (ASCIIZ?) */
 
-   s_u16_t track_levels[12];   /* @0x0014..0x002b   (note) LSB (track_levels[i].b.hi) is unused (always 0x00) */
-
-   sU8 __unknown_arr1b[0x2];   /* @0x002c..0x002d */
+   s_u16_t track_levels[13];   /* @0x0014..0x002b   (note) LSB (track_levels[i].b.hi) is unused (always 0x00) */
 
    ar_sound_t tracks[12];      /* @0x002E..0x07C5 (12*162=1944($798) bytes */
 
@@ -284,7 +307,7 @@ typedef struct {
                                    off=2249 (0x8c9) a=0x00 b=0x01  <-- perf id
                      */
 
-   sU8 __unknown_arr4[0x15];   /* @0x0902..0x0916 */
+   sU8 __unknown_0902[0x15];   /* @0x0902..0x0916 */
 
    sU8 scene_ctl[48 * 4];      /* @0x0917..0x09D6 */
 
@@ -308,11 +331,14 @@ typedef struct {
                                    off=2640 (0xa50) a=0x00 b=0x01
                      */
 
-   sU8 __unknown_pad37;        /* @0x09D7 (scene_id MSB?) */
+   sU8 __unknown_09D7;         /* @0x09D7 (scene_id MSB?) */
    sU8 current_scene_id;       /* @0x09D8 (0..11) */
 
-   /* (note) 54 unknown bytes not present in v1 kit data */
-   sU8 __unknown_arr5[54];     /* @0x09D9..0x0A0E */
+   sU8 __unknown_09D9[4];      /* ?@0x09D9 */
+
+   s_u16_t retrig_always_on;   /* @0x09DD..0x09DE  bit0=trk1($0001) .. bit11=trk12($0800) */
+
+   ar_retrig_t retrig[12];     /* @0x09DF..0x0A0E  track 1..12 retrig / length / velcurve (4 bytes per track) */
 
    sU8 __unknown_arr6[35];     /* @0x0A0F..0x0A31 */
 } ar_kit_t;
