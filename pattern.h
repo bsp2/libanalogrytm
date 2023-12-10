@@ -190,6 +190,54 @@
 
 
 /*
+ *
+ ** <ali> Fx P-Lock sequence types
+ *
+ *       (These types may seem that they overlap with others but they mean what they mean in the context of the FX track / 12th track)
+ */
+#define AR_FX_PLOCK_TYPE_DELAY_TIME      (0u)  /*  */
+#define AR_FX_PLOCK_TYPE_DELAY_PING_PONG (1u)  /*  */
+#define AR_FX_PLOCK_TYPE_DELAY_WIDTH     (2u)  /*  */
+#define AR_FX_PLOCK_TYPE_DELAY_FEEDBACK  (3u)  /*  */
+#define AR_FX_PLOCK_TYPE_DELAY_HPF       (4u)  /*  */
+#define AR_FX_PLOCK_TYPE_DELAY_LPF       (5u)  /*  */
+#define AR_FX_PLOCK_TYPE_DELAY_REV       (6u)  /*  */
+#define AR_FX_PLOCK_TYPE_DELAY_VOL       (7u)  /*  */
+
+#define AR_FX_PLOCK_TYPE_REVERB_PRE      (10u)  /*  */
+#define AR_FX_PLOCK_TYPE_REVERB_DECAY    (11u)  /*  */
+#define AR_FX_PLOCK_TYPE_REVERB_FREQ     (12u)  /*  */
+#define AR_FX_PLOCK_TYPE_REVERB_GAIN     (13u)  /*  */
+#define AR_FX_PLOCK_TYPE_REVERB_HPF      (14u)  /*  */
+#define AR_FX_PLOCK_TYPE_REVERB_LPF      (15u)  /*  */
+#define AR_FX_PLOCK_TYPE_REVERB_VOL      (16u)  /*  */
+
+#define AR_FX_PLOCK_TYPE_DIST_AMOUNT     (18u)  /*  */
+#define AR_FX_PLOCK_TYPE_DIST_SYM        (19u)  /*  */
+#define AR_FX_PLOCK_TYPE_DIST_DOV        (8u)   /*  */
+#define AR_FX_PLOCK_TYPE_DIST_DELAY      (9u)   /*  */
+#define AR_FX_PLOCK_TYPE_DIST_REV        (17u)  /*  */
+
+#define AR_FX_PLOCK_TYPE_COMP_THRESHOLD  (21u)  /*  */
+#define AR_FX_PLOCK_TYPE_COMP_ATTACK     (22u)  /*  */
+#define AR_FX_PLOCK_TYPE_COMP_RELEASE    (23u)  /*  */
+#define AR_FX_PLOCK_TYPE_COMP_MAKEUP     (26u)  /*  */
+#define AR_FX_PLOCK_TYPE_COMP_RATIO      (24u)  /*  */
+#define AR_FX_PLOCK_TYPE_COMP_SEQ        (25u)  /*  */
+#define AR_FX_PLOCK_TYPE_COMP_MIX        (27u)  /*  */
+#define AR_FX_PLOCK_TYPE_COMP_VOL        (28u)  /*  */
+
+#define AR_FX_PLOCK_TYPE_LFO_SPEED       (29u)  /*  */
+#define AR_FX_PLOCK_TYPE_LFO_MULTIPLY    (30u)  /*  */
+#define AR_FX_PLOCK_TYPE_LFO_FADE        (31u)  /*  */
+#define AR_FX_PLOCK_TYPE_LFO_DEST        (32u)  /*  */
+#define AR_FX_PLOCK_TYPE_LFO_WAVEFORM    (33u)  /*  */
+#define AR_FX_PLOCK_TYPE_LFO_PHASE       (34u)  /*  */
+#define AR_FX_PLOCK_TYPE_LFO_MOD         (35u)  /*  */
+#define AR_FX_PLOCK_TYPE_LFO_DEPTH       (36u)  /*  */
+
+
+/*
  * <ali> ar_pattern_track_t.pad_scale enumeration
  *
  */
@@ -324,18 +372,16 @@
 #define AR_TRIG_SMP_PL_EN  0x1000u  /* bit 12:        enable SMP p-lock        */
 #define AR_TRIG_ENV_PL_EN  0x2000u  /* bit 13:        enable ENV p-lock        */
 
-
-
-/*
- *
- ** Track structure
- *
- *      0x281(641) bytes (v5/FW1.70)
- *      0x289(649) bytes (v4/FW1.50..1.61b)
- *      0x288(648) bytes (v1)
- *
- */
-typedef struct {
+   /*
+    *
+    ** Track structure
+    *
+    *      0x281(641) bytes (v5/FW1.70)
+    *      0x289(649) bytes (v4/FW1.50..1.61b)
+    *      0x288(648) bytes (v1)
+    *
+    */
+   typedef struct {
    sU8     trig_bits[((14*64)/8)];      /* @0x0004..0x0073   See AR_TRIG_xxx flags. 14 bits per step ((14*64)/8)==112 bytes */
    sU8     notes[64];                   /* @0x0074..0x00B3   127=unset (default note), MIDI note (0..126) otherwise (lower 7 bits)
                                          *                   bit7: 1=no trig condition, 0=have trig condition
