@@ -419,15 +419,15 @@ typedef struct {
    sU8     quantize_amount;             /* @0x023A            quantize amount                        */
    sU8     sound_locks[64];             /* ?@0x023B..0x027A   soundLocks                             */
    sU8     flags_and_speed;             /* @0x027B.           bit7=send MIDI. bit2..0: speed, 0=2x, 1=3/2x, 2=1x, 3=3/4x, 4=1/2x, 5=1/4x, 6=1/8x (see AR_SPEED_xxx) */
-   sU8     trig_probability;            /* @0x027C            <ali> Trig probability 0..100                                                 */
-   sU8     euc_mode;                    /* @0x027D            <ali> Euclidean mode 0=off, 128=on                                            */
-   sU8     euc_pl1;                     /* @0x027E            <ali> Euclidean PL1 / Pulse generator 1  0..64 (number of pulses)             */
-   sU8     euc_pl2;                     /* @0x027F            <ali> Euclidean PL2 / Pulse generator 2  0..64 (number of pulses)             */
-   sU8     euc_ro1;                     /* @0x0280            <ali> Euclidean RO1 / Rotation generator 1  0..126 (middle point 63)          */
-   sU8     euc_ro2;                     /* @0x0281            <ali> Euclidean RO2 / Rotation generator 2  0..126 (middle point 63)          */
-   sU8     euc_tro;                     /* @0x0282            <ali> Euclidean TRO / Track rotation 0..126 (middle point 63)                 */
-   sU8     pad_scale;                   /* @0x0283            <ali> PAD SCALE 255 chromatic 0..34 All modes. See AR_PADSCALE_xxx            */
-   sU8     root_note;                   /* @0x0284            <ali> bits 0..3: Root Note 0..11 (C..B) bits 4..7: octave shift (0..9, def=6) */
+   sU8     trig_probability;            /* @0x027C            <ali> Trig probability 0..100                                                   */
+   sU8     euc_mode;                    /* @0x027D            <ali> Euclidean mode 0=off, 128=on                                              */
+   sU8     euc_pl1;                     /* @0x027E            <ali> Euclidean PL1 / Pulse generator 1  0..64 (number of pulses)               */
+   sU8     euc_pl2;                     /* @0x027F            <ali> Euclidean PL2 / Pulse generator 2  0..64 (number of pulses)               */
+   sU8     euc_ro1;                     /* @0x0280            <ali> Euclidean RO1 / Rotation generator 1  0..126 (middle point 63)            */
+   sU8     euc_ro2;                     /* @0x0281            <ali> Euclidean RO2 / Rotation generator 2  0..126 (middle point 63)            */
+   sU8     euc_tro;                     /* @0x0282            <ali> Euclidean TRO / Track rotation 0..126 (middle point 63)                   */
+   sU8     pad_scale;                   /* @0x0283            <ali> PAD SCALE 255 chromatic 0..34 All modes. See AR_PADSCALE_xxx              */
+   sU8     root_note;                   /* @0x0284            <ali> bits 0..3: Root Note 0..11 (C..B) bits 4..7: pad row offset (0..9, def=6) */
 
 } ar_pattern_track_t;
 
