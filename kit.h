@@ -25,7 +25,7 @@
  * ----
  * ---- created: 28Feb2016
  * ---- changed: 29Mar2016, 04Apr2016, 21Nov2016, 07Jul2017, 09Jul2017, 21Aug2017, 19Nov2018
- * ----          21Oct2019, 25Nov2023, 07Dec2023, 08Dec2023
+ * ----          21Oct2019, 25Nov2023, 07Dec2023, 08Dec2023, 21Dec2023
  * ----
  * ----
  * ----
@@ -342,6 +342,7 @@ typedef struct {
 
    sU8 __unknown_arr6[3];      /* @0x0A0F..0x0A11 */
 
+   /* note: mkII only ? */
    sU8 ctrl_in_mod_1_amt_1;    /* @0x0A12 (-128..127) */
    sU8 __unused_pad37;         /* @0x0A13 */
    sU8 ctrl_in_mod_1_target_1; /* @0x0A14 See sound.h, same as AR_SOUND_MOD_DEST_XXX, AR_SOUND_MOD_DEST_SYN_X variants can not be used. */
@@ -382,65 +383,78 @@ typedef struct {
 
 
 /*
-* Create kit sysex request.
-*
-*  Arguments:
-*     _dstbuf - Destination buffer. Must be large enough to hold the request string (15 bytes, see AR_SYSEX_REQUEST_MSG_SZ).
-*      _devId - Sysex device id (0..15).
-*  _patternNr - Determines kit number. 0=1, 1=2, .. 16=17, ..127=128.
-*
-*  Returns:
-*   AR_ERR_OK if the request was created successfully.
-*
-*/
-   S_EXTERN ar_error_t ar_kit_request(sU8 *_dstBuf, sU8 _devId, sU8 _kitNr);
+ * Create kit sysex request.
+ *
+ *  Arguments:
+ *     _dstbuf - Destination buffer. Must be large enough to hold the request string (15 bytes, see AR_SYSEX_REQUEST_MSG_SZ).
+ *      _devId - Sysex device id (0..15).
+ *  _patternNr - Determines kit number. 0=1, 1=2, .. 16=17, ..127=128.
+ *
+ *  Returns:
+ *   AR_ERR_OK if the request was created successfully.
+ *
+ */
+S_EXTERN ar_error_t ar_kit_request (sU8 *_dstBuf, sU8  _devId, sU8  _kitNr);
 
-   /*
-    * Create kit workbuffer sysex request.
-    *
-    *  Arguments:
-    *     _dstbuf - Destination buffer. Must be large enough to hold the request string (15 bytes, see AR_SYSEX_REQUEST_MSG_SZ).
-    *      _devId - Sysex device id (0..15).
-    *
-    *  Returns:
-    *   AR_ERR_OK if the request was created successfully.
-    *
-    */
-   S_EXTERN ar_error_t ar_kit_request_x(sU8 *_dstBuf, sU8 _devId, sU8 _kitNr);
 
-   /*
-    * Convert kit sysex dump (starting with 0xF0) to 'raw' 8bit data.
-    *
-    *  Arguments:
-    *          _rawBuf - Destination buffer. Must be large enough to hold the decoded 'raw' 8bit data.
-    *                     Pass NULL to query the required buffer size.
-    *          _syxBuf - Source buffer that stores the encoded 7bit MIDI data (starting with 0xF0)
-    *      _syxBufSize - Size of the source buffer (number of bytes)
-    *   _retRawBufSize - If not NULL, returns the required size of the 'raw' 8bit data buffer.
-    *         _retMeta - If not NULL, returns additional meta data like version / pattern number.
-    *
-    *  Returns:
-    *   AR_ERR_OK if the request was created successfully.
-    *
-    */
-   S_EXTERN ar_error_t ar_kit_syx_to_raw(sU8 *_rawBuf, const sU8 *_syxBuf, sU32 _syxBufSize, sU32 *_retRawBufSize, ar_sysex_meta_t *_meta);
+/*
+ * Create kit workbuffer sysex request.
+ *
+ *  Arguments:
+ *     _dstbuf - Destination buffer. Must be large enough to hold the request string (15 bytes, see AR_SYSEX_REQUEST_MSG_SZ).
+ *      _devId - Sysex device id (0..15).
+ *
+ *  Returns:
+ *   AR_ERR_OK if the request was created successfully.
+ *
+ */
+S_EXTERN ar_error_t ar_kit_request_x (sU8 *_dstBuf, sU8  _devId, sU8  _kitNr);
 
-   /*
-    * Convert 'raw' 8bit data to 7bit MIDI sysex data (starting with 0xF0).
-    *
-    *  Arguments:
-    *          _syxBuf - Destination buffer. Must be large enough to hold the encoded 7bit MIDI sysex data.
-    *                     Pass NULL to query the required buffer size.
-    *          _rawBuf - Source buffer that stores the 'raw' 8bit data.
-    *      _rawBufSize - Size of source buffer (number of bytes).
-    *   _retSyxBufSize - If not NULL, returns the required size of the 7bit MIDI sysex data buffer.
-    *            _meta - Determines pattern number, format version(s). Must not be NULL.
-    *
-    *  Returns:
-    *   AR_ERR_OK if the request was created successfully.
-    *
-    */
-   S_EXTERN ar_error_t ar_kit_raw_to_syx(sU8 *_syxBuf, const sU8 *_rawBuf, sU32 _rawBufSize, sU32 *_retSyxBufSize, const ar_sysex_meta_t *_meta);
+
+/*
+ * Convert kit sysex dump (starting with 0xF0) to 'raw' 8bit data.
+ *
+ *  Arguments:
+ *          _rawBuf - Destination buffer. Must be large enough to hold the decoded 'raw' 8bit data.
+ *                     Pass NULL to query the required buffer size.
+ *          _syxBuf - Source buffer that stores the encoded 7bit MIDI data (starting with 0xF0)
+ *      _syxBufSize - Size of the source buffer (number of bytes)
+ *   _retRawBufSize - If not NULL, returns the required size of the 'raw' 8bit data buffer.
+ *         _retMeta - If not NULL, returns additional meta data like version / pattern number.
+ *
+ *  Returns:
+ *   AR_ERR_OK if the request was created successfully.
+ *
+ */
+S_EXTERN ar_error_t ar_kit_syx_to_raw (sU8             *_rawBuf,
+                                       const sU8       *_syxBuf,
+                                       sU32             _syxBufSize,
+                                       sU32            *_retRawBufSize,
+                                       ar_sysex_meta_t *_meta
+                                       );
+
+
+/*
+ * Convert 'raw' 8bit data to 7bit MIDI sysex data (starting with 0xF0).
+ *
+ *  Arguments:
+ *          _syxBuf - Destination buffer. Must be large enough to hold the encoded 7bit MIDI sysex data.
+ *                     Pass NULL to query the required buffer size.
+ *          _rawBuf - Source buffer that stores the 'raw' 8bit data.
+ *      _rawBufSize - Size of source buffer (number of bytes).
+ *   _retSyxBufSize - If not NULL, returns the required size of the 7bit MIDI sysex data buffer.
+ *            _meta - Determines pattern number, format version(s). Must not be NULL.
+ *
+ *  Returns:
+ *   AR_ERR_OK if the request was created successfully.
+ *
+ */
+S_EXTERN ar_error_t ar_kit_raw_to_syx (sU8                   *_syxBuf,
+                                       const sU8             *_rawBuf,
+                                       sU32                   _rawBufSize,
+                                       sU32                  *_retSyxBufSize,
+                                       const ar_sysex_meta_t *_meta
+                                       );
 
 
 #pragma pack(pop)

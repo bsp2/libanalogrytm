@@ -25,7 +25,7 @@
  * ----
  * ---- created: 30Jul2014
  * ---- changed: 01Aug2014, 04Aug2014, 07Jul2017, 21Oct2019, 24Oct2019, 26Nov2023, 27Nov2023
- * ----          07Dec2023
+ * ----          07Dec2023, 21Dec2023
  * ----
  * ----
  */
@@ -372,16 +372,18 @@
 #define AR_TRIG_SMP_PL_EN  0x1000u  /* bit 12:        enable SMP p-lock        */
 #define AR_TRIG_ENV_PL_EN  0x2000u  /* bit 13:        enable ENV p-lock        */
 
-   /*
-    *
-    ** Track structure
-    *
-    *      0x281(641) bytes (v5/FW1.70)
-    *      0x289(649) bytes (v4/FW1.50..1.61b)
-    *      0x288(648) bytes (v1)
-    *
-    */
-   typedef struct {
+
+
+/*
+ *
+ ** Track structure
+ *
+ *      0x281(641) bytes (v5/FW1.70)
+ *      0x289(649) bytes (v4/FW1.50..1.61b)
+ *      0x288(648) bytes (v1)
+ *
+ */
+typedef struct {
    sU8     trig_bits[((14*64)/8)];      /* @0x0004..0x0073   See AR_TRIG_xxx flags. 14 bits per step ((14*64)/8)==112 bytes */
    sU8     notes[64];                   /* @0x0074..0x00B3   127=unset (default note), MIDI note (0..126) otherwise (lower 7 bits)
                                          *                   bit7: 1=no trig condition, 0=have trig condition
